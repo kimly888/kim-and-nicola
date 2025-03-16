@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "home": "Início",
+    "story": "Nossa História",
+    "details": "Detalhes",
+    "gallery": "Galeria",
+    "rsvp": "RSVP"
+  },
+  "hero": {
+    "title": "Kim & Nicola",
+    "subtitle": "VAMOS NOS CASAR",
+    "date": "5 de Janeiro, 2026",
+    "location": "Worfield, Bridgnorth WV15 5LE, Reino Unido"
+  },
+  "story": {
+    "title": "Nossa História",
+    "howWeMet": {
+      "title": "Como Nos Conhecemos",
+      "date": "15 de Junho, 2018",
+      "description": "Nos encontramos pela primeira vez na festa de aniversário de um amigo em comum. O que começou como uma conversa casual sobre nosso amor compartilhado por viagens se transformou em horas de conversa e risadas. Trocamos números naquela noite, e o resto, como dizem, é história."
+    },
+    "firstDate": {
+      "title": "Nosso Primeiro Encontro",
+      "date": "3 de Julho, 2018",
+      "description": "Para nosso primeiro encontro, fomos a um pequeno restaurante italiano no centro da cidade. Conversamos por horas sobre massa e vinho, perdendo completamente a noção do tempo. O garçom teve que nos informar educadamente que estavam fechando!"
+    },
+    "proposal": {
+      "title": "O Pedido",
+      "date": "24 de Dezembro, 2022",
+      "description": "Na véspera de Natal, durante uma viagem às montanhas, fomos fazer uma caminhada ao pôr do sol até um belo mirante. Enquanto o céu se tornava rosa e dourado, me ajoelhei e fiz a pergunta mais importante da minha vida. E ela disse sim!"
+    }
+  },
+  "details": {
+    "title": "Detalhes do Evento",
+    "ceremony": {
+      "title": "Cerimônia",
+      "date": "Domingo, 5 de Janeiro, 2026",
+      "time": "15:00 - 16:00",
+      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Reino Unido",
+      "description": "Junte-se a nós enquanto trocamos votos e começamos nossa jornada juntos como um casal casado."
+    },
+    "reception": {
+      "title": "Recepção",
+      "date": "Domingo, 5 de Janeiro, 2026",
+      "time": "17:00 - 23:00",
+      "location": "Worfield, Bridgnorth WV15 5LE, Reino Unido",
+      "description": "Celebre conosco com jantar, dança e festividades durante toda a noite."
+    },
+    "farewell": {
+      "title": "Brunch de Despedida",
+      "date": "Segunda-feira, 6 de Janeiro, 2026",
+      "time": "10:00 - 13:00",
+      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Reino Unido",
+      "description": "Junte-se a nós para um brunch casual para se despedir antes de partirmos para nossa lua de mel."
+    }
+  },
+  "gallery": {
+    "title": "Galeria de Fotos"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Esperamos celebrar com você!",
+    "deadline": "Por favor, responda até 1 de Dezembro, 2025",
+    "form": {
+      "name": "Nome Completo",
+      "email": "Endereço de Email",
+      "attending": "Você vai comparecer?",
+      "yes": "Sim, estarei lá",
+      "no": "Desculpe, não poderei ir",
+      "guests": "Número de Convidados",
+      "dietaryRestrictions": "Restrições Alimentares",
+      "message": "Mensagem para o Casal",
+      "submit": "Enviar RSVP"
+    },
+    "confirmation": "Obrigado pelo seu RSVP! Mal podemos esperar para celebrar com você."
+  },
+  "footer": {
+    "copyright": "© 2026 Kim & Nicola",
+    "madeWith": "Feito com amor"
+  },
+  "languageSwitcher": {
+    "label": "Idioma",
+    "en": "Inglês",
+    "fr": "Francês",
+    "ja": "Japonês",
+    "cy": "Galês",
+    "es": "Espanhol",
+    "pt-BR": "Português (Brasil)"
+  }
+} 

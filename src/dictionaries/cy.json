@@ -1,0 +1,90 @@
+{
+  "navigation": {
+    "home": "Hafan",
+    "story": "Ein Stori",
+    "details": "Manylion",
+    "gallery": "Oriel",
+    "rsvp": "RSVP"
+  },
+  "hero": {
+    "title": "Kim & Nicola",
+    "subtitle": "RYDYM YN PRIODI",
+    "date": "Ionawr 5, 2026",
+    "location": "Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig"
+  },
+  "story": {
+    "title": "Ein Stori",
+    "howWeMet": {
+      "title": "Sut Wnaethon Ni Gyfarfod",
+      "date": "Mehefin 15, 2018",
+      "description": "Gwnaethom groesi llwybrau am y tro cyntaf mewn parti pen-blwydd ffrind cyffredin. Dechreuodd yr hyn a ddechreuodd fel sgwrs achlysurol am ein cariad cyffredin am deithio yn oriau o siarad a chwerthin. Gwnaethom gyfnewid rhifau y noson honno, a'r gweddill, fel y maent yn ei ddweud, yw hanes."
+    },
+    "firstDate": {
+      "title": "Ein Dêt Gyntaf",
+      "date": "Gorffennaf 3, 2018",
+      "description": "Ar gyfer ein dêt gyntaf, aethom i fwyty Eidalaidd bach yng nghanol y dref. Siaradom am oriau dros basta a gwin, gan golli trac o amser yn llwyr. Roedd yn rhaid i'r gweinydd ein hysbysu'n gwrtais eu bod yn cau!"
+    },
+    "proposal": {
+      "title": "Y Cynnig",
+      "date": "Rhagfyr 24, 2022",
+      "description": "Ar Noswyl Nadolig, yn ystod taith i'r mynyddoedd, aethom am dro i weld machlud haul i olygfa hardd. Wrth i'r awyr droi'n binc ac aur, syrthiais ar fy nglin a gofyn y cwestiwn pwysicaf yn fy mywyd. A dywedodd hi ie!"
+    }
+  },
+  "details": {
+    "title": "Manylion y Digwyddiad",
+    "ceremony": {
+      "title": "Seremoni",
+      "date": "Dydd Sul, Ionawr 5, 2026",
+      "time": "3:00 PM - 4:00 PM",
+      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
+      "description": "Ymunwch â ni wrth i ni gyfnewid addunedau a dechrau ein taith gyda'n gilydd fel cwpl priod."
+    },
+    "reception": {
+      "title": "Derbyniad",
+      "date": "Dydd Sul, Ionawr 5, 2026",
+      "time": "5:00 PM - 11:00 PM",
+      "location": "Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
+      "description": "Dathlwch gyda ni gyda swper, dawnsio, a dathliadau drwy gydol y noson."
+    },
+    "farewell": {
+      "title": "Brunch Ffarwél",
+      "date": "Dydd Llun, Ionawr 6, 2026",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
+      "description": "Ymunwch â ni am frunch anffurfiol i ddweud hwyl fawr cyn i ni adael am ein mis mêl."
+    }
+  },
+  "gallery": {
+    "title": "Oriel Luniau"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Rydym yn edrych ymlaen at ddathlu gyda chi!",
+    "deadline": "Atebwch erbyn Rhagfyr 1, 2025 os gwelwch yn dda",
+    "form": {
+      "name": "Enw Llawn",
+      "email": "Cyfeiriad E-bost",
+      "attending": "A fyddwch chi'n mynychu?",
+      "yes": "Ie, byddaf yno",
+      "no": "Mae'n ddrwg gennyf, ni allaf ei wneud",
+      "guests": "Nifer o Westeion",
+      "dietaryRestrictions": "Cyfyngiadau Deietegol",
+      "message": "Neges i'r Cwpl",
+      "submit": "Cyflwyno RSVP"
+    },
+    "confirmation": "Diolch am eich RSVP! Ni allwn aros i ddathlu gyda chi."
+  },
+  "footer": {
+    "copyright": "© 2026 Kim & Nicola",
+    "madeWith": "Wedi'i wneud gyda chariad"
+  },
+  "languageSwitcher": {
+    "label": "Iaith",
+    "en": "Saesneg",
+    "fr": "Ffrangeg",
+    "ja": "Japaneaidd",
+    "cy": "Cymraeg",
+    "es": "Sbaeneg",
+    "pt-BR": "Portiwgaleg Brasil"
+  }
+} 
