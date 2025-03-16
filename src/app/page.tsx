@@ -32,9 +32,9 @@ export default function Home() {
   const events = [
     {
       title: 'Ceremony',
-      date: 'Saturday, June 15, 2024',
+      date: 'Sunday, January 5, 2026',
       time: '3:00 PM - 4:00 PM',
-      location: 'St. Mary\'s Cathedral',
+      location: 'Davenport House,Worfield, Bridgnorth WV15 5LE, United Kingdom',
       description: 'Join us as we exchange vows and begin our journey together as a married couple.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -47,9 +47,9 @@ export default function Home() {
     },
     {
       title: 'Reception',
-      date: 'Saturday, June 15, 2024',
+      date: 'Sunday, January 5, 2026',
       time: '5:00 PM - 11:00 PM',
-      location: 'Grand Ballroom, Riverside Hotel',
+      location: 'Worfield, Bridgnorth WV15 5LE, United Kingdom',
       description: 'Celebrate with us with dinner, dancing, and festivities throughout the evening.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -61,9 +61,9 @@ export default function Home() {
     },
     {
       title: 'Farewell Brunch',
-      date: 'Sunday, June 16, 2024',
+      date: 'Monday, January 6, 2026',
       time: '10:00 AM - 1:00 PM',
-      location: 'Garden Terrace, Riverside Hotel',
+      location: 'Davenport House, Worfield, Bridgnorth WV15 5LE, United Kingdom',
       description: 'Join us for a casual brunch to say goodbye before we depart for our honeymoon.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -134,8 +134,8 @@ export default function Home() {
       <HeroSection
         title="Kim & Nicola"
         subtitle="WE'RE GETTING MARRIED"
-        date="June 15, 2024"
-        location="San Francisco, California"
+        date="January 5, 2026"
+        location="Worfield, Bridgnorth WV15 5LE, United Kingdom"
         backgroundImage="/images/hero.jpg"
       />
       <StorySection stories={stories} />
