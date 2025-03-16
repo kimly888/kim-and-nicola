@@ -70,6 +70,7 @@ function StoryItem({ story, isEven, index }: StoryItemProps) {
 
   return (
     <div
+      id={`story-${index}`}
       ref={ref}
       className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center`}
     >
