@@ -8,10 +8,12 @@ import { getDictionary } from '@/dictionaries';
 import { Locale } from '@/i18n-config';
 
 export default async function Home({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  // Await the params object before destructuring
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
   // Sample story data
