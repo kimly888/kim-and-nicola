@@ -146,7 +146,7 @@ export default async function Home({
         subtitle={dictionary.hero.subtitle}
         date={dictionary.hero.date}
         location={dictionary.hero.location}
-        backgroundImage="/images/0027.jpg"
+        backgroundImage="/images/0021.jpg"
       />
       <StorySection stories={stories} />
       <DetailsSection events={events} />
