@@ -12,19 +12,19 @@ export default function Home() {
       title: 'How We Met',
       date: 'June 15, 2018',
       description: 'We first crossed paths at a mutual friend\'s birthday party. What started as a casual conversation about our shared love for travel turned into hours of talking and laughing. We exchanged numbers that night, and the rest, as they say, is history.',
-      image: '/images/story-1.jpg',
+      image: '/images/0016.jpg',
     },
     {
       title: 'Our First Date',
       date: 'July 3, 2018',
       description: 'For our first date, we went to a small Italian restaurant downtown. We talked for hours over pasta and wine, losing track of time completely. The waiter had to politely let us know they were closing!',
-      image: '/images/story-2.jpg',
+      image: '/images/0017.jpg',
     },
     {
       title: 'The Proposal',
       date: 'December 24, 2022',
       description: 'On Christmas Eve, during a trip to the mountains, we went for a sunset hike to a beautiful overlook. As the sky turned pink and gold, I got down on one knee and asked the most important question of my life. And she said yes!',
-      image: '/images/story-3.jpg',
+      image: '/images/0018.jpg',
     },
   ];
 
@@ -80,49 +80,49 @@ export default function Home() {
   // Sample gallery images
   const galleryImages = [
     {
-      src: '/images/gallery-1.jpg',
+      src: '/images/0019.jpg',
       alt: 'Kim and Nicola at the beach',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-2.jpg',
+      src: '/images/0020.jpg',
       alt: 'Kim and Nicola hiking',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-3.jpg',
+      src: '/images/0021.jpg',
       alt: 'Kim and Nicola at a restaurant',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-4.jpg',
+      src: '/images/0022.jpg',
       alt: 'Kim and Nicola traveling',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-5.jpg',
+      src: '/images/0023.jpg',
       alt: 'Kim and Nicola at a concert',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-6.jpg',
+      src: '/images/0024.jpg',
       alt: 'Kim and Nicola at home',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-7.jpg',
+      src: '/images/0025.jpg',
       alt: 'Kim and Nicola with friends',
       width: 800,
       height: 800,
     },
     {
-      src: '/images/gallery-8.jpg',
+      src: '/images/0026.jpg',
       alt: 'Kim and Nicola engagement photo',
       width: 800,
       height: 800,
@@ -136,7 +136,7 @@ export default function Home() {
         subtitle="WE'RE GETTING MARRIED"
         date="January 5, 2026"
         location="Worfield, Bridgnorth WV15 5LE, United Kingdom"
-        backgroundImage="/images/hero.jpg"
+        backgroundImage="/images/0027.jpg"
       />
       <StorySection stories={stories} />
       <DetailsSection events={events} />
