@@ -25,7 +25,7 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
     >
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="text-2xl font-serif tracking-wider">
-          {dictionary?.hero.title}
+          {dictionary?.hero.title || 'Kim & Nicola'}
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -36,9 +36,11 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
         </nav>
         
         <div className="hidden md:flex items-center space-x-4">
-          <LanguageSwitcher dictionary={dictionary} />
+          {dictionary?.languageSwitcher && (
+            <LanguageSwitcher dictionary={dictionary} />
+          )}
           <Button asChild variant="outline">
-            <Link href="/#rsvp">{dictionary?.navigation.rsvp}</Link>
+            <Link href="/#rsvp">{'RSVP'}</Link>
           </Button>
         </div>
         
