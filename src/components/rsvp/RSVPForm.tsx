@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -18,15 +18,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { fadeIn, slideUp } from '@/lib/animations';
-import { supabase } from '@/lib/supabase/client';
+} from "@/components/ui/form";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { fadeIn, slideUp } from "@/lib/animations";
+import { supabase } from "@/lib/supabase/client";
 
 // Form schema
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Please enter your name' }),
-  email: z.string().email({ message: 'Please enter a valid email address' }),
+  name: z.string().min(2, { message: "Please enter your name" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
   attending: z.boolean(),
   plusOnes: z.number().min(0).max(5),
   dietaryRestrictions: z.string().optional(),
@@ -43,42 +43,40 @@ export function RSVPForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
-      email: '',
+      name: "",
+      email: "",
       attending: true,
       plusOnes: 0,
-      dietaryRestrictions: '',
-      notes: '',
+      dietaryRestrictions: "",
+      notes: "",
     },
   });
 
   // Form submission handler
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     try {
       // Submit to Supabase
-      const { error } = await supabase
-        .from('guests')
-        .insert([
-          {
-            name: data.name,
-            email: data.email,
-            attending: data.attending,
-            plus_ones: data.plusOnes,
-            dietary_restrictions: data.dietaryRestrictions,
-            notes: data.notes,
-          },
-        ]);
-      
+      const { error } = await supabase.from("guests").insert([
+        {
+          name: data.name,
+          email: data.email,
+          attending: data.attending,
+          plus_ones: data.plusOnes,
+          dietary_restrictions: data.dietaryRestrictions,
+          notes: data.notes,
+        },
+      ]);
+
       if (error) throw error;
-      
+
       // Show success message
       setIsSuccess(true);
-      toast.success('Thank you for your RSVP!');
+      toast.success("Thank you for your RSVP!");
     } catch (error) {
-      console.error('Error submitting RSVP:', error);
-      toast.error('There was an error submitting your RSVP. Please try again.');
+      console.error("Error submitting RSVP:", error);
+      toast.error("There was an error submitting your RSVP. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -92,7 +90,7 @@ export function RSVPForm() {
       className="w-full max-w-md mx-auto"
     >
       {isSuccess ? (
-        <SuccessMessage name={form.getValues('name')} />
+        <SuccessMessage name={form.getValues("name")} />
       ) : (
         <Card className="border-none shadow-lg">
           <CardHeader>
@@ -117,7 +115,7 @@ export function RSVPForm() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -131,31 +129,24 @@ export function RSVPForm() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="attending"
                   render={({ field }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
                       <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
+                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>
-                          I will be attending
-                        </FormLabel>
-                        <FormDescription>
-                          Let us know if you can make it
-                        </FormDescription>
+                        <FormLabel>I will be attending</FormLabel>
+                        <FormDescription>Let us know if you can make it</FormDescription>
                       </div>
                     </FormItem>
                   )}
                 />
-                
-                {form.watch('attending') && (
+
+                {form.watch("attending") && (
                   <>
                     <FormField
                       control={form.control}
@@ -179,7 +170,7 @@ export function RSVPForm() {
                         </FormItem>
                       )}
                     />
-                    
+
                     <FormField
                       control={form.control}
                       name="dietaryRestrictions"
@@ -198,7 +189,7 @@ export function RSVPForm() {
                     />
                   </>
                 )}
-                
+
                 <FormField
                   control={form.control}
                   name="notes"
@@ -215,9 +206,9 @@ export function RSVPForm() {
                     </FormItem>
                   )}
                 />
-                
+
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
+                  {isSubmitting ? "Submitting..." : "Submit RSVP"}
                 </Button>
               </form>
             </Form>
@@ -237,7 +228,17 @@ function SuccessMessage({ name }: { name: string }) {
       className="text-center space-y-4 p-8"
     >
       <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M20 6 9 17l-5-5" />
         </svg>
       </div>
@@ -250,4 +251,4 @@ function SuccessMessage({ name }: { name: string }) {
       </p>
     </motion.div>
   );
-} 
+}

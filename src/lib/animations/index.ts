@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion';
+import { Variants } from "framer-motion";
 
 // Fade in animation
 export const fadeIn = (delay: number = 0): Variants => ({
@@ -8,7 +8,7 @@ export const fadeIn = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.6,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 });
@@ -22,7 +22,7 @@ export const slideUp = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.6,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 });
@@ -36,7 +36,7 @@ export const slideInLeft = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.6,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 });
@@ -50,7 +50,7 @@ export const slideInRight = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.6,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 });
@@ -64,7 +64,7 @@ export const scaleIn = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.6,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 });
@@ -101,7 +101,7 @@ export const textReveal = (delay: number = 0): Variants => ({
     transition: {
       delay,
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
-}); 
+});

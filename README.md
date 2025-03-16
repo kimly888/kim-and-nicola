@@ -115,3 +115,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Supabase](https://supabase.io/)
 - [Vercel](https://vercel.com/)
+
+## ESLint Configuration
+
+This project uses ESLint to enforce code quality and consistency. The configuration includes:
+
+- Next.js core web vitals rules
+- TypeScript-specific rules
+- Custom spacing rules:
+  - `object-curly-spacing`: Enforces spaces inside curly brackets (e.g., `import { Component } from 'package'` instead of `import {Component} from 'package'`)
+
+To run the linter:
+
+```bash
+# Check for linting issues
+npm run lint
+
+# Automatically fix linting issues
+npm run lint:fix
+```

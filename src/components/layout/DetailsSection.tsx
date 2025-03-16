@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { useAnimationOnScroll } from '@/hooks/useAnimationOnScroll';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { fadeIn, staggerContainer } from '@/lib/animations';
+import { motion } from "framer-motion";
+import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { fadeIn, staggerContainer } from "@/lib/animations";
 
 interface DetailsSectionProps {
   events: {
@@ -72,11 +72,7 @@ function EventCard({ event, index }: EventCardProps) {
   });
 
   return (
-    <motion.div
-      ref={ref}
-      variants={fadeIn(index * 0.1)}
-      className="h-full"
-    >
+    <motion.div ref={ref} variants={fadeIn(index * 0.1)} className="h-full">
       <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
         <CardHeader className="pb-2">
           <div className="flex items-center gap-3 mb-2">
@@ -97,4 +93,4 @@ function EventCard({ event, index }: EventCardProps) {
       </Card>
     </motion.div>
   );
-} 
+}

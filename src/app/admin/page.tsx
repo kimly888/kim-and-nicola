@@ -1,5 +1,5 @@
-import { MainLayout } from '@/components/layout/MainLayout';
-import { AdminDashboard } from '@/components/admin/AdminDashboard';
+import { MainLayout } from "@/components/layout/MainLayout";
+import { AdminDashboard } from "@/components/admin/AdminDashboard";
 
 export default function AdminPage() {
   return (
@@ -10,4 +10,4 @@ export default function AdminPage() {
       </div>
     </MainLayout>
   );
-} 
+}

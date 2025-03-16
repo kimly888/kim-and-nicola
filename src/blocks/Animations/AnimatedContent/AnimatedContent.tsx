@@ -18,7 +18,7 @@ interface AnimatedContentProps {
   delay?: number;
 }
 
-const AnimatedDiv = animated('div')
+const AnimatedDiv = animated("div");
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
   children,
@@ -48,7 +48,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
           }, delay);
         }
       },
-      { threshold },
+      { threshold }
     );
 
     observer.observe(element);

@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { useAnimationOnScroll } from '@/hooks/useAnimationOnScroll';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { fadeIn, staggerContainer } from '@/lib/animations';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { fadeIn, staggerContainer } from "@/lib/animations";
 
 interface GallerySectionProps {
   images: {
@@ -21,7 +21,7 @@ export function GallerySection({ images }: GallerySectionProps) {
     threshold: 0.1,
     triggerOnce: true,
   });
-  
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -47,9 +47,9 @@ export function GallerySection({ images }: GallerySectionProps) {
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
         >
           {images.map((image, index) => (
-            <GalleryItem 
-              key={index} 
-              image={image} 
+            <GalleryItem
+              key={index}
+              image={image}
               index={index}
               onClick={() => setSelectedImage(image.src)}
             />
@@ -68,12 +68,7 @@ export function GallerySection({ images }: GallerySectionProps) {
                 transition={{ duration: 0.3 }}
                 className="relative w-full aspect-[3/2] overflow-hidden rounded-lg"
               >
-                <Image
-                  src={selectedImage}
-                  alt="Gallery image"
-                  fill
-                  className="object-cover"
-                />
+                <Image src={selectedImage} alt="Gallery image" fill className="object-cover" />
               </motion.div>
             )}
           </AnimatePresence>
@@ -111,21 +106,21 @@ function GalleryItem({ image, index, onClick }: GalleryItemProps) {
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-110"
       />
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         className="absolute inset-0 bg-black/30 flex items-center justify-center"
       >
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="white" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
           strokeLinejoin="round"
         >
           <circle cx="11" cy="11" r="8" />
@@ -136,4 +131,4 @@ function GalleryItem({ image, index, onClick }: GalleryItemProps) {
       </motion.div>
     </motion.div>
   );
-} 
+}

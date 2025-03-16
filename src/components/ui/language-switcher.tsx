@@ -1,14 +1,8 @@
 "use client";
 
-import {usePathname} from "next/navigation";
-import {i18n} from "@/i18n-config";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./select";
+import { usePathname } from "next/navigation";
+import { i18n } from "@/i18n-config";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 
 // Define flag emojis for each locale
 const flagEmojis: Record<string, string> = {

@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import {motion} from "framer-motion";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import LanguageSwitcher from "@/components/ui/language-switcher";
-import {Dictionary} from "@/dictionaries";
+import { Dictionary } from "@/dictionaries";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,7 +15,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 interface HeaderProps {
   transparent?: boolean;
@@ -28,7 +28,7 @@ interface NavItem {
   content?: ReactNode;
 }
 
-export function Header({transparent = false, dictionary}: HeaderProps) {
+export function Header({ transparent = false, dictionary }: HeaderProps) {
   // Navigation items defined as a constant
   const navItems: NavItem[] = [
     {
@@ -37,21 +37,15 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
       content: (
         <div className="p-4 w-[350px] md:w-[400px] lg:w-[500px]">
           <div className="mb-3">
-            <h4 className="text-sm font-medium mb-1">
-              {dictionary?.story.title || "Our Story"}
-            </h4>
+            <h4 className="text-sm font-medium mb-1">{dictionary?.story.title || "Our Story"}</h4>
             <p className="text-xs text-muted-foreground mb-3">
-              The journey that brought us together and led us to this special
-              day.
+              The journey that brought us together and led us to this special day.
             </p>
           </div>
 
           <div className="grid gap-3">
             {/* How We Met Section */}
-            <Link
-              href="/#story-0"
-              className="group block p-2 rounded-md hover:bg-muted"
-            >
+            <Link href="/#story-0" className="group block p-2 rounded-md hover:bg-muted">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium text-sm">
                   1
@@ -68,10 +62,7 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
             </Link>
 
             {/* First Date Section */}
-            <Link
-              href="/#story-1"
-              className="group block p-2 rounded-md hover:bg-muted"
-            >
+            <Link href="/#story-1" className="group block p-2 rounded-md hover:bg-muted">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium text-sm">
                   2
@@ -88,10 +79,7 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
             </Link>
 
             {/* Proposal Section */}
-            <Link
-              href="/#story"
-              className="group block p-2 rounded-md hover:bg-muted"
-            >
+            <Link href="/#story" className="group block p-2 rounded-md hover:bg-muted">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-medium text-sm">
                   3
@@ -126,14 +114,12 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
 
   return (
     <motion.header
-      initial={{y: -100, opacity: 0}}
-      animate={{y: 0, opacity: 1}}
-      transition={{duration: 0.5, ease: "easeOut"}}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12",
-        transparent
-          ? "bg-transparent"
-          : "bg-background/80 backdrop-blur-md border-b"
+        transparent ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b"
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
@@ -148,18 +134,11 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
               <NavigationMenuItem key={index}>
                 {item.content ? (
                   <>
-                    <NavigationMenuTrigger>
-                      {item.label(dictionary)}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      {item.content}
-                    </NavigationMenuContent>
+                    <NavigationMenuTrigger>{item.label(dictionary)}</NavigationMenuTrigger>
+                    <NavigationMenuContent>{item.content}</NavigationMenuContent>
                   </>
                 ) : (
-                  <NavigationMenuLink
-                    href={item.href}
-                    className={navigationMenuTriggerStyle()}
-                  >
+                  <NavigationMenuLink href={item.href} className={navigationMenuTriggerStyle()}>
                     {item.label(dictionary)}
                   </NavigationMenuLink>
                 )}
@@ -169,9 +148,7 @@ export function Header({transparent = false, dictionary}: HeaderProps) {
         </NavigationMenu>
 
         <div className="hidden md:flex items-center space-x-4">
-          {dictionary?.languageSwitcher && (
-            <LanguageSwitcher dictionary={dictionary} />
-          )}
+          {dictionary?.languageSwitcher && <LanguageSwitcher dictionary={dictionary} />}
           <Button asChild variant="outline">
             <Link href="/#rsvp">{"RSVP"}</Link>
           </Button>

@@ -26,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={i18n.defaultLocale} className="scroll-smooth">
-      <body
-        className={`${playfair.variable} ${inter.variable} font-sans antialiased`}
-      >
+      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         <Toaster position="bottom-right" />
       </body>

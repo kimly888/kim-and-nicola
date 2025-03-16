@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, MutableRefObject } from 'react';
+import { useEffect, useState, useRef, MutableRefObject } from "react";
 
 interface UseAnimationOnScrollOptions {
   threshold?: number;
@@ -40,4 +40,4 @@ export function useAnimationOnScroll<T extends HTMLElement>(
   }, [threshold, triggerOnce]);
 
   return [ref, isVisible];
-} 
+}

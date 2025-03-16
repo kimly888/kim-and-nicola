@@ -1,8 +1,8 @@
 "use client";
 
-import {Header} from "./Header";
-import {Footer} from "./Footer";
-import {Dictionary} from "@/dictionaries";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { Dictionary } from "@/dictionaries";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -10,11 +10,7 @@ interface MainLayoutProps {
   dictionary?: Dictionary;
 }
 
-export function MainLayout({
-  children,
-  transparentHeader = false,
-  dictionary,
-}: MainLayoutProps) {
+export function MainLayout({ children, transparentHeader = false, dictionary }: MainLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header transparent={transparentHeader} dictionary={dictionary} />
