@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 
 interface GallerySectionProps {
@@ -58,6 +58,7 @@ export function GallerySection({ images }: GallerySectionProps) {
       </div>
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogTitle></DialogTitle>
         <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
           <AnimatePresence>
             {selectedImage && (
