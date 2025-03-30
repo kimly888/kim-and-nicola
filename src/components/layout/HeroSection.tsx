@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { fadeIn, slideUp, textReveal } from "@/lib/animations";
+import { fadeIn } from "@/lib/animations";
+import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 
 interface HeroSectionProps {
   title: string;
@@ -50,26 +51,37 @@ export function HeroSection({
         animate="visible"
         className="relative z-10 text-center text-white px-4 max-w-3xl"
       >
-        <motion.p
-          variants={textReveal()}
+        <TextMaskAnimation
+          phrases={[subtitle]}
           className="text-lg md:text-xl font-light tracking-wider mb-4"
-        >
-          {subtitle}
-        </motion.p>
+          threshold={0.5}
+          delayMultiplier={0.1}
+        />
 
-        <motion.h1
-          variants={textReveal()}
+        <TextMaskAnimation
+          phrases={[title]}
           className="text-5xl md:text-7xl font-serif mb-6 tracking-wide"
-        >
-          {title}
-        </motion.h1>
+          threshold={0.5}
+          delayMultiplier={0.2}
+        />
 
         <motion.div variants={fadeIn(0.6)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
 
-        <motion.div variants={slideUp(0.8)} className="space-y-2 mb-10">
-          <p className="text-xl md:text-2xl font-light">{date}</p>
-          <p className="text-lg md:text-xl font-light">{location}</p>
-        </motion.div>
+        <div className="space-y-2 mb-10">
+          <TextMaskAnimation
+            phrases={[date]}
+            className="text-xl md:text-2xl font-light"
+            threshold={0.5}
+            delayMultiplier={0.15}
+          />
+
+          <TextMaskAnimation
+            phrases={[location]}
+            className="text-lg md:text-xl font-light"
+            threshold={0.5}
+            delayMultiplier={0.25}
+          />
+        </div>
 
         <motion.div variants={fadeIn(1)}>
           <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
