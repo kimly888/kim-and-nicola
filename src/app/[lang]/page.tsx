@@ -1,6 +1,5 @@
 import { MainLayout } from "@/components/layout/MainLayout";
 import { HeroSection } from "@/components/layout/HeroSection";
-import { StorySection } from "@/components/layout/StorySection";
 import { DetailsSection } from "@/components/layout/DetailsSection";
 import { GallerySection } from "@/components/layout/GallerySection";
 import { RSVPSection } from "@/components/layout/RSVPSection";
@@ -13,29 +12,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  // Sample story data
-  const stories = [
-    {
-      title: dictionary.story.howWeMet.title,
-      date: dictionary.story.howWeMet.date,
-      description: dictionary.story.howWeMet.description,
-      image: "/images/0016.jpg",
-    },
-    {
-      title: dictionary.story.firstDate.title,
-      date: dictionary.story.firstDate.date,
-      description: dictionary.story.firstDate.description,
-      image: "/images/0017.jpg",
-    },
-    {
-      title: dictionary.story.proposal.title,
-      date: dictionary.story.proposal.date,
-      description: dictionary.story.proposal.description,
-      image: "/images/0018.jpg",
-    },
-  ];
-
-  // Sample event details
   const events = [
     {
       title: dictionary.details.ceremony.title,
@@ -123,7 +99,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         location={dictionary.hero.location}
         backgroundImage="/images/1.jpg"
       />
-      <StorySection stories={stories} />
       <DetailsSection events={events} />
       <GallerySection images={GALLERY_IMAGES} />
       <RSVPSection />
