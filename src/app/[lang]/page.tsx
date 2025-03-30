@@ -6,6 +6,7 @@ import { GallerySection } from "@/components/layout/GallerySection";
 import { RSVPSection } from "@/components/layout/RSVPSection";
 import { getDictionary } from "@/dictionaries";
 import { Locale } from "@/i18n-config";
+import { GALLERY_IMAGES } from "@/lib/constants/images";
 
 export default async function Home({ params }: { params: Promise<{ lang: Locale }> }) {
   // Await the params object before destructuring
@@ -113,58 +114,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     },
   ];
 
-  // Sample gallery images
-  const galleryImages = [
-    {
-      src: "/images/0019.jpg",
-      alt: "Kim and Nicola at the beach",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0020.jpg",
-      alt: "Kim and Nicola hiking",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0021.jpg",
-      alt: "Kim and Nicola at a restaurant",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0022.jpg",
-      alt: "Kim and Nicola traveling",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0023.jpg",
-      alt: "Kim and Nicola at a concert",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0024.jpg",
-      alt: "Kim and Nicola at home",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0025.jpg",
-      alt: "Kim and Nicola with friends",
-      width: 800,
-      height: 800,
-    },
-    {
-      src: "/images/0026.jpg",
-      alt: "Kim and Nicola engagement photo",
-      width: 800,
-      height: 800,
-    },
-  ];
-
   return (
     <MainLayout transparentHeader={true} dictionary={dictionary}>
       <HeroSection
@@ -172,11 +121,11 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         subtitle={dictionary.hero.subtitle}
         date={dictionary.hero.date}
         location={dictionary.hero.location}
-        backgroundImage="/images/0021.jpg"
+        backgroundImage="/images/1.jpg"
       />
       <StorySection stories={stories} />
       <DetailsSection events={events} />
-      <GallerySection images={galleryImages} />
+      <GallerySection images={GALLERY_IMAGES} />
       <RSVPSection />
     </MainLayout>
   );
