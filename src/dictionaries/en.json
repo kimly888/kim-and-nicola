@@ -8,9 +8,9 @@
   },
   "hero": {
     "title": "Kim & Nicola",
-    "subtitle": "WE'RE GETTING MARRIED",
+    "subtitle": "Are getting married!",
     "date": "January 5, 2026",
-    "location": "Worfield, Bridgnorth WV15 5LE, United Kingdom"
+    "location": "Davenport House, Worfield, UK"
   },
   "story": {
     "title": "Our Story",
@@ -41,7 +41,7 @@
       "items": [
         {
           "time": "11:30 - 12:30",
-          "event": "Arrival party, check-ins, tea and coffees"
+          "event": "Arrival party, check ins, tea and coffees"
         },
         {
           "time": "12:30 - 13:00",
@@ -74,10 +74,10 @@
       ]
     },
     "attire": {
-      "title": "Attire Guidelines",
+      "title": "Attire",
       "note": "Please keep in mind January is wintertime in the UK. Although inside the venue will be very warm and comfortable, please bring additional clothing to keep warm during your traveling.",
       "women": {
-        "title": "Women - Semi-Formal / Cocktail Attire",
+        "title": "Women",
         "guidelines": [
           "Floor length, Midi or knee-length dress, suits ok, or sophisticated skirt and blouse combo",
           "Heels, dressy sandals, or stylish flats"
@@ -85,7 +85,7 @@
         "note": "We kindly ask our guests to please avoid white, cream or ivory block color outfits."
       },
       "men": {
-        "title": "Men - Semi-Formal / Cocktail Attire",
+        "title": "Men",
         "guidelines": [
           "Dark or neutral-colored suit (navy, charcoal, or grey)",
           "Dress shirt (white or light-colored)",
@@ -96,15 +96,15 @@
     },
     "accommodation": {
       "title": "Accommodation",
-      "description": "Coming soon"
+      "description": "Davenport house can accommodate up to 40 guests over 9 bedrooms and 3 cottages. We have booked these rooms and offer them at a discounted rate to our guests. Priority will be given to those who have flown from overseas and wedding party. There are also a selection of local hotels available for those who would like some freedom in their choice of room. Please let us know your accommodation needs and we will arrange a room for you."
     },
     "travel": {
       "title": "Travel",
-      "description": "Coming soon"
+      "description": "For those joining us from abroad: The closest airport is Birmingham Airport (BHX). From here, it's about 45 minutes to Worfield by car or taxi. Alternatively, you can take a train from Birmingham new street station which is about 30 minutes. Those flying into London Heathrow Airport: Worfield is about 220 kilometers away. You can rent a car for a drive of approximately 2 hours and 30 minutes, or take a train from London to Wolverhampton, followed by a taxi to Worfield."
     },
     "gifts": {
       "title": "Gifts",
-      "description": "Coming soon"
+      "description": "Your presence at our wedding is the greatest gift we could ask for! As we're celebrating abroad and won't be able to take physical gifts home, if you'd like to give a gift, an optional financial contribution towards our future together would be truly appreciated. But most of all, we're just grateful to celebrate this special day with you!"
     }
   },
   "gallery": {

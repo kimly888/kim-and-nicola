@@ -8,9 +8,9 @@
   },
   "hero": {
     "title": "Kim & Nicola",
-    "subtitle": "¡NOS CASAMOS!",
-    "date": "5 de enero de 2026",
-    "location": "Worfield, Bridgnorth WV15 5LE, Reino Unido"
+    "subtitle": "¡Se casan!",
+    "date": "Enero 2025",
+    "location": "Davenport House, Worfield, Reino Unido"
   },
   "story": {
     "title": "Nuestra Historia",
@@ -33,15 +33,15 @@
   "details": {
     "title": "Detalles del Evento",
     "welcome": {
-      "title": "Bienvenidos",
-      "message": "Nos alegra que hayas recibido nuestra invitación. ¡Estamos muy emocionados de invitarte a celebrar nuestro día especial con nosotros, nuestra familia y nuestros amigos más cercanos! Aquí hemos reunido todos los detalles importantes para hacer que tu experiencia sea lo más agradable posible. Encontrarás información sobre el lugar, el programa, el transporte, el alojamiento y todo lo que puedas necesitar para planificar tu viaje. ¡Estamos ansiosos por crear hermosos recuerdos con todos ustedes en Inglaterra!"
+      "title": "Bienvenida",
+      "message": "Nos alegra que hayas recibido nuestra invitación. ¡Estamos muy emocionadas de invitarte a celebrar nuestro día especial con nosotras, nuestra familia y nuestros amigos más cercanos! Aquí hemos reunido todos los detalles importantes para hacer tu experiencia lo más agradable y placentera posible. Encontrarás información sobre el lugar, el horario, el transporte, el alojamiento y todo lo que puedas necesitar para planificar tu viaje. ¡No podemos esperar para crear hermosos recuerdos con todos ustedes en Inglaterra!"
     },
     "schedule": {
-      "title": "Programa",
+      "title": "Horario",
       "items": [
         {
           "time": "11:30 - 12:30",
-          "event": "Llegada de invitados, registro, té y café"
+          "event": "Llegada, registro, té y café"
         },
         {
           "time": "12:30 - 13:00",
@@ -57,11 +57,11 @@
         },
         {
           "time": "14:30 - 14:45",
-          "event": "Transición al almuerzo de bodas"
+          "event": "Transición al desayuno de bodas"
         },
         {
           "time": "14:45",
-          "event": "Entrada de los novios y comienzo de los discursos"
+          "event": "Entrada de las novias y comienzo de los discursos"
         },
         {
           "time": "15:15",
@@ -74,18 +74,18 @@
       ]
     },
     "attire": {
-      "title": "Código de Vestimenta",
-      "note": "Ten en cuenta que enero es invierno en el Reino Unido. Aunque el interior del lugar será muy cálido y confortable, por favor trae ropa adicional para mantenerte abrigado durante tus desplazamientos.",
+      "title": "Vestimenta",
+      "note": "Ten en cuenta que enero es invierno en el Reino Unido. Aunque el interior del lugar será muy cálido y confortable, por favor trae ropa adicional para mantenerte abrigado durante los traslados.",
       "women": {
-        "title": "Mujeres - Vestimenta Semi-Formal / Cóctel",
+        "title": "Mujeres",
         "guidelines": [
-          "Vestido largo, midi o hasta la rodilla, trajes permitidos, o conjunto sofisticado de falda y blusa",
+          "Vestido largo, midi o hasta la rodilla, traje formal aceptable, o conjunto sofisticado de falda y blusa",
           "Tacones, sandalias de vestir o zapatos planos elegantes"
         ],
-        "note": "Pedimos amablemente a nuestros invitados que eviten atuendos completamente blancos, crema o marfil."
+        "note": "Pedimos amablemente a nuestros invitados que eviten usar atuendos de color blanco, crema o marfil liso."
       },
       "men": {
-        "title": "Hombres - Vestimenta Semi-Formal / Cóctel",
+        "title": "Hombres",
         "guidelines": [
           "Traje de color oscuro o neutro (azul marino, gris marengo o gris)",
           "Camisa de vestir (blanca o de color claro)",
@@ -96,15 +96,15 @@
     },
     "accommodation": {
       "title": "Alojamiento",
-      "description": "Próximamente"
+      "description": "Davenport House puede alojar hasta 40 huéspedes en 9 habitaciones y 3 cabañas. Hemos reservado estas habitaciones y las ofrecemos a un precio con descuento para nuestros invitados. Se dará prioridad a aquellos que viajen desde el extranjero y a los miembros del cortejo nupcial. También hay una selección de hoteles locales disponibles para aquellos que deseen más libertad en su elección de habitación. Por favor, háznos saber tus necesidades de alojamiento y organizaremos una habitación para ti."
     },
     "travel": {
       "title": "Transporte",
-      "description": "Próximamente"
+      "description": "Para aquellos que se unen desde el extranjero: El aeropuerto más cercano es el Aeropuerto de Birmingham (BHX). Desde allí, son aproximadamente 45 minutos hasta Worfield en coche o taxi. Alternativamente, puedes tomar un tren desde la estación Birmingham New Street, que está a unos 30 minutos. Para aquellos que vuelen al Aeropuerto de Londres Heathrow: Worfield está a unos 220 kilómetros. Puedes alquilar un coche para un viaje de aproximadamente 2 horas y 30 minutos, o tomar un tren desde Londres a Wolverhampton, seguido de un taxi a Worfield."
     },
     "gifts": {
       "title": "Regalos",
-      "description": "Próximamente"
+      "description": "¡Tu presencia en nuestra boda es el mayor regalo que podríamos pedir! Como estamos celebrando en el extranjero y no podremos llevar regalos físicos a casa, si deseas hacer un regalo, agradeceríamos una contribución financiera opcional para nuestro futuro juntas. Pero sobre todo, ¡estamos agradecidas de celebrar este día especial contigo!"
     }
   },
   "gallery": {

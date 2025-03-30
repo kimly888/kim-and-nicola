@@ -8,9 +8,9 @@
   },
   "hero": {
     "title": "Kim & Nicola",
-    "subtitle": "RYDYM YN PRIODI",
-    "date": "5ed o Ionawr 2026",
-    "location": "Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig"
+    "subtitle": "Yn priodi!",
+    "date": "Ionawr 2025",
+    "location": "Davenport House, Worfield, DU"
   },
   "story": {
     "title": "Ein Stori",
@@ -34,7 +34,7 @@
     "title": "Manylion y Digwyddiad",
     "welcome": {
       "title": "Croeso",
-      "message": "Rydym yn falch eich bod wedi derbyn ein gwahoddiad. Rydym mor gyffrous i'ch gwahodd i ddathlu ein diwrnod arbennig gyda ni, ein teulu a'n ffrindiau agosaf! Yma rydym wedi rhoi at ei gilydd yr holl fanylion pwysig i wneud eich profiad mor hwylus a phleserus â phosibl. Fe welwch wybodaeth am y lleoliad, yr amserlen, teithio, llety, ac unrhyw beth arall y gallech ei angen i gynllunio'ch taith. Ni allwn aros i greu atgofion hardd gyda chi i gyd yn Lloegr!"
+      "message": "Rydym yn falch eich bod wedi derbyn ein gwahoddiad. Rydym mor gyffrous i'ch gwahodd i ddathlu ein diwrnod arbennig gyda ni, ein teulu a'n ffrindiau agosaf! Rydym wedi casglu'r holl fanylion pwysig yma i wneud eich profiad mor hwylus a phleserus â phosibl. Fe welwch wybodaeth am y lleoliad, yr amserlen, teithio, llety, ac unrhyw beth arall y gallech ei angen i gynllunio'ch taith. Ni allwn aros i greu atgofion hardd gyda chi i gyd yn Lloegr!"
     },
     "schedule": {
       "title": "Amserlen",
@@ -49,11 +49,11 @@
         },
         {
           "time": "13:00 - 13:30",
-          "event": "Symud i'r awr goctêl"
+          "event": "Symud i'r awr goctels"
         },
         {
           "time": "13:30 - 14:30",
-          "event": "Awr goctêl, cymysgu, lluniau"
+          "event": "Awr goctels, cymdeithasu, lluniau"
         },
         {
           "time": "14:30 - 14:45",
@@ -61,7 +61,7 @@
         },
         {
           "time": "14:45",
-          "event": "Mynediad y briod a'r priodfab ac areithiau'n dechrau"
+          "event": "Mynediad y briodferch a'r priodfab ac areithiau'n dechrau"
         },
         {
           "time": "15:15",
@@ -69,42 +69,42 @@
         },
         {
           "time": "18:00",
-          "event": "Symud i'r derbyniad/parti"
+          "event": "Symud i'r derbyniad/parti hwyr"
         }
       ]
     },
     "attire": {
-      "title": "Canllawiau Gwisg",
-      "note": "Cofiwch mai gaeaf yw hi yn y DU ym mis Ionawr. Er y bydd y tu mewn i'r lleoliad yn gynnes ac yn gyfforddus iawn, dewch â dillad ychwanegol i gadw'n gynnes wrth deithio.",
+      "title": "Gwisg",
+      "note": "Cofiwch mai gaeaf yw hi yn y DU ym mis Ionawr. Er y bydd y lleoliad yn gynnes a chyfforddus y tu mewn, dewch â dillad ychwanegol i gadw'n gynnes wrth deithio.",
       "women": {
-        "title": "Menywod - Gwisg Lled-Ffurfiol / Coctêl",
+        "title": "Menywod",
         "guidelines": [
-          "Gwisg hir, canolig neu hyd pen-glin, siwt yn iawn, neu gyfuniad soffistigedig o sgert a blows",
+          "Gwisg hir, canolig neu hyd pen-glin, siwt yn dderbyniol, neu gyfuniad sgert a blows soffistigedig",
           "Sodlau uchel, sandalau smart, neu esgidiau fflat smart"
         ],
-        "note": "Gofynnwn yn garedig i'n gwesteion osgoi gwisgoedd lliw gwyn, hufen neu ifori llawn."
+        "note": "Gofynnwn yn garedig i'n gwesteion osgoi gwisgo dillad gwyn, hufen neu ifori plaen."
       },
       "men": {
-        "title": "Dynion - Gwisg Lled-Ffurfiol / Coctêl",
+        "title": "Dynion",
         "guidelines": [
-          "Siwt lliw tywyll neu niwtral (glas tywyll, llwyd tywyll, neu lwyd)",
+          "Siwt lliw tywyll neu niwtral (glas tywyll, siarcol, neu lwyd)",
           "Crys ffurfiol (gwyn neu liw golau)",
-          "Tei neu bow-tei",
-          "Esgidiau ffurfiol (Oxford, Derby, neu loafers)"
+          "Tei neu fow-dei",
+          "Esgidiau ffurfiol (Rhydychen, Derby, neu loafers)"
         ]
       }
     },
     "accommodation": {
       "title": "Llety",
-      "description": "Yn dod yn fuan"
+      "description": "Gall Davenport House letya hyd at 40 o westeion mewn 9 ystafell wely a 3 bwthyn. Rydym wedi archebu'r ystafelloedd hyn ac yn eu cynnig am bris gostyngol i'n gwesteion. Bydd blaenoriaeth yn cael ei roi i'r rhai sy'n hedfan o dramor a pharti'r briodas. Mae hefyd dewis o westai lleol ar gael i'r rhai a fyddai'n hoffi mwy o ryddid yn eu dewis o ystafell. Rhowch wybod i ni beth yw'ch anghenion llety a byddwn yn trefnu ystafell i chi."
     },
     "travel": {
       "title": "Teithio",
-      "description": "Yn dod yn fuan"
+      "description": "I'r rhai sy'n ymuno â ni o dramor: Y maes awyr agosaf yw Maes Awyr Birmingham (BHX). O fan hyn, mae'n cymryd tua 45 munud i Worfield mewn car neu dacsi. Fel arall, gallwch gymryd trên o orsaf Birmingham New Street sydd tua 30 munud i ffwrdd. Y rhai sy'n hedfan i Faes Awyr Heathrow Llundain: Mae Worfield tua 220 cilomedr i ffwrdd. Gallwch logi car am daith o tua 2 awr a 30 munud, neu gymryd trên o Lundain i Wolverhampton, ac yna dacsi i Worfield."
     },
     "gifts": {
       "title": "Anrhegion",
-      "description": "Yn dod yn fuan"
+      "description": "Eich presenoldeb yn ein priodas yw'r anrheg fwyaf y gallem ofyn amdani! Gan ein bod yn dathlu dramor ac ni fyddwn yn gallu cymryd anrhegion corfforol adref, os hoffech roi anrheg, byddem yn gwerthfawrogi cyfraniad ariannol dewisol tuag at ein dyfodol gyda'n gilydd. Ond yn bennaf oll, rydym yn ddiolchgar am gael dathlu'r diwrnod arbennig hwn gyda chi!"
     }
   },
   "gallery": {

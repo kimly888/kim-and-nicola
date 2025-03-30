@@ -8,9 +8,9 @@
   },
   "hero": {
     "title": "Kim & Nicola",
-    "subtitle": "NOUS NOUS MARIONS",
-    "date": "5 janvier 2026",
-    "location": "Worfield, Bridgnorth WV15 5LE, Royaume-Uni"
+    "subtitle": "Se marient !",
+    "date": "Janvier 2025",
+    "location": "Davenport House, Worfield, Royaume-Uni"
   },
   "story": {
     "title": "Notre Histoire",
@@ -34,14 +34,14 @@
     "title": "Détails de l'Événement",
     "welcome": {
       "title": "Bienvenue",
-      "message": "Nous sommes ravis que vous ayez reçu notre invitation. Nous sommes très heureux de vous inviter à célébrer notre journée spéciale avec nous, notre famille et nos amis les plus proches ! Nous avons rassemblé ici tous les détails importants pour rendre votre expérience aussi agréable que possible. Vous trouverez des informations sur le lieu, le programme, le transport, l'hébergement et tout ce dont vous pourriez avoir besoin pour planifier votre voyage. Nous avons hâte de créer de beaux souvenirs avec vous tous en Angleterre !"
+      "message": "Nous sommes ravis que vous ayez reçu notre invitation. Nous sommes tellement heureux de vous inviter à célébrer notre jour spécial avec nous, notre famille et nos amis les plus proches ! Nous avons rassemblé ici tous les détails importants pour rendre votre expérience aussi agréable que possible. Vous trouverez des informations sur le lieu, le programme, le transport, l'hébergement et tout ce dont vous pourriez avoir besoin pour planifier votre voyage. Nous avons hâte de créer de beaux souvenirs avec vous tous en Angleterre !"
     },
     "schedule": {
       "title": "Programme",
       "items": [
         {
           "time": "11h30 - 12h30",
-          "event": "Arrivée des invités, enregistrement, thé et café"
+          "event": "Accueil des invités, enregistrement, thé et café"
         },
         {
           "time": "12h30 - 13h00",
@@ -74,37 +74,37 @@
       ]
     },
     "attire": {
-      "title": "Code Vestimentaire",
-      "note": "N'oubliez pas que janvier est la période hivernale au Royaume-Uni. Bien que l'intérieur du lieu soit très chaleureux et confortable, pensez à apporter des vêtements supplémentaires pour vous tenir chaud pendant vos déplacements.",
+      "title": "Tenue",
+      "note": "N'oubliez pas que janvier est la période hivernale au Royaume-Uni. Bien que l'intérieur du lieu soit très chaud et confortable, veuillez prévoir des vêtements supplémentaires pour vous tenir chaud pendant vos déplacements.",
       "women": {
-        "title": "Femmes - Tenue de Cocktail / Semi-Formelle",
+        "title": "Femmes",
         "guidelines": [
-          "Robe longue, mi-longue ou aux genoux, tailleur accepté, ou ensemble jupe-chemisier sophistiqué",
+          "Robe longue, mi-longue ou aux genoux, tailleur accepté, ou ensemble jupe et chemisier sophistiqué",
           "Talons hauts, sandales habillées ou ballerines élégantes"
         ],
-        "note": "Nous demandons aimablement à nos invités d'éviter les tenues entièrement blanches, crème ou ivoire."
+        "note": "Nous demandons gentiment à nos invités d'éviter les tenues de couleur unie blanche, crème ou ivoire."
       },
       "men": {
-        "title": "Hommes - Tenue de Cocktail / Semi-Formelle",
+        "title": "Hommes",
         "guidelines": [
-          "Costume de couleur sombre ou neutre (bleu marine, gris anthracite ou gris)",
+          "Costume de couleur sombre ou neutre (bleu marine, anthracite ou gris)",
           "Chemise habillée (blanche ou de couleur claire)",
           "Cravate ou nœud papillon",
-          "Chaussures de ville (Richelieu, Derby ou mocassins)"
+          "Chaussures habillées (Richelieu, Derby ou mocassins)"
         ]
       }
     },
     "accommodation": {
       "title": "Hébergement",
-      "description": "À venir"
+      "description": "Davenport House peut accueillir jusqu'à 40 invités répartis dans 9 chambres et 3 cottages. Nous avons réservé ces chambres et les proposons à un tarif préférentiel à nos invités. La priorité sera donnée aux personnes venant de l'étranger et aux membres du cortège. Il existe également une sélection d'hôtels locaux pour ceux qui souhaitent plus de liberté dans leur choix de chambre. Veuillez nous faire part de vos besoins en hébergement et nous nous chargerons d'organiser votre séjour."
     },
     "travel": {
       "title": "Transport",
-      "description": "À venir"
+      "description": "Pour ceux qui viennent de l'étranger : L'aéroport le plus proche est l'aéroport de Birmingham (BHX). De là, il faut environ 45 minutes pour rejoindre Worfield en voiture ou en taxi. Vous pouvez également prendre un train depuis la gare de Birmingham New Street, qui se trouve à environ 30 minutes. Pour ceux qui atterrissent à l'aéroport de Londres Heathrow : Worfield se trouve à environ 220 kilomètres. Vous pouvez louer une voiture pour un trajet d'environ 2 heures et 30 minutes, ou prendre un train de Londres à Wolverhampton, puis un taxi jusqu'à Worfield."
     },
     "gifts": {
       "title": "Cadeaux",
-      "description": "À venir"
+      "description": "Votre présence à notre mariage est le plus beau cadeau que nous puissions recevoir ! Comme nous célébrons notre mariage à l'étranger et que nous ne pourrons pas ramener de cadeaux physiques, si vous souhaitez nous offrir quelque chose, une contribution financière optionnelle pour notre avenir ensemble serait vraiment appréciée. Mais surtout, nous sommes simplement reconnaissants de célébrer ce jour spécial avec vous !"
     }
   },
   "gallery": {
