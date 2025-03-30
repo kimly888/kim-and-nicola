@@ -32,26 +32,79 @@
   },
   "details": {
     "title": "Event Details",
-    "ceremony": {
-      "title": "Ceremony",
-      "date": "Sunday, January 5, 2026",
-      "time": "3:00 PM - 4:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, United Kingdom",
-      "description": "Join us as we exchange vows and begin our journey together as a married couple."
+    "welcome": {
+      "title": "Welcome",
+      "message": "We're pleased you received our invitation. We are so excited to invite you to celebrate our special day with us, our family and our closest friends! Here we've put together all the important details to help make your experience as smooth and enjoyable as possible. You'll find information about the venue, schedule, travel, accommodation, and anything else you might need to plan your trip. We can't wait to create beautiful memories with all of you in England!"
     },
-    "reception": {
-      "title": "Reception",
-      "date": "Sunday, January 5, 2026",
-      "time": "5:00 PM - 11:00 PM",
-      "location": "Worfield, Bridgnorth WV15 5LE, United Kingdom",
-      "description": "Celebrate with us with dinner, dancing, and festivities throughout the evening."
+    "schedule": {
+      "title": "Schedule",
+      "items": [
+        {
+          "time": "11:30 - 12:30",
+          "event": "Arrival party, check-ins, tea and coffees"
+        },
+        {
+          "time": "12:30 - 13:00",
+          "event": "Ceremony"
+        },
+        {
+          "time": "13:00 - 13:30",
+          "event": "Transition to cocktail hour"
+        },
+        {
+          "time": "13:30 - 14:30",
+          "event": "Cocktail hour, mingling, photos"
+        },
+        {
+          "time": "14:30 - 14:45",
+          "event": "Wedding breakfast transition"
+        },
+        {
+          "time": "14:45",
+          "event": "Bride and groom entrance and speeches commence"
+        },
+        {
+          "time": "15:15",
+          "event": "Food is served"
+        },
+        {
+          "time": "18:00",
+          "event": "Transition to reception/after party"
+        }
+      ]
     },
-    "farewell": {
-      "title": "Farewell Brunch",
-      "date": "Monday, January 6, 2026",
-      "time": "10:00 AM - 1:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, United Kingdom",
-      "description": "Join us for a casual brunch to say goodbye before we depart for our honeymoon."
+    "attire": {
+      "title": "Attire Guidelines",
+      "note": "Please keep in mind January is wintertime in the UK. Although inside the venue will be very warm and comfortable, please bring additional clothing to keep warm during your traveling.",
+      "women": {
+        "title": "Women - Semi-Formal / Cocktail Attire",
+        "guidelines": [
+          "Floor length, Midi or knee-length dress, suits ok, or sophisticated skirt and blouse combo",
+          "Heels, dressy sandals, or stylish flats"
+        ],
+        "note": "We kindly ask our guests to please avoid white, cream or ivory block color outfits."
+      },
+      "men": {
+        "title": "Men - Semi-Formal / Cocktail Attire",
+        "guidelines": [
+          "Dark or neutral-colored suit (navy, charcoal, or grey)",
+          "Dress shirt (white or light-colored)",
+          "Tie or bow tie",
+          "Dress shoes (Oxfords, Derbies, or loafers)"
+        ]
+      }
+    },
+    "accommodation": {
+      "title": "Accommodation",
+      "description": "Coming soon"
+    },
+    "travel": {
+      "title": "Travel",
+      "description": "Coming soon"
+    },
+    "gifts": {
+      "title": "Gifts",
+      "description": "Coming soon"
     }
   },
   "gallery": {

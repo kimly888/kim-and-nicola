@@ -3,20 +3,51 @@
 import { motion } from "framer-motion";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { fadeIn, staggerContainer } from "@/lib/animations";
+import { staggerContainer } from "@/lib/animations";
 
 interface DetailsSectionProps {
-  events: {
+  details: {
     title: string;
-    date: string;
-    time: string;
-    location: string;
-    description: string;
-    icon: React.ReactNode;
-  }[];
+    welcome: {
+      title: string;
+      message: string;
+    };
+    schedule: {
+      title: string;
+      items: {
+        time: string;
+        event: string;
+      }[];
+    };
+    attire: {
+      title: string;
+      note: string;
+      women: {
+        title: string;
+        guidelines: string[];
+        note: string;
+      };
+      men: {
+        title: string;
+        guidelines: string[];
+      };
+    };
+    accommodation: {
+      title: string;
+      description: string;
+    };
+    travel: {
+      title: string;
+      description: string;
+    };
+    gifts: {
+      title: string;
+      description: string;
+    };
+  };
 }
 
-export function DetailsSection({ events }: DetailsSectionProps) {
+export function DetailsSection({ details }: DetailsSectionProps) {
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
     threshold: 0.1,
     triggerOnce: true,
@@ -32,65 +63,84 @@ export function DetailsSection({ events }: DetailsSectionProps) {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">Event Details</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to know about our wedding day.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-serif mb-4">{details.title}</h2>
         </motion.div>
 
         <motion.div
           variants={staggerContainer(0.1)}
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 gap-8 max-w-4xl mx-auto"
         >
-          {events.map((event, index) => (
-            <EventCard key={index} event={event} index={index} />
+          {/* Welcome Section */}
+          <Card className="border-none shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl font-serif">{details.welcome.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{details.welcome.message}</p>
+            </CardContent>
+          </Card>
+
+          {/* Schedule Section */}
+          <Card className="border-none shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl font-serif">{details.schedule.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {details.schedule.items.map((item, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="font-medium min-w-[120px]">{item.time}</div>
+                    <div className="text-muted-foreground">{item.event}</div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Attire Section */}
+          <Card className="border-none shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl font-serif">{details.attire.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-serif">{details.attire.women.title}</h3>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  {details.attire.women.guidelines.map((guideline, index) => (
+                    <li key={index}>{guideline}</li>
+                  ))}
+                </ul>
+                <p className="text-muted-foreground italic">{details.attire.women.note}</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-serif">{details.attire.men.title}</h3>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  {details.attire.men.guidelines.map((guideline, index) => (
+                    <li key={index}>{guideline}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-muted-foreground mt-4">{details.attire.note}</p>
+            </CardContent>
+          </Card>
+
+          {/* Additional Information Cards */}
+          {[details.accommodation, details.travel, details.gifts].map((section, index) => (
+            <Card key={index} className="border-none shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl font-serif">{section.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{section.description}</p>
+              </CardContent>
+            </Card>
           ))}
         </motion.div>
       </div>
     </section>
-  );
-}
-
-interface EventCardProps {
-  event: {
-    title: string;
-    date: string;
-    time: string;
-    location: string;
-    description: string;
-    icon: React.ReactNode;
-  };
-  index: number;
-}
-
-function EventCard({ event, index }: EventCardProps) {
-  const [ref] = useAnimationOnScroll<HTMLDivElement>({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  return (
-    <motion.div ref={ref} variants={fadeIn(index * 0.1)} className="h-full">
-      <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <CardHeader className="pb-2">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 flex items-center justify-center text-primary">
-              {event.icon}
-            </div>
-            <CardTitle className="text-xl font-serif">{event.title}</CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-1">
-            <p className="text-sm font-medium">{event.date}</p>
-            <p className="text-sm text-muted-foreground">{event.time}</p>
-            <p className="text-sm text-muted-foreground">{event.location}</p>
-          </div>
-          <p className="text-muted-foreground text-sm">{event.description}</p>
-        </CardContent>
-      </Card>
-    </motion.div>
   );
 }

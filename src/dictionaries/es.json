@@ -8,8 +8,8 @@
   },
   "hero": {
     "title": "Kim & Nicola",
-    "subtitle": "NOS VAMOS A CASAR",
-    "date": "5 de Enero, 2026",
+    "subtitle": "¡NOS CASAMOS!",
+    "date": "5 de enero de 2026",
     "location": "Worfield, Bridgnorth WV15 5LE, Reino Unido"
   },
   "story": {
@@ -32,26 +32,79 @@
   },
   "details": {
     "title": "Detalles del Evento",
-    "ceremony": {
-      "title": "Ceremonia",
-      "date": "Domingo, 5 de Enero, 2026",
-      "time": "3:00 PM - 4:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Reino Unido",
-      "description": "Únete a nosotros mientras intercambiamos votos y comenzamos nuestro viaje juntos como pareja casada."
+    "welcome": {
+      "title": "Bienvenidos",
+      "message": "Nos alegra que hayas recibido nuestra invitación. ¡Estamos muy emocionados de invitarte a celebrar nuestro día especial con nosotros, nuestra familia y nuestros amigos más cercanos! Aquí hemos reunido todos los detalles importantes para hacer que tu experiencia sea lo más agradable posible. Encontrarás información sobre el lugar, el programa, el transporte, el alojamiento y todo lo que puedas necesitar para planificar tu viaje. ¡Estamos ansiosos por crear hermosos recuerdos con todos ustedes en Inglaterra!"
     },
-    "reception": {
-      "title": "Recepción",
-      "date": "Domingo, 5 de Enero, 2026",
-      "time": "5:00 PM - 11:00 PM",
-      "location": "Worfield, Bridgnorth WV15 5LE, Reino Unido",
-      "description": "Celebra con nosotros con cena, baile y festividades durante toda la noche."
+    "schedule": {
+      "title": "Programa",
+      "items": [
+        {
+          "time": "11:30 - 12:30",
+          "event": "Llegada de invitados, registro, té y café"
+        },
+        {
+          "time": "12:30 - 13:00",
+          "event": "Ceremonia"
+        },
+        {
+          "time": "13:00 - 13:30",
+          "event": "Transición a la hora del cóctel"
+        },
+        {
+          "time": "13:30 - 14:30",
+          "event": "Hora del cóctel, socialización, fotos"
+        },
+        {
+          "time": "14:30 - 14:45",
+          "event": "Transición al almuerzo de bodas"
+        },
+        {
+          "time": "14:45",
+          "event": "Entrada de los novios y comienzo de los discursos"
+        },
+        {
+          "time": "15:15",
+          "event": "Se sirve la comida"
+        },
+        {
+          "time": "18:00",
+          "event": "Transición a la recepción/fiesta"
+        }
+      ]
     },
-    "farewell": {
-      "title": "Brunch de Despedida",
-      "date": "Lunes, 6 de Enero, 2026",
-      "time": "10:00 AM - 1:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Reino Unido",
-      "description": "Únete a nosotros para un brunch informal para despedirnos antes de partir hacia nuestra luna de miel."
+    "attire": {
+      "title": "Código de Vestimenta",
+      "note": "Ten en cuenta que enero es invierno en el Reino Unido. Aunque el interior del lugar será muy cálido y confortable, por favor trae ropa adicional para mantenerte abrigado durante tus desplazamientos.",
+      "women": {
+        "title": "Mujeres - Vestimenta Semi-Formal / Cóctel",
+        "guidelines": [
+          "Vestido largo, midi o hasta la rodilla, trajes permitidos, o conjunto sofisticado de falda y blusa",
+          "Tacones, sandalias de vestir o zapatos planos elegantes"
+        ],
+        "note": "Pedimos amablemente a nuestros invitados que eviten atuendos completamente blancos, crema o marfil."
+      },
+      "men": {
+        "title": "Hombres - Vestimenta Semi-Formal / Cóctel",
+        "guidelines": [
+          "Traje de color oscuro o neutro (azul marino, gris marengo o gris)",
+          "Camisa de vestir (blanca o de color claro)",
+          "Corbata o pajarita",
+          "Zapatos de vestir (Oxford, Derby o mocasines)"
+        ]
+      }
+    },
+    "accommodation": {
+      "title": "Alojamiento",
+      "description": "Próximamente"
+    },
+    "travel": {
+      "title": "Transporte",
+      "description": "Próximamente"
+    },
+    "gifts": {
+      "title": "Regalos",
+      "description": "Próximamente"
     }
   },
   "gallery": {
@@ -60,16 +113,16 @@
   "rsvp": {
     "title": "RSVP",
     "subtitle": "¡Esperamos celebrar contigo!",
-    "deadline": "Por favor responde antes del 1 de Diciembre, 2025",
+    "deadline": "Por favor responde antes del 1 de diciembre de 2025",
     "form": {
       "name": "Nombre Completo",
       "email": "Correo Electrónico",
       "attending": "¿Asistirás?",
-      "yes": "Sí, estaré allí",
-      "no": "Lo siento, no puedo asistir",
+      "yes": "Sí, asistiré",
+      "no": "Lo siento, no podré asistir",
       "guests": "Número de Invitados",
       "dietaryRestrictions": "Restricciones Alimentarias",
-      "message": "Mensaje para la Pareja",
+      "message": "Mensaje para los Novios",
       "submit": "Enviar RSVP"
     },
     "confirmation": "¡Gracias por tu RSVP! Estamos ansiosos por celebrar contigo."
@@ -85,6 +138,6 @@
     "ja": "Japonés",
     "cy": "Galés",
     "es": "Español",
-    "pt-BR": "Portugués brasileño"
+    "pt-BR": "Portugués Brasileño"
   }
 } 

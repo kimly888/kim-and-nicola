@@ -9,7 +9,7 @@
   "hero": {
     "title": "Kim & Nicola",
     "subtitle": "RYDYM YN PRIODI",
-    "date": "Ionawr 5, 2026",
+    "date": "5ed o Ionawr 2026",
     "location": "Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig"
   },
   "story": {
@@ -32,26 +32,79 @@
   },
   "details": {
     "title": "Manylion y Digwyddiad",
-    "ceremony": {
-      "title": "Seremoni",
-      "date": "Dydd Sul, Ionawr 5, 2026",
-      "time": "3:00 PM - 4:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
-      "description": "Ymunwch â ni wrth i ni gyfnewid addunedau a dechrau ein taith gyda'n gilydd fel cwpl priod."
+    "welcome": {
+      "title": "Croeso",
+      "message": "Rydym yn falch eich bod wedi derbyn ein gwahoddiad. Rydym mor gyffrous i'ch gwahodd i ddathlu ein diwrnod arbennig gyda ni, ein teulu a'n ffrindiau agosaf! Yma rydym wedi rhoi at ei gilydd yr holl fanylion pwysig i wneud eich profiad mor hwylus a phleserus â phosibl. Fe welwch wybodaeth am y lleoliad, yr amserlen, teithio, llety, ac unrhyw beth arall y gallech ei angen i gynllunio'ch taith. Ni allwn aros i greu atgofion hardd gyda chi i gyd yn Lloegr!"
     },
-    "reception": {
-      "title": "Derbyniad",
-      "date": "Dydd Sul, Ionawr 5, 2026",
-      "time": "5:00 PM - 11:00 PM",
-      "location": "Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
-      "description": "Dathlwch gyda ni gyda swper, dawnsio, a dathliadau drwy gydol y noson."
+    "schedule": {
+      "title": "Amserlen",
+      "items": [
+        {
+          "time": "11:30 - 12:30",
+          "event": "Parti cyrraedd, cofrestru, te a choffi"
+        },
+        {
+          "time": "12:30 - 13:00",
+          "event": "Seremoni"
+        },
+        {
+          "time": "13:00 - 13:30",
+          "event": "Symud i'r awr goctêl"
+        },
+        {
+          "time": "13:30 - 14:30",
+          "event": "Awr goctêl, cymysgu, lluniau"
+        },
+        {
+          "time": "14:30 - 14:45",
+          "event": "Symud i frecwast y briodas"
+        },
+        {
+          "time": "14:45",
+          "event": "Mynediad y briod a'r priodfab ac areithiau'n dechrau"
+        },
+        {
+          "time": "15:15",
+          "event": "Gweinir y bwyd"
+        },
+        {
+          "time": "18:00",
+          "event": "Symud i'r derbyniad/parti"
+        }
+      ]
     },
-    "farewell": {
-      "title": "Brunch Ffarwél",
-      "date": "Dydd Llun, Ionawr 6, 2026",
-      "time": "10:00 AM - 1:00 PM",
-      "location": "Davenport House, Worfield, Bridgnorth WV15 5LE, Y Deyrnas Unedig",
-      "description": "Ymunwch â ni am frunch anffurfiol i ddweud hwyl fawr cyn i ni adael am ein mis mêl."
+    "attire": {
+      "title": "Canllawiau Gwisg",
+      "note": "Cofiwch mai gaeaf yw hi yn y DU ym mis Ionawr. Er y bydd y tu mewn i'r lleoliad yn gynnes ac yn gyfforddus iawn, dewch â dillad ychwanegol i gadw'n gynnes wrth deithio.",
+      "women": {
+        "title": "Menywod - Gwisg Lled-Ffurfiol / Coctêl",
+        "guidelines": [
+          "Gwisg hir, canolig neu hyd pen-glin, siwt yn iawn, neu gyfuniad soffistigedig o sgert a blows",
+          "Sodlau uchel, sandalau smart, neu esgidiau fflat smart"
+        ],
+        "note": "Gofynnwn yn garedig i'n gwesteion osgoi gwisgoedd lliw gwyn, hufen neu ifori llawn."
+      },
+      "men": {
+        "title": "Dynion - Gwisg Lled-Ffurfiol / Coctêl",
+        "guidelines": [
+          "Siwt lliw tywyll neu niwtral (glas tywyll, llwyd tywyll, neu lwyd)",
+          "Crys ffurfiol (gwyn neu liw golau)",
+          "Tei neu bow-tei",
+          "Esgidiau ffurfiol (Oxford, Derby, neu loafers)"
+        ]
+      }
+    },
+    "accommodation": {
+      "title": "Llety",
+      "description": "Yn dod yn fuan"
+    },
+    "travel": {
+      "title": "Teithio",
+      "description": "Yn dod yn fuan"
+    },
+    "gifts": {
+      "title": "Anrhegion",
+      "description": "Yn dod yn fuan"
     }
   },
   "gallery": {
@@ -59,17 +112,17 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Rydym yn edrych ymlaen at ddathlu gyda chi!",
-    "deadline": "Atebwch erbyn Rhagfyr 1, 2025 os gwelwch yn dda",
+    "subtitle": "Edrychwn ymlaen at ddathlu gyda chi!",
+    "deadline": "Atebwch erbyn Rhagfyr 1af 2025 os gwelwch yn dda",
     "form": {
       "name": "Enw Llawn",
       "email": "Cyfeiriad E-bost",
       "attending": "A fyddwch chi'n mynychu?",
-      "yes": "Ie, byddaf yno",
-      "no": "Mae'n ddrwg gennyf, ni allaf ei wneud",
+      "yes": "Ie, byddaf yn dod",
+      "no": "Mae'n ddrwg gennyf, ni allaf ddod",
       "guests": "Nifer o Westeion",
-      "dietaryRestrictions": "Cyfyngiadau Deietegol",
-      "message": "Neges i'r Cwpl",
+      "dietaryRestrictions": "Cyfyngiadau Deiet",
+      "message": "Neges i'r Pâr",
       "submit": "Cyflwyno RSVP"
     },
     "confirmation": "Diolch am eich RSVP! Ni allwn aros i ddathlu gyda chi."
