@@ -11,6 +11,7 @@ interface DetailsSectionProps {
     welcome: {
       title: string;
       message: string;
+      icon: React.ReactNode;
     };
     schedule: {
       title: string;
@@ -18,6 +19,7 @@ interface DetailsSectionProps {
         time: string;
         event: string;
       }[];
+      icon: React.ReactNode;
     };
     attire: {
       title: string;
@@ -31,18 +33,22 @@ interface DetailsSectionProps {
         title: string;
         guidelines: string[];
       };
+      icon: React.ReactNode;
     };
     accommodation: {
       title: string;
       description: string;
+      icon: React.ReactNode;
     };
     travel: {
       title: string;
       description: string;
+      icon: React.ReactNode;
     };
     gifts: {
       title: string;
       description: string;
+      icon: React.ReactNode;
     };
   };
 }
@@ -75,7 +81,12 @@ export function DetailsSection({ details }: DetailsSectionProps) {
           {/* Welcome Section */}
           <Card className="border-none shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-serif">{details.welcome.title}</CardTitle>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 flex items-center justify-center text-primary">
+                  {details.welcome.icon}
+                </div>
+                <CardTitle className="text-2xl font-serif">{details.welcome.title}</CardTitle>
+              </div>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">{details.welcome.message}</p>
@@ -85,7 +96,12 @@ export function DetailsSection({ details }: DetailsSectionProps) {
           {/* Schedule Section */}
           <Card className="border-none shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-serif">{details.schedule.title}</CardTitle>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 flex items-center justify-center text-primary">
+                  {details.schedule.icon}
+                </div>
+                <CardTitle className="text-2xl font-serif">{details.schedule.title}</CardTitle>
+              </div>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -102,7 +118,12 @@ export function DetailsSection({ details }: DetailsSectionProps) {
           {/* Attire Section */}
           <Card className="border-none shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-serif">{details.attire.title}</CardTitle>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 flex items-center justify-center text-primary">
+                  {details.attire.icon}
+                </div>
+                <CardTitle className="text-2xl font-serif">{details.attire.title}</CardTitle>
+              </div>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
@@ -132,7 +153,12 @@ export function DetailsSection({ details }: DetailsSectionProps) {
           {[details.accommodation, details.travel, details.gifts].map((section, index) => (
             <Card key={index} className="border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl font-serif">{section.title}</CardTitle>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 flex items-center justify-center text-primary">
+                    {section.icon}
+                  </div>
+                  <CardTitle className="text-2xl font-serif">{section.title}</CardTitle>
+                </div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{section.description}</p>
