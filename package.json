@@ -54,6 +54,7 @@
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.1.1",
     "prettier": "^3.5.3",
+    "sass": "^1.86.0",
     "shadcn": "^2.4.0-canary.14",
     "tailwindcss": "^4",
     "typescript": "^5"
