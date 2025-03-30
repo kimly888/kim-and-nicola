@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { fadeIn, staggerContainer } from "@/lib/animations";
+import ZoomParallax from "@/components/effects/ZoomParallax";
 
 interface GallerySectionProps {
   images: {
@@ -14,9 +15,17 @@ interface GallerySectionProps {
     width: number;
     height: number;
   }[];
+  title?: string;
+  description?: string;
+  useParallaxEffect?: boolean;
 }
 
-export function GallerySection({ images }: GallerySectionProps) {
+export function GallerySection({
+  images,
+  title = "Our Gallery",
+  description = "A collection of our favorite moments together.",
+  useParallaxEffect = false,
+}: GallerySectionProps) {
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
     threshold: 0.1,
     triggerOnce: true,
@@ -24,6 +33,38 @@ export function GallerySection({ images }: GallerySectionProps) {
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  // Limit to 7 images max for the parallax effect
+  const parallaxImages = images.slice(0, 7).map((img) => ({
+    src: img.src,
+    alt: img.alt,
+  }));
+
+  if (useParallaxEffect) {
+    return (
+      <>
+        {/* Parallax section */}
+        <section className="bg-muted/5">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              ref={ref}
+              className="text-center py-20"
+            >
+              <h2 className="text-3xl md:text-4xl font-serif mb-4">{title}</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
+            </motion.div>
+          </div>
+
+          {/* ZoomParallax effect - full width */}
+          <ZoomParallax images={parallaxImages} />
+        </section>
+      </>
+    );
+  }
+
+  // Original grid gallery
   return (
     <section id="gallery" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
@@ -34,10 +75,8 @@ export function GallerySection({ images }: GallerySectionProps) {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">Our Gallery</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of our favorite moments together.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-serif mb-4">{title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </motion.div>
 
         <motion.div

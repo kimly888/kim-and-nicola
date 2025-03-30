@@ -138,7 +138,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
         backgroundImage="/images/1.jpg"
       />
       <DetailsSection details={detailsWithIcons} />
-      <GallerySection images={GALLERY_IMAGES} />
+      <GallerySection images={GALLERY_IMAGES} useParallaxEffect/>
       <RSVPSection />
     </MainLayout>
   );
