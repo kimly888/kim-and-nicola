@@ -73,9 +73,9 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
-      animate={{ 
+      animate={{
         y: isVisible ? 0 : -100,
-        opacity: isVisible ? 1 : 0 
+        opacity: isVisible ? 1 : 0,
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={cn(
@@ -84,7 +84,10 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
       )}
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
-        <Link href="/" className="text-2xl font-serif tracking-wider">
+        <Link
+          href="/"
+          className={`${transparent && atTop ? "text-white" : "text-black"} text-2xl font-serif tracking-wider transition-colors duration-300`}
+        >
           {dictionary?.hero.title || "Kim & Nicola"}
         </Link>
 
