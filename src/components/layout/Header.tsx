@@ -47,7 +47,7 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
   //   },
   // ];
 
-  const scrollDirection = useScrollDirection();
+  const scrollDirection = useScrollDirection({ thresholdPixels: 400 });
   const [isVisible, setIsVisible] = useState(true);
   const [atTop, setAtTop] = useState(true);
 
