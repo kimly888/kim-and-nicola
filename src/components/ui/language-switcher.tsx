@@ -61,7 +61,7 @@ export default function LanguageSwitcher({
         <SelectValue placeholder="Select language">
           <div className="flex items-center gap-2">
             <span>{flagEmojis[currentLocale]}</span>
-            <span>{localeNames[currentLocale]}</span>
+            <span className="hidden sm:block">{localeNames[currentLocale]}</span>
           </div>
         </SelectValue>
       </SelectTrigger>
