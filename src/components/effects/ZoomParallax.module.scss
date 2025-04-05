@@ -1,3 +1,5 @@
+$mobile-breakpoint: 768px;
+
 .container {
   position: relative;
   height: 300vh; /* Create enough scroll space for the effect */
@@ -38,6 +40,8 @@
 .el {
   &:nth-of-type(1) .imageContainer {
     /* Center image */
+    @media (max-width: $mobile-breakpoint) {
+    }
   }
 
   &:nth-of-type(2) .imageContainer {
@@ -45,6 +49,13 @@
     left: 5vw;
     width: 35vw;
     height: 30vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: -29vh;
+      left: 10vw;
+      width: 45vw;
+      height: 30vh;
+    }
   }
 
   &:nth-of-type(3) .imageContainer {
@@ -52,12 +63,26 @@
     left: -25vw;
     width: 20vw;
     height: 45vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: -5vh;
+      left: -31vw;
+      width: 31vw;
+      height: 35vh;
+    }
   }
 
   &:nth-of-type(4) .imageContainer {
     left: 27.5vw;
     width: 25vw;
     height: 25vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 2.5vh;
+      left: 30.5vw;
+      width: 30vw;
+      height: 30vh;
+    }
   }
 
   &:nth-of-type(5) .imageContainer {
@@ -65,19 +90,40 @@
     left: 5vw;
     width: 20vw;
     height: 25vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 28vh;
+      left: -2.5vw;
+      width: 30vw;
+      height: 28vh;
+    }
   }
 
   &:nth-of-type(6) .imageContainer {
-    top: 27.5vh;
+    top: 30vh;
     left: -22.5vw;
     width: 30vw;
-    height: 25vh;
+    height: 30vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 21.5vh;
+      left: -34vw;
+      width: 27vw;
+      height: 15vh;
+    }
   }
 
   &:nth-of-type(7) .imageContainer {
-    top: 22.5vh;
-    left: 25vw;
-    width: 15vw;
-    height: 15vh;
+    top: 25vh;
+    left: 28vw;
+    width: 20vw;
+    height: 20vh;
+
+    @media (max-width: $mobile-breakpoint) {
+      top: 28vh;
+      left: 29.5vw;
+      width: 28vw;
+      height: 18vh;
+    }
   }
 } 
