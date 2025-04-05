@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import { Dictionary } from "@/dictionaries";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { useState, useEffect } from "react";
 // import {
 //   NavigationMenu,
 //   NavigationMenuContent,
@@ -45,14 +47,40 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
   //   },
   // ];
 
+  const scrollDirection = useScrollDirection();
+  const [isVisible, setIsVisible] = useState(true);
+  const [atTop, setAtTop] = useState(true);
+
+  useEffect(() => {
+    // Always show header when at the top of the page
+    const handleScroll = () => {
+      setAtTop(window.scrollY < 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Update header visibility based on scroll direction
+    if (scrollDirection === "down" && !atTop) {
+      setIsVisible(false);
+    } else if (scrollDirection === "up") {
+      setIsVisible(true);
+    }
+  }, [scrollDirection, atTop]);
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      animate={{ 
+        y: isVisible ? 0 : -100,
+        opacity: isVisible ? 1 : 0 
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12",
-        transparent ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b"
+        transparent && atTop ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b"
       )}
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
