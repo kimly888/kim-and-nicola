@@ -37,6 +37,7 @@ export function HeroSection({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundPositionX: "55%"
       }}
     >
       {/* Overlay */}
@@ -47,7 +48,7 @@ export function HeroSection({
         variants={container}
         initial="hidden"
         animate="visible"
-        className="relative z-10 text-center text-white px-4 max-w-3xl"
+        className="relative z-10 text-center mt-20 sm:mt-0 text-white px-4 max-w-3xl"
       >
         <TextMaskAnimation
           phrases={[title]}
@@ -93,7 +94,7 @@ export function HeroSection({
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
         <p className="text-white text-sm mb-2">Scroll Down</p>
         <svg

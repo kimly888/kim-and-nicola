@@ -57,7 +57,7 @@ export default function LanguageSwitcher({
         window.location.href = redirectedPathName(locale);
       }}
     >
-      <SelectTrigger className="w-[180px] bg-background">
+      <SelectTrigger className="w-fit bg-background">
         <SelectValue placeholder="Select language">
           <div className="flex items-center gap-2">
             <span>{flagEmojis[currentLocale]}</span>
