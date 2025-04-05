@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { fadeIn } from "@/lib/animations";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 
@@ -52,20 +50,20 @@ export function HeroSection({
         className="relative z-10 text-center text-white px-4 max-w-3xl"
       >
         <TextMaskAnimation
+          phrases={[title]}
+          className="text-5xl md:text-7xl font-serif mb-6 tracking-wide"
+          threshold={0.5}
+          delayMultiplier={0.1}
+        />
+
+        <TextMaskAnimation
           phrases={[subtitle]}
           className="text-lg md:text-xl font-light tracking-wider mb-4"
           threshold={0.5}
           delayMultiplier={0.1}
         />
 
-        <TextMaskAnimation
-          phrases={[title]}
-          className="text-5xl md:text-7xl font-serif mb-6 tracking-wide"
-          threshold={0.5}
-          delayMultiplier={0.2}
-        />
-
-        <motion.div variants={fadeIn(0.6)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
+        <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
 
         <div className="space-y-2 mb-10">
           <TextMaskAnimation
@@ -83,11 +81,11 @@ export function HeroSection({
           />
         </div>
 
-        <motion.div variants={fadeIn(1)}>
+        {/* <motion.div variants={fadeIn(1)}>
           <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
             <Link href="/#rsvp">RSVP Now</Link>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       {/* Scroll indicator */}
