@@ -41,17 +41,16 @@ export function HeroSection({
   };
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative h-screen flex  justify-center overflow-hidden"
-    >
+    <section ref={sectionRef} className="relative h-screen flex  justify-center overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
           // src={backgroundImage}
           // src={'https://images.unsplash.com/photo-1654371973188-e7831a51086f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
           // src={'https://images.unsplash.com/photo-1556446384-0c6fd6c8e673?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-          src={'https://cdn.prod.website-files.com/634e5ccdbca7e77e1d981e22/63dce7a0242fd1370f177479_DLP-MEGAN%2BOLIVER-CURATEDMIX(002of922).png'}
+          src={
+            "https://cdn.prod.website-files.com/634e5ccdbca7e77e1d981e22/63dce7a0242fd1370f177479_DLP-MEGAN%2BOLIVER-CURATEDMIX(002of922).png"
+          }
           fill
           priority
           alt="Background"
@@ -118,7 +117,7 @@ export function HeroSection({
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10"
       >
-        <p className="text-white text-sm mb-2">Scroll Down</p>
+        <p className="text-white text-lg   sm:text-2xl mb-2">Scroll Down</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
