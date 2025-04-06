@@ -80,7 +80,7 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12",
-        transparent && atTop ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b"
+        // transparent && atTop ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b"
       )}
     >
       <div className="container mx-auto flex items-center justify-between gap-4">
@@ -88,7 +88,7 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
           href="/"
           className={`${transparent && atTop ? "text-white" : "text-black"} text-2xl font-serif tracking-wider transition-colors duration-300`}
         >
-          {dictionary?.hero.title || "Kim & Nicola"}
+          {/* {dictionary?.hero.title || "Kim & Nicola"} */}
         </Link>
 
         {/* Desktop Navigation Menu */}

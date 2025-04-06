@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { fadeIn } from "@/lib/animations";
+// import { fadeIn } from "@/lib/animations";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
 import Image from "next/image";
@@ -17,9 +17,9 @@ interface HeroSectionProps {
 export function HeroSection({
   title,
   subtitle,
-  date,
-  location,
-  backgroundImage,
+  // date,
+  // location,
+  // backgroundImage,
 }: HeroSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -43,12 +43,15 @@ export function HeroSection({
   return (
     <section
       ref={sectionRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex  justify-center overflow-hidden"
     >
       {/* Background Image with Parallax Effect */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
-          src={backgroundImage}
+          // src={backgroundImage}
+          // src={'https://images.unsplash.com/photo-1654371973188-e7831a51086f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+          // src={'https://images.unsplash.com/photo-1556446384-0c6fd6c8e673?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+          src={'https://cdn.prod.website-files.com/634e5ccdbca7e77e1d981e22/63dce7a0242fd1370f177479_DLP-MEGAN%2BOLIVER-CURATEDMIX(002of922).png'}
           fill
           priority
           alt="Background"
@@ -60,14 +63,14 @@ export function HeroSection({
       </motion.div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] z-[1]" />
+      <div className="absolute inset-0 bg-black/30 z-[1]" />
 
       {/* Content */}
       <motion.div
         variants={contentContainer}
         initial="hidden"
         animate="visible"
-        className="relative z-10 text-center mt-20 sm:mt-0 text-white px-4 max-w-3xl"
+        className="relative z-10 text-center mt-20 text-white px-4 max-w-3xl"
       >
         <TextMaskAnimation
           phrases={[title]}
@@ -83,7 +86,7 @@ export function HeroSection({
           delayMultiplier={0.1}
         />
 
-        <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
+        {/* <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
 
         <div className="space-y-2 mb-10">
           <TextMaskAnimation
@@ -99,7 +102,7 @@ export function HeroSection({
             threshold={0.5}
             delayMultiplier={0.25}
           />
-        </div>
+        </div> */}
 
         {/* <motion.div variants={fadeIn(1)}>
           <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
