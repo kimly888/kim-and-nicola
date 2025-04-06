@@ -1,8 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
+import { useRef } from "react";
+import Image from "next/image";
 
 interface HeroSectionProps {
   title: string;
@@ -19,7 +21,15 @@ export function HeroSection({
   location,
   backgroundImage,
 }: HeroSectionProps) {
-  const container = {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "20vh"]);
+
+  const contentContainer = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -32,20 +42,29 @@ export function HeroSection({
 
   return (
     <section
+      ref={sectionRef}
       className="relative h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundPositionX: "55%"
-      }}
     >
+      {/* Background Image with Parallax Effect */}
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
+        <Image
+          src={backgroundImage}
+          fill
+          priority
+          alt="Background"
+          className="object-cover"
+          style={{
+            objectPosition: "55% center",
+          }}
+        />
+      </motion.div>
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px] z-[1]" />
 
       {/* Content */}
       <motion.div
-        variants={container}
+        variants={contentContainer}
         initial="hidden"
         animate="visible"
         className="relative z-10 text-center mt-20 sm:mt-0 text-white px-4 max-w-3xl"
@@ -94,7 +113,7 @@ export function HeroSection({
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10"
       >
         <p className="text-white text-sm mb-2">Scroll Down</p>
         <svg
