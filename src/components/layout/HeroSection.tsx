@@ -1,25 +1,33 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-// import { fadeIn } from "@/lib/animations";
+import { fadeIn } from "@/lib/animations";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   title: string;
   subtitle: string;
   date: string;
   location: string;
+  headline?: string;
+  subheadline?: string;
+  rsvpButton?: string;
   backgroundImage: string;
 }
 
 export function HeroSection({
   title,
   subtitle,
-  // date,
-  // location,
-  // backgroundImage,
+  date,
+  location,
+  headline,
+  subheadline,
+  rsvpButton = "RSVP Now",
+  backgroundImage,
 }: HeroSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -41,16 +49,11 @@ export function HeroSection({
   };
 
   return (
-    <section ref={sectionRef} className="relative h-screen flex  justify-center overflow-hidden">
+    <section ref={sectionRef} className="relative h-screen flex justify-center overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
-          // src={backgroundImage}
-          // src={'https://images.unsplash.com/photo-1654371973188-e7831a51086f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-          // src={'https://images.unsplash.com/photo-1556446384-0c6fd6c8e673?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-          src={
-            "https://cdn.prod.website-files.com/634e5ccdbca7e77e1d981e22/63dce7a0242fd1370f177479_DLP-MEGAN%2BOLIVER-CURATEDMIX(002of922).png"
-          }
+          src={backgroundImage}
           fill
           priority
           alt="Background"
@@ -85,9 +88,18 @@ export function HeroSection({
           delayMultiplier={0.1}
         />
 
-        {/* <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
+        {headline && (
+          <TextMaskAnimation
+            phrases={[headline]}
+            className="text-2xl md:text-3xl font-serif italic mb-4 mt-8"
+            threshold={0.5}
+            delayMultiplier={0.2}
+          />
+        )}
 
-        <div className="space-y-2 mb-10">
+        <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
+
+        <div className="space-y-2 mb-6">
           <TextMaskAnimation
             phrases={[date]}
             className="text-xl md:text-2xl font-light"
@@ -101,13 +113,22 @@ export function HeroSection({
             threshold={0.5}
             delayMultiplier={0.25}
           />
-        </div> */}
+        </div>
 
-        {/* <motion.div variants={fadeIn(1)}>
+        {subheadline && (
+          <TextMaskAnimation
+            phrases={[subheadline]}
+            className="text-base md:text-lg font-light italic mb-10 max-w-2xl mx-auto"
+            threshold={0.5}
+            delayMultiplier={0.3}
+          />
+        )}
+
+        <motion.div variants={fadeIn(1)}>
           <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
-            <Link href="/#rsvp">RSVP Now</Link>
+            <Link href="/#rsvp">{rsvpButton}</Link>
           </Button>
-        </motion.div> */}
+        </motion.div>
       </motion.div>
 
       {/* Scroll indicator */}
@@ -117,7 +138,7 @@ export function HeroSection({
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-30 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10"
       >
-        <p className="text-white text-lg   sm:text-2xl mb-2">Scroll Down</p>
+        <p className="text-white text-lg sm:text-2xl mb-2">Scroll Down</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

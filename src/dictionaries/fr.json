@@ -10,7 +10,10 @@
     "title": "Kim & Nicola",
     "subtitle": "Se marient !",
     "date": "Janvier 2025",
-    "location": "Davenport House, Worfield, Royaume-Uni"
+    "location": "Davenport House, Worfield, Royaume-Uni",
+    "headline": "C'est une histoire d'amour. Il suffit de dire oui.",
+    "subheadline": "Parce que l'amour est patient, l'amour est gentil, et aussi... nous avons déjà payé l'acompte. Alors veuillez confirmer votre présence au plus vite avant que nous ne nous enfuyions sous le poids du stress.",
+    "rsvpButton": "Réservez votre place (et votre champagne)"
   },
   "story": {
     "title": "Notre Histoire",
@@ -34,77 +37,106 @@
     "title": "Détails de l'Événement",
     "welcome": {
       "title": "Bienvenue",
-      "message": "Nous sommes ravis que vous ayez reçu notre invitation. Nous sommes tellement heureux de vous inviter à célébrer notre jour spécial avec nous, notre famille et nos amis les plus proches ! Nous avons rassemblé ici tous les détails importants pour rendre votre expérience aussi agréable que possible. Vous trouverez des informations sur le lieu, le programme, le transport, l'hébergement et tout ce dont vous pourriez avoir besoin pour planifier votre voyage. Nous avons hâte de créer de beaux souvenirs avec vous tous en Angleterre !"
+      "message": "Vous y êtes arrivés ! Que vous ayez reçu votre invitation par pigeon voyageur, par la poste, ou par culpabilisation – nous sommes ravis que vous soyez là. Nous avons hâte de célébrer cette journée glorieusement chaotique et remplie d'amour avec vous. Ce site contient toutes les informations essentielles : où être, quoi porter, comment y arriver, et où récupérer après la fête. Nous sommes plus qu'impatients de créer des souvenirs (et quelques bêtises légères) ensemble dans la belle Angleterre."
+    },
+    "venue": {
+      "title": "Lieu",
+      "description": "Arrivez tôt, caféinez-vous en conséquence. Rejoignez-nous dès 12h00 pour un échauffement pré-cérémonie avec thés, cafés, et probablement quelques va-et-vient nerveux. L'événement principal (alias la cérémonie) commence à 13h00 — suivi de boissons, d'amuse-bouches, et de câlins sincères (ou de retrouvailles gênantes, à vous de choisir)."
     },
     "schedule": {
       "title": "Programme",
+      "disclaimer": "Avertissement : Les horaires peuvent légèrement varier. Nous serons à \"l'heure du mariage.\"",
       "items": [
         {
-          "time": "11h30 - 12h30",
-          "event": "Accueil des invités, enregistrement, thé et café"
+          "time": "12h00 - 12h30",
+          "event": "Accueil des invités, thé, café et observation pré-mariage"
         },
         {
           "time": "12h30 - 13h00",
-          "event": "Cérémonie"
+          "event": "Veuillez prendre place (pas de chaises musicales, désolé)"
         },
         {
           "time": "13h00 - 13h30",
-          "event": "Transition vers le cocktail"
+          "event": "L'événement principal : notre \"oui\""
         },
         {
           "time": "13h30 - 14h30",
-          "event": "Cocktail, rencontres, photos"
+          "event": "Cocktail, rencontres et selfies discrets"
         },
         {
-          "time": "14h30 - 14h45",
-          "event": "Transition vers le déjeuner de mariage"
+          "time": "14h30 - 15h30",
+          "event": "Ouverture du buffet, discours et entrées dramatiques"
         },
         {
-          "time": "14h45",
-          "event": "Entrée des mariés et début des discours"
+          "time": "15h30 - 17h30",
+          "event": "Le festin (prévoyez des vêtements extensibles... je plaisante. Enfin, presque.)"
         },
         {
-          "time": "15h15",
-          "event": "Service du repas"
-        },
-        {
-          "time": "18h00",
-          "event": "Transition vers la réception/soirée"
+          "time": "18h00 - 21h00",
+          "event": "Groupe live, bar et mouvements de danse douteux"
         }
       ]
     },
     "attire": {
       "title": "Tenue",
-      "note": "N'oubliez pas que janvier est la période hivernale au Royaume-Uni. Bien que l'intérieur du lieu soit très chaud et confortable, veuillez prévoir des vêtements supplémentaires pour vous tenir chaud pendant vos déplacements.",
+      "note": "Code vestimentaire : Semi-Formel / Cocktail – autrement dit \"élégant mais confortable\"\n\nConseil bonus : Janvier au Royaume-Uni = frisquet. Le lieu sera bien chauffé, mais prévoyez des couches pour le trajet.",
       "women": {
-        "title": "Femmes",
+        "title": "Pour les Femmes",
         "guidelines": [
-          "Robe longue, mi-longue ou aux genoux, tailleur accepté, ou ensemble jupe et chemisier sophistiqué",
-          "Talons hauts, sandales habillées ou ballerines élégantes"
+          "Robes midi, au genou ou longues bienvenues. Tailleurs chics et ensembles élégants également parfaits.",
+          "Chaussures : Talons, ballerines de soirée, ou sandales qui ne vous trahiront pas sur la piste de danse."
         ],
-        "note": "Nous demandons gentiment à nos invités d'éviter les tenues de couleur unie blanche, crème ou ivoire."
+        "note": "Avis important : Merci de réserver le blanc, crème ou ivoire pour la mariée."
       },
       "men": {
-        "title": "Hommes",
+        "title": "Pour les Hommes",
         "guidelines": [
-          "Costume de couleur sombre ou neutre (bleu marine, anthracite ou gris)",
-          "Chemise habillée (blanche ou de couleur claire)",
-          "Cravate ou nœud papillon",
-          "Chaussures habillées (Richelieu, Derby ou mocassins)"
+          "Costumes neutres, chemises impeccables, et cravate ou nœud papillon (optionnel, mais fortement encouragé).",
+          "Chaussures : Quelque chose d'élégant et avec lequel on peut danser."
         ]
       }
     },
     "accommodation": {
       "title": "Hébergement",
-      "description": "Davenport House peut accueillir jusqu'à 40 invités répartis dans 9 chambres et 3 cottages. Nous avons réservé ces chambres et les proposons à un tarif préférentiel à nos invités. La priorité sera donnée aux personnes venant de l'étranger et aux membres du cortège. Il existe également une sélection d'hôtels locaux pour ceux qui souhaitent plus de liberté dans leur choix de chambre. Veuillez nous faire part de vos besoins en hébergement et nous nous chargerons d'organiser votre séjour."
+      "description": "Davenport House peut accueillir jusqu'à 40 invités dans des chambres et cottages magnifiquement confortables. Nous avons réservé ces logements à un tarif préférentiel pour nos invités, avec priorité aux personnes venant de l'étranger, à la famille proche et à l'équipe de mariage.",
+      "alternatives": {
+        "title": "Vous préférez votre propre aventure ?",
+        "options": [
+          "The Falcon, Bridgnorth",
+          "The Vicarage Inn",
+          "Ou consultez les Airbnb locaux pour plus de liberté — n'oubliez pas votre brosse à dents. Si vous avez besoin d'aide pour réserver, nous sommes à un message près."
+        ]
+      }
     },
     "travel": {
       "title": "Transport",
-      "description": "Pour ceux qui viennent de l'étranger : L'aéroport le plus proche est l'aéroport de Birmingham (BHX). De là, il faut environ 45 minutes pour rejoindre Worfield en voiture ou en taxi. Vous pouvez également prendre un train depuis la gare de Birmingham New Street, qui se trouve à environ 30 minutes. Pour ceux qui atterrissent à l'aéroport de Londres Heathrow : Worfield se trouve à environ 220 kilomètres. Vous pouvez louer une voiture pour un trajet d'environ 2 heures et 30 minutes, ou prendre un train de Londres à Wolverhampton, puis un taxi jusqu'à Worfield."
+      "intro": "Vous venez de l'étranger ? Vous êtes de véritables héros. Merci d'entreprendre ce voyage — nous vous recommandons d'arriver quelques jours plus tôt pour vaincre le décalage horaire et comprendre comment fonctionne la bouilloire anglaise.",
+      "closestAirport": "Aéroport le plus proche :",
+      "options": [
+        "Birmingham (BHX) — 45 minutes en voiture jusqu'à Worfield",
+        "Option train : Birmingham New Street → Wolverhampton → taxi jusqu'au lieu"
+      ],
+      "alternatives": {
+        "title": "Vous atterrissez à Londres Heathrow ? (Excellent choix.)",
+        "options": [
+          "Environ 2h30 en voiture",
+          "Ou prenez un train jusqu'à Wolverhampton, puis un taxi pour le reste du trajet"
+        ]
+      },
+      "tip": "Conseil de pro : emportez des en-cas pour la route."
+    },
+    "travelSpots": {
+      "title": "Lieux Recommandés",
+      "intro": "Vous arrivez tôt ? Faites-en des mini-vacances ! En attendant d'assister à nos vœux, explorez Londres comme un touriste local :",
+      "spots": [
+        "Musée d'Histoire Naturelle – Gratuit, immense, et avec des dinosaures.",
+        "Hyde Park – Promenez-vous, sirotez une boisson et méditez près d'un cygne.",
+        "Covent Garden – Idéal pour le thé, le théâtre et les artistes de rue qui sont peut-être (ou peut-être pas) de meilleurs danseurs que nous."
+      ]
     },
     "gifts": {
       "title": "Cadeaux",
-      "description": "Votre présence à notre mariage est le plus beau cadeau que nous puissions recevoir ! Comme nous célébrons notre mariage à l'étranger et que nous ne pourrons pas ramener de cadeaux physiques, si vous souhaitez nous offrir quelque chose, une contribution financière optionnelle pour notre avenir ensemble serait vraiment appréciée. Mais surtout, nous sommes simplement reconnaissants de célébrer ce jour spécial avec vous !"
+      "description": "Votre présence est véritablement le plus beau cadeau. Mais si vous vous sentez généreux (ou si vous détestez arriver les mains vides), une contribution à notre avenir commun nous toucherait énormément. Nous restons légers côté bagages, donc pas de cadeaux physiques s'il vous plaît — nos valises sont déjà pleines de stress nuptial."
     }
   },
   "gallery": {

@@ -4,14 +4,17 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 
-interface ScheduleSectionProps {
-  schedule: {
+interface EnhancedTravelSectionProps {
+  travel: {
     title: string;
-    disclaimer?: string;
-    items: {
-      time: string;
-      event: string;
-    }[];
+    intro: string;
+    closestAirport: string;
+    options: string[];
+    alternatives: {
+      title: string;
+      options: string[];
+    };
+    tip: string;
     icon: React.ReactNode;
   };
   backgroundImage?: string;
@@ -19,12 +22,12 @@ interface ScheduleSectionProps {
   id?: string;
 }
 
-export function ScheduleSection({ 
-  schedule, 
+export function EnhancedTravelSection({ 
+  travel, 
   backgroundImage,
   enableParallax = false,
   id
-}: ScheduleSectionProps) {
+}: EnhancedTravelSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
     threshold: 0.1,
@@ -69,22 +72,33 @@ export function ScheduleSection({
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 flex items-center justify-center text-primary">
-              {schedule.icon}
+              {travel.icon}
             </div>
-            <h2 className="text-2xl font-serif">{schedule.title}</h2>
+            <h2 className="text-2xl font-serif">{travel.title}</h2>
           </div>
           
-          {schedule.disclaimer && (
-            <div className="mb-6 italic text-muted-foreground">{schedule.disclaimer}</div>
-          )}
-          
-          <div className="space-y-4">
-            {schedule.items.map((item, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="font-medium min-w-[120px]">{item.time}</div>
-                <div className="text-muted-foreground">{item.event}</div>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <p className="text-muted-foreground">{travel.intro}</p>
+            
+            <div>
+              <h3 className="font-medium mb-2">{travel.closestAirport}</h3>
+              <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+                {travel.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="font-medium mb-2">{travel.alternatives.title}</h3>
+              <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+                {travel.alternatives.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <p className="text-muted-foreground italic">{travel.tip}</p>
           </div>
         </motion.div>
       </div>

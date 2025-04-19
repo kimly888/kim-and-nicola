@@ -10,101 +10,133 @@
     "title": "Kim & Nicola",
     "subtitle": "Yn priodi!",
     "date": "Ionawr 2025",
-    "location": "Davenport House, Worfield, DU"
+    "location": "Davenport House, Worfield, DU",
+    "headline": "Mae'n stori cariad. Dywedwch ie yn unig.",
+    "subheadline": "Oherwydd mae cariad yn amyneddgar, mae cariad yn garedig, a hefyd... rydym eisoes wedi talu'r blaendal. Felly, rhowch wybod i ni cyn gynted â phosibl cyn i ni ddianc oherwydd straen llwyr.",
+    "rsvpButton": "Cadwch eich sedd (a'ch siampên)"
   },
   "story": {
     "title": "Ein Stori",
     "howWeMet": {
-      "title": "Sut Wnaethon Ni Gyfarfod",
+      "title": "Sut Gwrddwyd Ni",
       "date": "Mehefin 15, 2018",
-      "description": "Gwnaethom groesi llwybrau am y tro cyntaf mewn parti pen-blwydd ffrind cyffredin. Dechreuodd yr hyn a ddechreuodd fel sgwrs achlysurol am ein cariad cyffredin am deithio yn oriau o siarad a chwerthin. Gwnaethom gyfnewid rhifau y noson honno, a'r gweddill, fel y maent yn ei ddweud, yw hanes."
+      "description": "Gwnaethom groesi llwybrau am y tro cyntaf mewn parti pen-blwydd ffrind cyffredin. Dechreuodd fel sgwrs gyffredin am ein cariad at deithio a throdd yn oriau o siarad a chwerthin. Cyfnewidiwyd rhifau y noson honno, a'r gweddill, fel y dywedant, yw hanes."
     },
     "firstDate": {
       "title": "Ein Dêt Gyntaf",
       "date": "Gorffennaf 3, 2018",
-      "description": "Ar gyfer ein dêt gyntaf, aethom i fwyty Eidalaidd bach yng nghanol y dref. Siaradom am oriau dros basta a gwin, gan golli trac o amser yn llwyr. Roedd yn rhaid i'r gweinydd ein hysbysu'n gwrtais eu bod yn cau!"
+      "description": "Ar gyfer ein dêt gyntaf, aethom i fwyty Eidalaidd bach yng nghanol y dref. Siaradwyd am oriau dros basta a gwin, gan golli trac o amser yn llwyr. Roedd yn rhaid i'r gweinydd ein hysbysu'n gwrtais eu bod yn cau!"
     },
     "proposal": {
       "title": "Y Cynnig",
       "date": "Rhagfyr 24, 2022",
-      "description": "Ar Noswyl Nadolig, yn ystod taith i'r mynyddoedd, aethom am dro i weld machlud haul i olygfa hardd. Wrth i'r awyr droi'n binc ac aur, syrthiais ar fy nglin a gofyn y cwestiwn pwysicaf yn fy mywyd. A dywedodd hi ie!"
+      "description": "Ar Noswyl Nadolig, yn ystod taith i'r mynyddoedd, aethom am dro i weld machludiad haul i olygfa hardd. Wrth i'r awyr droi'n binc ac aur, syrthiais ar fy nglin a gofyn y cwestiwn pwysicaf yn fy mywyd. A dywedodd hi ie!"
     }
   },
   "details": {
     "title": "Manylion y Digwyddiad",
     "welcome": {
       "title": "Croeso",
-      "message": "Rydym yn falch eich bod wedi derbyn ein gwahoddiad. Rydym mor gyffrous i'ch gwahodd i ddathlu ein diwrnod arbennig gyda ni, ein teulu a'n ffrindiau agosaf! Rydym wedi casglu'r holl fanylion pwysig yma i wneud eich profiad mor hwylus a phleserus â phosibl. Fe welwch wybodaeth am y lleoliad, yr amserlen, teithio, llety, ac unrhyw beth arall y gallech ei angen i gynllunio'ch taith. Ni allwn aros i greu atgofion hardd gyda chi i gyd yn Lloegr!"
+      "message": "Rydych chi wedi cyrraedd! P'un a gawsoch eich gwahoddiad trwy golomen, post, neu deimladau euog — rydym wrth ein bodd eich bod chi yma. Ni allwn aros i ddathlu'r diwrnod hwn sydd yn llawn cariad a chaos gyda chi. Mae'r wefan hon yn cynnwys yr holl wybodaeth angenrheidiol: ble i fod, beth i'w wisgo, sut i gyrraedd, a ble i gysgu wedi'r cyfan. Rydym yn fwy na chyffrous i greu atgofion (a chamgymeriadau bach) gyda'n gilydd yn Lloegr brydferth."
+    },
+    "venue": {
+      "title": "Lleoliad",
+      "description": "Cyrhaeddwch yn gynnar, a chaffeinio yn unol â hynny. Ymunwch â ni o 12:00 am gynhesu cyn y seremoni gyda the, coffi, a phosibl ychydig o gerddediad nerfus. Mae'r prif ddigwyddiad (sef y seremoni) yn dechrau am 13:00 — ac yna diodydd, byrbrydau, a chofleidiau cynnes (neu ailgyfarfodydd lletchwith, eich dewis chi)."
     },
     "schedule": {
       "title": "Amserlen",
+      "disclaimer": "Nodyn: Efallai bydd amseroedd yn newid ychydig. Byddwn ar \"amser priodas.\"",
       "items": [
         {
-          "time": "11:30 - 12:30",
-          "event": "Parti cyrraedd, cofrestru, te a choffi"
+          "time": "12:00 - 12:30",
+          "event": "Parti cyrraedd, te, coffi a gwylio pobl cyn y briodas"
         },
         {
           "time": "12:30 - 13:00",
-          "event": "Seremoni"
+          "event": "Cymerwch eich seddau os gwelwch yn dda (dim cadeiriau cerddoriaeth, mae'n ddrwg gennym)"
         },
         {
           "time": "13:00 - 13:30",
-          "event": "Symud i'r awr goctels"
+          "event": "Y prif ddigwyddiad: ni'n dweud \"Ydw\""
         },
         {
           "time": "13:30 - 14:30",
-          "event": "Awr goctels, cymdeithasu, lluniau"
+          "event": "Awr coctêl, cymysgu, a selfies slei"
         },
         {
-          "time": "14:30 - 14:45",
-          "event": "Symud i frecwast y briodas"
+          "time": "14:30 - 15:30",
+          "event": "Agoriad neuadd fwyd, areithiau, a mynediadau dramatig"
         },
         {
-          "time": "14:45",
-          "event": "Mynediad y briodferch a'r priodfab ac areithiau'n dechrau"
+          "time": "15:30 - 17:30",
+          "event": "Y wledd (dewch â dillad ystwyth... jôc yw hi. Bron iawn.)"
         },
         {
-          "time": "15:15",
-          "event": "Gweinir y bwyd"
-        },
-        {
-          "time": "18:00",
-          "event": "Symud i'r derbyniad/parti hwyr"
+          "time": "18:00 - 21:00",
+          "event": "Band byw, bar, a symudiadau dawns amheus"
         }
       ]
     },
     "attire": {
       "title": "Gwisg",
-      "note": "Cofiwch mai gaeaf yw hi yn y DU ym mis Ionawr. Er y bydd y lleoliad yn gynnes a chyfforddus y tu mewn, dewch â dillad ychwanegol i gadw'n gynnes wrth deithio.",
+      "note": "Côd Gwisg: Lled-Ffurfiol / Coctêl – hy \"edrych yn wych ond aros yn gyfforddus\"\n\nAwgrym Ychwanegol: Ionawr yn y DU = oer. Bydd y lleoliad yn gynnes, ond gwisgwch haenau ar gyfer y daith.",
       "women": {
-        "title": "Menywod",
+        "title": "I Fenywod",
         "guidelines": [
-          "Gwisg hir, canolig neu hyd pen-glin, siwt yn dderbyniol, neu gyfuniad sgert a blows soffistigedig",
-          "Sodlau uchel, sandalau smart, neu esgidiau fflat smart"
+          "Ffrogiau midi, hyd y pen-glin, neu hyd y llawr yn dderbyniol. Siwts chic a chyfuniadau smart hefyd yn wych.",
+          "Esgidiau: Sodlau uchel, esgidiau fflat ffansi, neu sandalau na fyddant yn eich siomi ar y llawr dawns."
         ],
-        "note": "Gofynnwn yn garedig i'n gwesteion osgoi gwisgo dillad gwyn, hufen neu ifori plaen."
+        "note": "Rhybudd: Cadwch wyn, hufen, neu ifori ar gyfer y briodferch."
       },
       "men": {
-        "title": "Dynion",
+        "title": "I Ddynion",
         "guidelines": [
-          "Siwt lliw tywyll neu niwtral (glas tywyll, siarcol, neu lwyd)",
-          "Crys ffurfiol (gwyn neu liw golau)",
-          "Tei neu fow-dei",
-          "Esgidiau ffurfiol (Rhydychen, Derby, neu loafers)"
+          "Siwts niwtral, crysau smart, a thei neu bow-dei (dewisol, ond yn cael ei annog yn fawr).",
+          "Esgidiau: Rhywbeth smart, rhywbeth y gallwch ddawnsio ynddo."
         ]
       }
     },
     "accommodation": {
       "title": "Llety",
-      "description": "Gall Davenport House letya hyd at 40 o westeion mewn 9 ystafell wely a 3 bwthyn. Rydym wedi archebu'r ystafelloedd hyn ac yn eu cynnig am bris gostyngol i'n gwesteion. Bydd blaenoriaeth yn cael ei roi i'r rhai sy'n hedfan o dramor a pharti'r briodas. Mae hefyd dewis o westai lleol ar gael i'r rhai a fyddai'n hoffi mwy o ryddid yn eu dewis o ystafell. Rhowch wybod i ni beth yw'ch anghenion llety a byddwn yn trefnu ystafell i chi."
+      "description": "Mae gan Davenport House le i hyd at 40 o westeion mewn ystafelloedd a bythynnod cyforddus a hardd. Rydym wedi archebu'r rhain am bris gostyngol i'n gwesteion, gyda blaenoriaeth i'r rhai sy'n hedfan yn rhyngwladol, teulu agos, a thîm y briodas.",
+      "alternatives": {
+        "title": "Yn well gennych eich antur eich hun?",
+        "options": [
+          "The Falcon, Bridgnorth",
+          "The Vicarage Inn",
+          "Neu edrychwch ar Airbnbs lleol am fwy o ryddid — peidiwch ag anghofio'ch brwsh dannedd. Os oes angen help arnoch gydag archebu, rydym ond neges i ffwrdd."
+        ]
+      }
     },
     "travel": {
       "title": "Teithio",
-      "description": "I'r rhai sy'n ymuno â ni o dramor: Y maes awyr agosaf yw Maes Awyr Birmingham (BHX). O fan hyn, mae'n cymryd tua 45 munud i Worfield mewn car neu dacsi. Fel arall, gallwch gymryd trên o orsaf Birmingham New Street sydd tua 30 munud i ffwrdd. Y rhai sy'n hedfan i Faes Awyr Heathrow Llundain: Mae Worfield tua 220 cilomedr i ffwrdd. Gallwch logi car am daith o tua 2 awr a 30 munud, neu gymryd trên o Lundain i Wolverhampton, ac yna dacsi i Worfield."
+      "intro": "Yn hedfan o dramor? Rydych chi'n chwedlonol. Diolch am wneud y daith — rydym yn argymell cyrraedd ychydig ddyddiau'n gynnar i oresgyn jet lag a gweithio allan sut i ddefnyddio'r tegell.",
+      "closestAirport": "Maes awyr agosaf:",
+      "options": [
+        "Birmingham (BHX) — 45 munud mewn car i Worfield",
+        "Opsiwn trên: Birmingham New Street → Wolverhampton → tacsi i'r lleoliad"
+      ],
+      "alternatives": {
+        "title": "Yn hedfan i Heathrow Llundain? (Dewis da.)",
+        "options": [
+          "Tua 2.5 awr mewn car",
+          "Neu ewch ar drên i Wolverhampton, yna tacsi am weddill y ffordd"
+        ]
+      },
+      "tip": "Awgrym pro: paciwch fyrbrydau ar gyfer y daith."
+    },
+    "travelSpots": {
+      "title": "Lleoedd Teithio a Argymhellir",
+      "intro": "Yn cyrraedd yn gynnar? Gwnewch mini-wyliau ohoni! Tra'n aros i dystio ein haddewidion, archwiliwch Lundain fel twrist lleol:",
+      "spots": [
+        "Amgueddfa Hanes Naturiol – Am ddim, enfawr, ac mae ganddi ddeinosoriaid.",
+        "Hyde Park – Cerddwch, yfwch, a myfyriwch ar fywyd ger alarch.",
+        "Covent Garden – Delfrydol ar gyfer te, theatr, a pherfformwyr stryd a allai fod yn well dawnswyr na ni (neu beidio)."
+      ]
     },
     "gifts": {
       "title": "Anrhegion",
-      "description": "Eich presenoldeb yn ein priodas yw'r anrheg fwyaf y gallem ofyn amdani! Gan ein bod yn dathlu dramor ac ni fyddwn yn gallu cymryd anrhegion corfforol adref, os hoffech roi anrheg, byddem yn gwerthfawrogi cyfraniad ariannol dewisol tuag at ein dyfodol gyda'n gilydd. Ond yn bennaf oll, rydym yn ddiolchgar am gael dathlu'r diwrnod arbennig hwn gyda chi!"
+      "description": "Mae eich presenoldeb yn wir yr anrheg orau. Ond os ydych chi'n teimlo'n hael (neu jest ddim yn hoffi cyrraedd â dwylo gwag), byddai cyfraniad tuag at ein dyfodol gyda'n gilydd yn golygu'r byd. Rydym yn ei gadw'n ysgafn ac yn rhydd o fagiau, felly dim anrhegion ffisegol os gwelwch yn dda — dim ond cymaint o goffrau sydd gennym a'r rhan fwyaf ohonynt yn llawn straen priodas."
     }
   },
   "gallery": {
@@ -113,15 +145,15 @@
   "rsvp": {
     "title": "RSVP",
     "subtitle": "Edrychwn ymlaen at ddathlu gyda chi!",
-    "deadline": "Atebwch erbyn Rhagfyr 1af 2025 os gwelwch yn dda",
+    "deadline": "Atebwch erbyn Rhagfyr 1, 2025 os gwelwch yn dda",
     "form": {
       "name": "Enw Llawn",
       "email": "Cyfeiriad E-bost",
-      "attending": "A fyddwch chi'n mynychu?",
-      "yes": "Ie, byddaf yn dod",
+      "attending": "A fyddwch chi'n bresennol?",
+      "yes": "Byddaf, byddaf yno",
       "no": "Mae'n ddrwg gennyf, ni allaf ddod",
       "guests": "Nifer o Westeion",
-      "dietaryRestrictions": "Cyfyngiadau Deiet",
+      "dietaryRestrictions": "Cyfyngiadau Deietegol",
       "message": "Neges i'r Pâr",
       "submit": "Cyflwyno RSVP"
     },

@@ -10,101 +10,133 @@
     "title": "Kim & Nicola",
     "subtitle": "¡Se casan!",
     "date": "Enero 2025",
-    "location": "Davenport House, Worfield, Reino Unido"
+    "location": "Davenport House, Worfield, Reino Unido",
+    "headline": "Es una historia de amor. Solo di que sí.",
+    "subheadline": "Porque el amor es paciente, el amor es amable, y además... ya pagamos el depósito. Así que confirma tu asistencia lo antes posible antes de que nos fugemos por puro estrés.",
+    "rsvpButton": "Reserva tu asiento (y tu champán)"
   },
   "story": {
     "title": "Nuestra Historia",
     "howWeMet": {
       "title": "Cómo Nos Conocimos",
-      "date": "15 de Junio, 2018",
-      "description": "Nos cruzamos por primera vez en la fiesta de cumpleaños de un amigo en común. Lo que comenzó como una conversación casual sobre nuestro amor compartido por los viajes se convirtió en horas de charla y risas. Intercambiamos números esa noche, y el resto, como dicen, es historia."
+      "date": "15 de Junio de 2018",
+      "description": "Nos cruzamos por primera vez en el cumpleaños de un amigo mutuo. Lo que comenzó como una conversación casual sobre nuestro amor compartido por los viajes se convirtió en horas de charla y risas. Intercambiamos números esa noche, y el resto, como dicen, es historia."
     },
     "firstDate": {
       "title": "Nuestra Primera Cita",
-      "date": "3 de Julio, 2018",
+      "date": "3 de Julio de 2018",
       "description": "Para nuestra primera cita, fuimos a un pequeño restaurante italiano en el centro. Hablamos durante horas sobre pasta y vino, perdiendo completamente la noción del tiempo. ¡El camarero tuvo que informarnos educadamente que estaban cerrando!"
     },
     "proposal": {
       "title": "La Propuesta",
-      "date": "24 de Diciembre, 2022",
-      "description": "En Nochebuena, durante un viaje a las montañas, fuimos a una caminata al atardecer hasta un hermoso mirador. Mientras el cielo se tornaba rosa y dorado, me arrodillé y le hice la pregunta más importante de mi vida. ¡Y ella dijo que sí!"
+      "date": "24 de Diciembre de 2022",
+      "description": "En Nochebuena, durante un viaje a las montañas, fuimos a hacer una caminata al atardecer hasta un hermoso mirador. Mientras el cielo se tornaba rosa y dorado, me arrodillé y le hice la pregunta más importante de mi vida. ¡Y ella dijo que sí!"
     }
   },
   "details": {
     "title": "Detalles del Evento",
     "welcome": {
       "title": "Bienvenida",
-      "message": "Nos alegra que hayas recibido nuestra invitación. ¡Estamos muy emocionadas de invitarte a celebrar nuestro día especial con nosotras, nuestra familia y nuestros amigos más cercanos! Aquí hemos reunido todos los detalles importantes para hacer tu experiencia lo más agradable y placentera posible. Encontrarás información sobre el lugar, el horario, el transporte, el alojamiento y todo lo que puedas necesitar para planificar tu viaje. ¡No podemos esperar para crear hermosos recuerdos con todos ustedes en Inglaterra!"
+      "message": "¡Lo lograste! Ya sea que hayas recibido tu invitación por paloma mensajera, correo postal, o por un viaje de culpa — estamos encantados de que estés aquí. No podemos esperar para celebrar este día gloriosamente caótico y lleno de amor contigo. Este sitio tiene toda la información necesaria: dónde estar, qué vestir, cómo llegar y dónde descansar después. Estamos más que emocionados de crear recuerdos (y pequeños errores entrañables) juntos en la hermosa Inglaterra."
+    },
+    "venue": {
+      "title": "Lugar",
+      "description": "Llega temprano, cafeinízate adecuadamente. Únete a nosotros desde las 12:00 para un calentamiento pre-ceremonia con tés, cafés y posiblemente algunos paseos nerviosos. El evento principal (también conocido como la ceremonia) comienza a las 13:00 — seguido de bebidas, aperitivos y algunos abrazos sinceros (o reencuentros incómodos, tú decides)."
     },
     "schedule": {
-      "title": "Horario",
+      "title": "Programa",
+      "disclaimer": "Aviso: Los horarios pueden variar ligeramente. Estaremos en \"hora de boda.\"",
       "items": [
         {
-          "time": "11:30 - 12:30",
-          "event": "Llegada, registro, té y café"
+          "time": "12:00 - 12:30",
+          "event": "Fiesta de llegada, té, café y observación pre-boda"
         },
         {
           "time": "12:30 - 13:00",
-          "event": "Ceremonia"
+          "event": "Por favor tomen asiento (no hay sillas musicales, lo sentimos)"
         },
         {
           "time": "13:00 - 13:30",
-          "event": "Transición a la hora del cóctel"
+          "event": "El evento principal: nuestro \"sí, quiero\""
         },
         {
           "time": "13:30 - 14:30",
-          "event": "Hora del cóctel, socialización, fotos"
+          "event": "Hora del cóctel, mezcla social y selfies disimulados"
         },
         {
-          "time": "14:30 - 14:45",
-          "event": "Transición al desayuno de bodas"
+          "time": "14:30 - 15:30",
+          "event": "Apertura del salón de banquetes, discursos y entradas dramáticas"
         },
         {
-          "time": "14:45",
-          "event": "Entrada de las novias y comienzo de los discursos"
+          "time": "15:30 - 17:30",
+          "event": "El festín (trae ropa con elástico... es broma. Más o menos.)"
         },
         {
-          "time": "15:15",
-          "event": "Se sirve la comida"
-        },
-        {
-          "time": "18:00",
-          "event": "Transición a la recepción/fiesta"
+          "time": "18:00 - 21:00",
+          "event": "Banda en vivo, bar y movimientos de baile cuestionables"
         }
       ]
     },
     "attire": {
       "title": "Vestimenta",
-      "note": "Ten en cuenta que enero es invierno en el Reino Unido. Aunque el interior del lugar será muy cálido y confortable, por favor trae ropa adicional para mantenerte abrigado durante los traslados.",
+      "note": "Código de vestimenta: Semi-Formal / Cóctel – es decir, \"verse fabuloso pero manteniéndose cómodo\"\n\nConsejo adicional: Enero en el Reino Unido = frío. El lugar estará calentito, pero abrígate para el viaje.",
       "women": {
-        "title": "Mujeres",
+        "title": "Para Mujeres",
         "guidelines": [
-          "Vestido largo, midi o hasta la rodilla, traje formal aceptable, o conjunto sofisticado de falda y blusa",
-          "Tacones, sandalias de vestir o zapatos planos elegantes"
+          "Bienvenidos vestidos midi, a la rodilla o largos. Trajes elegantes y combinaciones refinadas también son geniales.",
+          "Calzado: Tacones, bailarinas elegantes o sandalias que no te traicionen en la pista de baile."
         ],
-        "note": "Pedimos amablemente a nuestros invitados que eviten usar atuendos de color blanco, crema o marfil liso."
+        "note": "Aviso importante: Por favor, reserva el blanco, crema o marfil para la novia."
       },
       "men": {
-        "title": "Hombres",
+        "title": "Para Hombres",
         "guidelines": [
-          "Traje de color oscuro o neutro (azul marino, gris marengo o gris)",
-          "Camisa de vestir (blanca o de color claro)",
-          "Corbata o pajarita",
-          "Zapatos de vestir (Oxford, Derby o mocasines)"
+          "Trajes neutros, camisas impecables y corbata o pajarita (opcional, pero muy recomendado).",
+          "Zapatos: Algo elegante y con lo que se pueda bailar."
         ]
       }
     },
     "accommodation": {
       "title": "Alojamiento",
-      "description": "Davenport House puede alojar hasta 40 huéspedes en 9 habitaciones y 3 cabañas. Hemos reservado estas habitaciones y las ofrecemos a un precio con descuento para nuestros invitados. Se dará prioridad a aquellos que viajen desde el extranjero y a los miembros del cortejo nupcial. También hay una selección de hoteles locales disponibles para aquellos que deseen más libertad en su elección de habitación. Por favor, háznos saber tus necesidades de alojamiento y organizaremos una habitación para ti."
+      "description": "Davenport House tiene espacio para hasta 40 invitados en habitaciones y cabañas maravillosamente acogedoras. Hemos reservado estos alojamientos a un precio con descuento para nuestros invitados, con prioridad para aquellos que vuelan internacionalmente, familia inmediata y el equipo de boda.",
+      "alternatives": {
+        "title": "¿Prefieres tu propia aventura?",
+        "options": [
+          "The Falcon, Bridgnorth",
+          "The Vicarage Inn",
+          "O consulta Airbnbs locales para mayor libertad — solo no olvides tu cepillo de dientes. Si necesitas ayuda con la reserva, estamos a solo un mensaje de distancia."
+        ]
+      }
     },
     "travel": {
       "title": "Transporte",
-      "description": "Para aquellos que se unen desde el extranjero: El aeropuerto más cercano es el Aeropuerto de Birmingham (BHX). Desde allí, son aproximadamente 45 minutos hasta Worfield en coche o taxi. Alternativamente, puedes tomar un tren desde la estación Birmingham New Street, que está a unos 30 minutos. Para aquellos que vuelen al Aeropuerto de Londres Heathrow: Worfield está a unos 220 kilómetros. Puedes alquilar un coche para un viaje de aproximadamente 2 horas y 30 minutos, o tomar un tren desde Londres a Wolverhampton, seguido de un taxi a Worfield."
+      "intro": "¿Vienes desde el extranjero? Qué leyenda. Gracias por hacer el viaje — te recomendamos llegar unos días antes para superar el jet lag y descifrar cómo funciona la tetera británica.",
+      "closestAirport": "Aeropuerto más cercano:",
+      "options": [
+        "Birmingham (BHX) — 45 minutos en coche hasta Worfield",
+        "Opción de tren: Birmingham New Street → Wolverhampton → taxi al lugar"
+      ],
+      "alternatives": {
+        "title": "¿Volando a Londres Heathrow? (Buena elección.)",
+        "options": [
+          "Aproximadamente 2.5 horas en coche",
+          "O toma un tren a Wolverhampton, y luego un taxi para el resto del camino"
+        ]
+      },
+      "tip": "Consejo profesional: lleva snacks para el camino."
+    },
+    "travelSpots": {
+      "title": "Lugares Recomendados",
+      "intro": "¿Llegas temprano? ¡Conviértelo en unas mini-vacaciones! Mientras esperas para presenciar nuestros votos, explora Londres como un turista local:",
+      "spots": [
+        "Museo de Historia Natural – Gratis, enorme, y tiene dinosaurios.",
+        "Hyde Park – Pasea, toma algo y contempla la vida cerca de un cisne.",
+        "Covent Garden – Ideal para té, teatro y artistas callejeros que puede que sean (o no) mejores bailarines que nosotros."
+      ]
     },
     "gifts": {
       "title": "Regalos",
-      "description": "¡Tu presencia en nuestra boda es el mayor regalo que podríamos pedir! Como estamos celebrando en el extranjero y no podremos llevar regalos físicos a casa, si deseas hacer un regalo, agradeceríamos una contribución financiera opcional para nuestro futuro juntas. Pero sobre todo, ¡estamos agradecidas de celebrar este día especial contigo!"
+      "description": "Tu presencia es verdaderamente el mejor regalo. Pero si te sientes generoso (o simplemente no te gusta llegar con las manos vacías), una contribución para nuestro futuro juntos significaría mucho. Lo mantenemos ligero y sin equipaje, así que por favor no traigas regalos físicos — solo tenemos tantas maletas y la mayoría ya están llenas de estrés nupcial."
     }
   },
   "gallery": {
@@ -118,11 +150,11 @@
       "name": "Nombre Completo",
       "email": "Correo Electrónico",
       "attending": "¿Asistirás?",
-      "yes": "Sí, asistiré",
+      "yes": "Sí, estaré allí",
       "no": "Lo siento, no podré asistir",
       "guests": "Número de Invitados",
       "dietaryRestrictions": "Restricciones Alimentarias",
-      "message": "Mensaje para los Novios",
+      "message": "Mensaje para la Pareja",
       "submit": "Enviar RSVP"
     },
     "confirmation": "¡Gracias por tu RSVP! Estamos ansiosos por celebrar contigo."

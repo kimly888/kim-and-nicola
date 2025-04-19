@@ -10,7 +10,10 @@
     "title": "Kim & Nicola",
     "subtitle": "Are getting married!",
     "date": "January 5, 2026",
-    "location": "Davenport House, Worfield, UK"
+    "location": "Davenport House, Worfield, UK",
+    "headline": "It's a love story. Just say yes.",
+    "subheadline": "Because love is patient, love is kind, and also… we already paid the deposit. So please RSVP ASAP before we elope out of sheer stress.",
+    "rsvpButton": "Reserve Your Seat (and your champagne)"
   },
   "story": {
     "title": "Our Story",
@@ -34,77 +37,106 @@
     "title": "Event Details",
     "welcome": {
       "title": "Welcome",
-      "message": "We're pleased you received our invitation. We are so excited to invite you to celebrate our special day with us, our family and our closest friends! Here we've put together all the important details to help make your experience as smooth and enjoyable as possible. You'll find information about the venue, schedule, travel, accommodation, and anything else you might need to plan your trip. We can't wait to create beautiful memories with all of you in England!"
+      "message": "You made it! Whether you received your invite via pigeon, post, or a guilt-trip — we're thrilled you're here. We can't wait to celebrate this gloriously chaotic and love-filled day with you. This site has all the need-to-knows: where to be, what to wear, how to get there, and where to sleep it off. We're beyond excited to make memories (and mild mistakes) together in beautiful England."
+    },
+    "venue": {
+      "title": "Venue",
+      "description": "Arrive early, caffeinate accordingly. Join us from 12:00 for a pre-ceremony warm-up featuring teas, coffees, and possibly some nervous pacing. The main event (aka the ceremony) kicks off at 13:00 — followed by drinks, snacks, and some heartfelt hugs (or awkward reunions, your call)."
     },
     "schedule": {
       "title": "Schedule",
+      "disclaimer": "Disclaimer: Times may shift slightly. We'll be on \"wedding time.\"",
       "items": [
         {
-          "time": "11:30 - 12:30",
-          "event": "Arrival party, check ins, tea and coffees"
+          "time": "12:00 - 12:30",
+          "event": "Arrival party, tea, coffee & pre-wedding people-watching"
         },
         {
           "time": "12:30 - 13:00",
-          "event": "Ceremony"
+          "event": "Please take your seats (no musical chairs, sorry)"
         },
         {
           "time": "13:00 - 13:30",
-          "event": "Transition to cocktail hour"
+          "event": "The main event: us saying \"I do\""
         },
         {
           "time": "13:30 - 14:30",
-          "event": "Cocktail hour, mingling, photos"
+          "event": "Cocktail hour, mingling, and sneaky selfies"
         },
         {
-          "time": "14:30 - 14:45",
-          "event": "Wedding breakfast transition"
+          "time": "14:30 - 15:30",
+          "event": "Food hall opens, speeches, and dramatic entrances"
         },
         {
-          "time": "14:45",
-          "event": "Bride and groom entrance and speeches commence"
+          "time": "15:30 - 17:30",
+          "event": "The feast (bring stretchy pants… just kidding. Kind of.)"
         },
         {
-          "time": "15:15",
-          "event": "Food is served"
-        },
-        {
-          "time": "18:00",
-          "event": "Transition to reception/after party"
+          "time": "18:00 - 21:00",
+          "event": "Live band, bar, and questionable dance moves"
         }
       ]
     },
     "attire": {
       "title": "Attire",
-      "note": "Please keep in mind January is wintertime in the UK. Although inside the venue will be very warm and comfortable, please bring additional clothing to keep warm during your traveling.",
+      "note": "Dress Code: Semi-Formal / Cocktail – aka \"look fab but stay comfy\"\n\nBonus Tip: January in the UK = chilly. The venue will be toasty, but layer up for the journey.",
       "women": {
-        "title": "Women",
+        "title": "For Women",
         "guidelines": [
-          "Floor length, Midi or knee-length dress, suits ok, or sophisticated skirt and blouse combo",
-          "Heels, dressy sandals, or stylish flats"
+          "Midi, knee-length, or floor-length dresses welcome. Chic suits and polished combos also great.",
+          "Footwear: Heels, fancy flats, or sandals that won't betray you on the dance floor."
         ],
-        "note": "We kindly ask our guests to please avoid white, cream or ivory block color outfits."
+        "note": "PSA: Please save white, cream, or ivory for the bridal spreadsheet."
       },
       "men": {
-        "title": "Men",
+        "title": "For Men",
         "guidelines": [
-          "Dark or neutral-colored suit (navy, charcoal, or grey)",
-          "Dress shirt (white or light-colored)",
-          "Tie or bow tie",
-          "Dress shoes (Oxfords, Derbies, or loafers)"
+          "Neutral suits, crisp dress shirts, and a tie or bow tie (optional, but highly encouraged).",
+          "Shoes: Something dressy, something danceable."
         ]
       }
     },
     "accommodation": {
       "title": "Accommodation",
-      "description": "Davenport house can accommodate up to 40 guests over 9 bedrooms and 3 cottages. We have booked these rooms and offer them at a discounted rate to our guests. Priority will be given to those who have flown from overseas and wedding party. There are also a selection of local hotels available for those who would like some freedom in their choice of room. Please let us know your accommodation needs and we will arrange a room for you."
+      "description": "Davenport House has space for up to 40 guests in beautifully cozy rooms and cottages. We've reserved these at a discounted rate for our guests, with priority for those flying internationally, immediate family, and the wedding squad.",
+      "alternatives": {
+        "title": "Prefer your own adventure?",
+        "options": [
+          "The Falcon, Bridgnorth",
+          "The Vicarage Inn",
+          "Or check out local Airbnbs for some extra freedom — just don't forget your toothbrush. If you need help booking, we're only a message away."
+        ]
+      }
     },
     "travel": {
       "title": "Travel",
-      "description": "For those joining us from abroad: The closest airport is Birmingham Airport (BHX). From here, it's about 45 minutes to Worfield by car or taxi. Alternatively, you can take a train from Birmingham new street station which is about 30 minutes. Those flying into London Heathrow Airport: Worfield is about 220 kilometers away. You can rent a car for a drive of approximately 2 hours and 30 minutes, or take a train from London to Wolverhampton, followed by a taxi to Worfield."
+      "intro": "Flying in from abroad? You absolute legends. Thank you for making the journey — we recommend arriving a few days early to beat jet lag and figure out the kettle.",
+      "closestAirport": "Closest airport:",
+      "options": [
+        "Birmingham (BHX) — 45 mins by car to Worfield",
+        "Train option: Birmingham New Street → Wolverhampton → taxi to venue"
+      ],
+      "alternatives": {
+        "title": "Flying into London Heathrow? (Solid choice.)",
+        "options": [
+          "About 2.5 hours by car",
+          "Or hop on a train to Wolverhampton, then taxi it the rest of the way"
+        ]
+      },
+      "tip": "Pro tip: pack snacks for the road."
+    },
+    "travelSpots": {
+      "title": "Recommended Travel Spots",
+      "intro": "Landing early? Make a mini-holiday of it! While you wait to witness our vows, explore London like a local tourist:",
+      "spots": [
+        "Natural History Museum – Free, massive, and has dinosaurs.",
+        "Hyde Park – Stroll, sip, and ponder life near a swan.",
+        "Covent Garden – Ideal for tea, theatre, and street performers who may or may not be better dancers than us."
+      ]
     },
     "gifts": {
       "title": "Gifts",
-      "description": "Your presence at our wedding is the greatest gift we could ask for! As we're celebrating abroad and won't be able to take physical gifts home, if you'd like to give a gift, an optional financial contribution towards our future together would be truly appreciated. But most of all, we're just grateful to celebrate this special day with you!"
+      "description": "Your presence is truly the best gift. But if you're feeling generous (or just really bad at showing up empty-handed), a contribution towards our future together would mean the world. We're keeping it light and luggage-free, so no physical gifts please — we've only got so many suitcases and most of them are full of wedding stress."
     }
   },
   "gallery": {
