@@ -59,10 +59,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   return (
     <MainLayout transparentHeader={true} dictionary={dictionary}>
       <HeroSection
-        title={heroWithDefaults.title}
-        subtitle={heroWithDefaults.subtitle}
-        date={heroWithDefaults.date}
-        location={heroWithDefaults.location}
         headline={heroWithDefaults.headline}
         subheadline={heroWithDefaults.subheadline}
         rsvpButton={heroWithDefaults.rsvpButton}
