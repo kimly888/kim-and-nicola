@@ -9,21 +9,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
-  title: string;
-  subtitle: string;
-  date: string;
-  location: string;
-  headline?: string;
-  subheadline?: string;
-  rsvpButton?: string;
+  headline: string;
+  subheadline: string;
+  rsvpButton: string;
   backgroundImage: string;
 }
 
 export function HeroSection({
-  title,
-  subtitle,
-  date,
-  location,
   headline,
   subheadline,
   rsvpButton = "RSVP Now",
@@ -60,7 +52,7 @@ export function HeroSection({
           className="object-cover"
           style={{
             objectPosition: "55% center",
-          }}
+          }} 
         />
       </motion.div>
 
@@ -75,54 +67,20 @@ export function HeroSection({
         className="relative z-10 text-center mt-20 text-white px-4 max-w-3xl"
       >
         <TextMaskAnimation
-          phrases={[title]}
+          phrases={[headline]}
           className="text-5xl md:text-7xl font-serif mb-6 tracking-wide"
           threshold={0.5}
           delayMultiplier={0.1}
         />
 
         <TextMaskAnimation
-          phrases={[subtitle]}
+          phrases={[subheadline]}
           className="text-lg md:text-xl font-light tracking-wider mb-4"
           threshold={0.5}
           delayMultiplier={0.1}
         />
 
-        {headline && (
-          <TextMaskAnimation
-            phrases={[headline]}
-            className="text-2xl md:text-3xl font-serif italic mb-4 mt-8"
-            threshold={0.5}
-            delayMultiplier={0.2}
-          />
-        )}
-
         <motion.div variants={fadeIn(0.2)} className="w-24 h-[1px] bg-white/70 mx-auto my-8" />
-
-        <div className="space-y-2 mb-6">
-          <TextMaskAnimation
-            phrases={[date]}
-            className="text-xl md:text-2xl font-light"
-            threshold={0.5}
-            delayMultiplier={0.15}
-          />
-
-          <TextMaskAnimation
-            phrases={[location]}
-            className="text-lg md:text-xl font-light"
-            threshold={0.5}
-            delayMultiplier={0.25}
-          />
-        </div>
-
-        {subheadline && (
-          <TextMaskAnimation
-            phrases={[subheadline]}
-            className="text-base md:text-lg font-light italic mb-10 max-w-2xl mx-auto"
-            threshold={0.5}
-            delayMultiplier={0.3}
-          />
-        )}
 
         <motion.div variants={fadeIn(1)}>
           <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
