@@ -208,7 +208,7 @@ export function RSVPForm() {
                 />
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Submit RSVP"}
+                  {isSubmitting ? "Submitting..." : "Reserve Your Seat (and your champagne)"}
                 </Button>
               </form>
             </Form>
