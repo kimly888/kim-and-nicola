@@ -33,12 +33,17 @@ interface EnhancedTravelType {
   icon: React.ReactNode;
 }
 
+interface WelcomeSection {
+  id: string;
+  text: string;
+}
+
 interface DetailsSectionProps {
   details: {
     title: string;
     welcome: {
       title: string;
-      message: string;
+      sections: WelcomeSection[];
       icon: React.ReactNode;
     };
     venue?: {
@@ -142,12 +147,10 @@ export function DetailsSection({
   const hasEnhancedAccommodation = Boolean(details.accommodation.alternatives);
 
   return (
-    <div id="details">
+    <div id="details" className="bg-[var(--color-sage-green)] px-4">
       {/* Welcome Section */}
       <WelcomeSection 
         welcome={details.welcome} 
-        backgroundImage={backgrounds.welcome}
-        enableParallax={parallaxEnabled.welcome}
         id="welcome"
       />
 

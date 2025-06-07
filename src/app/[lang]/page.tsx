@@ -12,16 +12,6 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
-  // Add default values for new hero fields if they don't exist in translation yet
-  const heroWithDefaults = {
-    ...dictionary.hero,
-    headline: dictionary.hero.headline || "It's a love story. Just say yes.",
-    subheadline:
-      dictionary.hero.subheadline ||
-      "Because love is patient, love is kind, and also… we already paid the deposit. So please RSVP ASAP before we elope out of sheer stress.",
-    rsvpButton: dictionary.hero.rsvpButton || "Reserve Your Seat (and your champagne)",
-  };
-
   const detailsWithIcons = {
     ...dictionary.details,
     welcome: {
@@ -64,7 +54,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
   return (
     <MainLayout transparentHeader={true} dictionary={dictionary}>
-      <HeroSection headline={heroWithDefaults.headline} />
+      <HeroSection />
       <DetailsSection details={detailsWithIcons} />
       <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
       <RSVPSection />

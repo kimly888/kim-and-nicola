@@ -33,7 +33,24 @@
     "title": "Event Details",
     "welcome": {
       "title": "Welcome",
-      "message": "You made it! Whether you received your invite via pigeon, post, or a guilt-trip — we're thrilled you're here. We can't wait to celebrate this gloriously chaotic and love-filled day with you. This site has all the need-to-knows: where to be, what to wear, how to get there, and where to sleep it off. We're beyond excited to make memories (and mild mistakes) together in beautiful England."
+      "sections": [
+        {
+          "id": "arrival",
+          "text": "You made it! Whether you received your invite via pigeon, post, or a guilt-trip — we're thrilled you're here."
+        },
+        {
+          "id": "celebration",
+          "text": "We can't wait to celebrate this gloriously chaotic and love-filled day with you."
+        },
+        {
+          "id": "information",
+          "text": "This site has all the need-to-knows: where to be, what to wear, how to get there, and where to sleep it off."
+        },
+        {
+          "id": "excitement",
+          "text": "We're beyond excited to make memories (and mild mistakes) together in beautiful England."
+        }
+      ]
     },
     "venue": {
       "title": "Venue",

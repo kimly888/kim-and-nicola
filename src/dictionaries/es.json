@@ -33,7 +33,24 @@
     "title": "Detalles del Evento",
     "welcome": {
       "title": "Bienvenida",
-      "message": "¡Lo lograste! Ya sea que hayas recibido tu invitación por paloma mensajera, correo postal, o por un viaje de culpa — estamos encantados de que estés aquí. No podemos esperar para celebrar este día gloriosamente caótico y lleno de amor contigo. Este sitio tiene toda la información necesaria: dónde estar, qué vestir, cómo llegar y dónde descansar después. Estamos más que emocionados de crear recuerdos (y pequeños errores entrañables) juntos en la hermosa Inglaterra."
+      "sections": [
+        {
+          "id": "arrival",
+          "text": "¡Lo lograste! Ya sea que hayas recibido tu invitación por paloma mensajera, correo postal, o por un viaje de culpa — estamos encantados de que estés aquí."
+        },
+        {
+          "id": "celebration",
+          "text": "No podemos esperar para celebrar este día gloriosamente caótico y lleno de amor contigo."
+        },
+        {
+          "id": "information",
+          "text": "Este sitio tiene toda la información necesaria: dónde estar, qué vestir, cómo llegar y dónde descansar después."
+        },
+        {
+          "id": "excitement",
+          "text": "Estamos más que emocionados de crear recuerdos (y pequeños errores entrañables) juntos en la hermosa Inglaterra."
+        }
+      ]
     },
     "venue": {
       "title": "Lugar",

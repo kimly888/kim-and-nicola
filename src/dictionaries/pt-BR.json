@@ -33,7 +33,24 @@
     "title": "Detalhes do Evento",
     "welcome": {
       "title": "Bem-vindo",
-      "message": "Você conseguiu chegar! Seja por pombo-correio, pelos Correios ou por um sentimento de culpa — estamos muito felizes que você esteja aqui. Mal podemos esperar para celebrar este dia gloriosamente caótico e cheio de amor com você. Este site tem todas as informações necessárias: onde estar, o que vestir, como chegar e onde descansar depois. Estamos super animados para criar memórias (e pequenos erros divertidos) juntos na bela Inglaterra."
+      "sections": [
+        {
+          "id": "arrival",
+          "text": "Você conseguiu chegar! Seja por pombo-correio, pelos Correios ou por um sentimento de culpa — estamos muito felizes que você esteja aqui."
+        },
+        {
+          "id": "celebration",
+          "text": "Mal podemos esperar para celebrar este dia gloriosamente caótico e cheio de amor com você."
+        },
+        {
+          "id": "information",
+          "text": "Este site tem todas as informações necessárias: onde estar, o que vestir, como chegar e onde descansar depois."
+        },
+        {
+          "id": "excitement",
+          "text": "Estamos super animados para criar memórias (e pequenos erros divertidos) juntos na bela Inglaterra."
+        }
+      ]
     },
     "venue": {
       "title": "Local",

@@ -137,3 +137,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Direct override for text-white */
+.text-white {
+  color: #FAFAFA !important;
+}

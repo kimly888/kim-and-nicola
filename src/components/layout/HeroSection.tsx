@@ -3,12 +3,9 @@
 import { motion } from "framer-motion";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
+import { bgColor } from "@/lib/theme/tailwind-classes";
 
-interface HeroSectionProps {
-  headline: string;
-}
-
-export function HeroSection({ headline }: HeroSectionProps) {
+export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Animation variants for the container
@@ -34,9 +31,10 @@ export function HeroSection({ headline }: HeroSectionProps) {
   };
 
   return (
-    <section ref={sectionRef} className="relative h-screen flex justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-black/30 z-[1]" />
-
+    <section
+      ref={sectionRef}
+      className={`relative h-screen flex justify-center overflow-hidden ${bgColor.sageGreen}`}
+    >
       {/* Text container that animates from center to top */}
       <motion.div
         className="absolute left-1/2 z-10"
@@ -47,7 +45,7 @@ export function HeroSection({ headline }: HeroSectionProps) {
       >
         <TextMaskAnimation
           phrases={["WELCOME"]}
-          className="text-5xl md:text-7xl tracking-wide text-white"
+          className="text-5xl md:text-8xl tracking-wide font-bold text-white"
           threshold={0.1}
           delayMultiplier={0.1}
         />

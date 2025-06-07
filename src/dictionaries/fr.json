@@ -33,7 +33,24 @@
     "title": "Détails de l'Événement",
     "welcome": {
       "title": "Bienvenue",
-      "message": "Vous y êtes arrivés ! Que vous ayez reçu votre invitation par pigeon voyageur, par la poste, ou par culpabilisation – nous sommes ravis que vous soyez là. Nous avons hâte de célébrer cette journée glorieusement chaotique et remplie d'amour avec vous. Ce site contient toutes les informations essentielles : où être, quoi porter, comment y arriver, et où récupérer après la fête. Nous sommes plus qu'impatients de créer des souvenirs (et quelques bêtises légères) ensemble dans la belle Angleterre."
+      "sections": [
+        {
+          "id": "arrival",
+          "text": "Vous y êtes arrivés ! Que vous ayez reçu votre invitation par pigeon voyageur, par la poste, ou par culpabilisation – nous sommes ravis que vous soyez là."
+        },
+        {
+          "id": "celebration",
+          "text": "Nous avons hâte de célébrer cette journée glorieusement chaotique et remplie d'amour avec vous."
+        },
+        {
+          "id": "information",
+          "text": "Ce site contient toutes les informations essentielles : où être, quoi porter, comment y arriver, et où récupérer après la fête."
+        },
+        {
+          "id": "excitement",
+          "text": "Nous sommes plus qu'impatients de créer des souvenirs (et quelques bêtises légères) ensemble dans la belle Angleterre."
+        }
+      ]
     },
     "venue": {
       "title": "Lieu",

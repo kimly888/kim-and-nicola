@@ -33,7 +33,24 @@
     "title": "Manylion y Digwyddiad",
     "welcome": {
       "title": "Croeso",
-      "message": "Rydych chi wedi cyrraedd! P'un a gawsoch eich gwahoddiad trwy golomen, post, neu deimladau euog — rydym wrth ein bodd eich bod chi yma. Ni allwn aros i ddathlu'r diwrnod hwn sydd yn llawn cariad a chaos gyda chi. Mae'r wefan hon yn cynnwys yr holl wybodaeth angenrheidiol: ble i fod, beth i'w wisgo, sut i gyrraedd, a ble i gysgu wedi'r cyfan. Rydym yn fwy na chyffrous i greu atgofion (a chamgymeriadau bach) gyda'n gilydd yn Lloegr brydferth."
+      "sections": [
+        {
+          "id": "arrival",
+          "text": "Rydych chi wedi cyrraedd! P'un a gawsoch eich gwahoddiad trwy golomen, post, neu deimladau euog — rydym wrth ein bodd eich bod chi yma."
+        },
+        {
+          "id": "celebration",
+          "text": "Ni allwn aros i ddathlu'r diwrnod hwn sydd yn llawn cariad a chaos gyda chi."
+        },
+        {
+          "id": "information",
+          "text": "Mae'r wefan hon yn cynnwys yr holl wybodaeth angenrheidiol: ble i fod, beth i'w wisgo, sut i gyrraedd, a ble i gysgu wedi'r cyfan."
+        },
+        {
+          "id": "excitement",
+          "text": "Rydym yn fwy na chyffrous i greu atgofion (a chamgymeriadau bach) gyda'n gilydd yn Lloegr brydferth."
+        }
+      ]
     },
     "venue": {
       "title": "Lleoliad",
