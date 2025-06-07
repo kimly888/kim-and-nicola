@@ -16,8 +16,10 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
   const heroWithDefaults = {
     ...dictionary.hero,
     headline: dictionary.hero.headline || "It's a love story. Just say yes.",
-    subheadline: dictionary.hero.subheadline || "Because love is patient, love is kind, and also… we already paid the deposit. So please RSVP ASAP before we elope out of sheer stress.",
-    rsvpButton: dictionary.hero.rsvpButton || "Reserve Your Seat (and your champagne)"
+    subheadline:
+      dictionary.hero.subheadline ||
+      "Because love is patient, love is kind, and also… we already paid the deposit. So please RSVP ASAP before we elope out of sheer stress.",
+    rsvpButton: dictionary.hero.rsvpButton || "Reserve Your Seat (and your champagne)",
   };
 
   const detailsWithIcons = {
@@ -26,10 +28,12 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
       ...dictionary.details.welcome,
       icon: <span className="text-4xl">👋</span>,
     },
-    venue: dictionary.details.venue ? {
-      ...dictionary.details.venue,
-      icon: <span className="text-4xl">🏰</span>,
-    } : undefined,
+    venue: dictionary.details.venue
+      ? {
+          ...dictionary.details.venue,
+          icon: <span className="text-4xl">🏰</span>,
+        }
+      : undefined,
     schedule: {
       ...dictionary.details.schedule,
       icon: <span className="text-4xl">🗓️</span>,
@@ -46,10 +50,12 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
       ...dictionary.details.travel,
       icon: <span className="text-4xl">🚗</span>,
     },
-    travelSpots: dictionary.details.travelSpots ? {
-      ...dictionary.details.travelSpots,
-      icon: <span className="text-4xl">🗺️</span>,
-    } : undefined,
+    travelSpots: dictionary.details.travelSpots
+      ? {
+          ...dictionary.details.travelSpots,
+          icon: <span className="text-4xl">🗺️</span>,
+        }
+      : undefined,
     gifts: {
       ...dictionary.details.gifts,
       icon: <span className="text-4xl">🎁</span>,
@@ -58,12 +64,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
 
   return (
     <MainLayout transparentHeader={true} dictionary={dictionary}>
-      <HeroSection
-        headline={heroWithDefaults.headline}
-        subheadline={heroWithDefaults.subheadline}
-        rsvpButton={heroWithDefaults.rsvpButton}
-        backgroundImage="/images/1.jpg"
-      />
+      <HeroSection headline={heroWithDefaults.headline} />
       <DetailsSection details={detailsWithIcons} />
       <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
       <RSVPSection />
