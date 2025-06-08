@@ -4,34 +4,10 @@ import { WelcomeSection } from "./details/WelcomeSection";
 import { VenueSection } from "./details/VenueSection";
 import { ScheduleSection } from "./details/ScheduleSection";
 import { AttireSection } from "./details/AttireSection";
-import { InfoSection } from "./details/InfoSection";
 import { EnhancedAccommodationSection } from "./details/EnhancedAccommodationSection";
 import { EnhancedTravelSection } from "./details/EnhancedTravelSection";
 import { TravelSpotsSection } from "./details/TravelSpotsSection";
-
-// Define specific types for the enhanced sections
-interface EnhancedAccommodationType {
-  title: string;
-  description: string;
-  alternatives: {
-    title: string;
-    options: string[];
-  };
-  icon: React.ReactNode;
-}
-
-interface EnhancedTravelType {
-  title: string;
-  intro: string;
-  closestAirport: string;
-  options: string[];
-  alternatives: {
-    title: string;
-    options: string[];
-  };
-  tip: string;
-  icon: React.ReactNode;
-}
+import { InfoSection } from "./details/InfoSection";
 
 interface WelcomeSection {
   id: string;
@@ -46,7 +22,7 @@ interface DetailsSectionProps {
       sections: WelcomeSection[];
       icon: React.ReactNode;
     };
-    venue?: {
+    venue: {
       title: string;
       description: string;
       icon: React.ReactNode;
@@ -77,7 +53,7 @@ interface DetailsSectionProps {
     accommodation: {
       title: string;
       description: string;
-      alternatives?: {
+      alternatives: {
         title: string;
         options: string[];
       };
@@ -85,18 +61,18 @@ interface DetailsSectionProps {
     };
     travel: {
       title: string;
-      description?: string;
-      intro?: string;
-      closestAirport?: string;
-      options?: string[];
-      alternatives?: {
+      description: string;
+      intro: string;
+      closestAirport: string;
+      options: string[];
+      alternatives: {
         title: string;
         options: string[];
       };
-      tip?: string;
+      tip: string;
       icon: React.ReactNode;
     };
-    travelSpots?: {
+    travelSpots: {
       title: string;
       intro: string;
       spots: string[];
@@ -130,110 +106,59 @@ interface DetailsSectionProps {
   };
 }
 
-export function DetailsSection({ 
-  details, 
-  backgrounds = {}, 
-  parallaxEnabled = {} 
+export function DetailsSection({
+  details,
+  backgrounds = {},
+  parallaxEnabled = {},
 }: DetailsSectionProps) {
-  // Check if travel section has the new structure
-  const hasEnhancedTravel = Boolean(
-    details.travel.intro && 
-    details.travel.closestAirport && 
-    details.travel.options &&
-    details.travel.alternatives
-  );
-
-  // Check if accommodation section has the new structure
-  const hasEnhancedAccommodation = Boolean(details.accommodation.alternatives);
-
   return (
-    <div id="details" className="bg-[var(--color-sage-green)] px-4">
-      {/* Welcome Section */}
-      <WelcomeSection 
-        welcome={details.welcome} 
-        id="welcome"
+    <div id="details" className="relative bg-[var(--color-sage-green)] px-4">
+      <WelcomeSection welcome={details.welcome} />
+
+      <VenueSection
+        venue={details.venue}
+        backgroundImage={backgrounds.venue}
+        enableParallax={parallaxEnabled.venue}
+        id="venue"
       />
 
-      {/* Venue Section */}
-      {details.venue && (
-        <VenueSection 
-          venue={details.venue} 
-          backgroundImage={backgrounds.venue}
-          enableParallax={parallaxEnabled.venue}
-          id="venue"
-        />
-      )}
-
-      {/* Schedule Section */}
-      <ScheduleSection 
-        schedule={details.schedule} 
+      <ScheduleSection
+        schedule={details.schedule}
         backgroundImage={backgrounds.schedule}
         enableParallax={parallaxEnabled.schedule}
         id="schedule"
       />
 
-      {/* Attire Section */}
-      <AttireSection 
-        attire={details.attire} 
+      <AttireSection
+        attire={details.attire}
         backgroundImage={backgrounds.attire}
         enableParallax={parallaxEnabled.attire}
         id="attire"
       />
 
-      {/* Accommodation Section */}
-      {hasEnhancedAccommodation ? (
-        <EnhancedAccommodationSection 
-          accommodation={details.accommodation as EnhancedAccommodationType}
-          backgroundImage={backgrounds.accommodation}
-          enableParallax={parallaxEnabled.accommodation}
-          id="accommodation"
-        />
-      ) : (
-        <InfoSection 
-          info={{
-            title: details.accommodation.title,
-            description: details.accommodation.description,
-            icon: details.accommodation.icon
-          }}
-          backgroundImage={backgrounds.accommodation}
-          enableParallax={parallaxEnabled.accommodation}
-          id="accommodation"
-        />
-      )}
+      <EnhancedAccommodationSection
+        accommodation={details.accommodation}
+        backgroundImage={backgrounds.accommodation}
+        enableParallax={parallaxEnabled.accommodation}
+        id="accommodation"
+      />
 
-      {/* Travel Section */}
-      {hasEnhancedTravel ? (
-        <EnhancedTravelSection 
-          travel={details.travel as EnhancedTravelType}
-          backgroundImage={backgrounds.travel}
-          enableParallax={parallaxEnabled.travel} 
-          id="travel"
-        />
-      ) : (
-        <InfoSection 
-          info={{
-            title: details.travel.title,
-            description: details.travel.description || "",
-            icon: details.travel.icon
-          }}
-          backgroundImage={backgrounds.travel}
-          enableParallax={parallaxEnabled.travel} 
-          id="travel"
-        />
-      )}
+      <EnhancedTravelSection
+        travel={details.travel}
+        backgroundImage={backgrounds.travel}
+        enableParallax={parallaxEnabled.travel}
+        id="travel"
+      />
 
-      {/* Travel Spots Section */}
-      {details.travelSpots && (
-        <TravelSpotsSection 
-          travelSpots={details.travelSpots}
-          backgroundImage={backgrounds.travelSpots}
-          enableParallax={parallaxEnabled.travelSpots}
-          id="travelSpots"
-        />
-      )}
+      <TravelSpotsSection
+        travelSpots={details.travelSpots}
+        backgroundImage={backgrounds.travelSpots}
+        enableParallax={parallaxEnabled.travelSpots}
+        id="travelSpots"
+      />
 
       {/* Gifts Section */}
-      <InfoSection 
+      <InfoSection
         info={details.gifts}
         backgroundImage={backgrounds.gifts}
         enableParallax={parallaxEnabled.gifts}
@@ -241,4 +166,4 @@ export function DetailsSection({
       />
     </div>
   );
-} 
+}

@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
+import { motion } from "framer-motion";
+import { SectionCard } from "./SectionCard";
 
 interface VenueSectionProps {
   venue: {
@@ -15,63 +14,43 @@ interface VenueSectionProps {
   id?: string;
 }
 
-export function VenueSection({ 
-  venue, 
+export function VenueSection({
+  venue,
   backgroundImage,
   enableParallax = false,
-  id
+  id,
 }: VenueSectionProps) {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  // Set up parallax effect if enabled
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const venueKeywords = ["Ceremony", "Reception", "Celebration", "Gathering", "Memories", "Love"];
 
   return (
-    <section
+    <SectionCard
       id={id}
-      ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-20"
+      sectionNumber="(01)"
+      icon={venue.icon}
+      title={venue.title}
+      tags={venueKeywords}
+      backgroundImage={backgroundImage}
+      enableParallax={enableParallax}
     >
-      {/* Background with optional parallax effect */}
-      {backgroundImage && (
-        <motion.div 
-          style={enableParallax ? { y } : {}} 
-          className="absolute inset-0 z-0"
-        >
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        </motion.div>
-      )}
+      <div className="flex-1">
+        <p className="text-[#653e00] text-lg lg:text-xl leading-relaxed max-w-lg font-medium">
+          {venue.description}
+        </p>
 
-      <div className="container mx-auto px-4 z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          ref={ref}
-          className="max-w-4xl mx-auto bg-background/90 backdrop-blur-sm p-8"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 flex items-center justify-center text-primary">
-              {venue.icon}
-            </div>
-            <h2 className="text-2xl font-serif">{venue.title}</h2>
-          </div>
-          <p className="text-muted-foreground">{venue.description}</p>
-        </motion.div>
+        <div className="flex flex-wrap gap-3 pt-6 max-w-sm">
+          {venueKeywords?.map((keyword, index) => (
+            <motion.span
+              key={keyword}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+              className="px-4 py-2 bg-white/50 backdrop-blur-sm text-[#653e00] font-medium rounded-full text-sm border border-white/30 hover:bg-white/30 transition-all duration-300"
+            >
+              {keyword}
+            </motion.span>
+          ))}
+        </div>
       </div>
-    </section>
+    </SectionCard>
   );
-} 
+}
