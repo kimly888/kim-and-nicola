@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/layout/HeroSection";
 import { DetailsSection } from "@/components/layout/DetailsSection";
 import { GallerySection } from "@/components/layout/GallerySection";
 import { RSVPSection } from "@/components/layout/RSVPSection";
+import { StickerGallery } from "@/components/effects/StickerGallery";
 import { getDictionary } from "@/dictionaries";
 import { Locale } from "@/i18n-config";
 import { GALLERY_IMAGES } from "@/lib/constants/images";
@@ -55,6 +56,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
       <HeroSection />
       <DetailsSection details={detailsWithIcons} />
       <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
+      <StickerGallery />
       <RSVPSection />
     </MainLayout>
   );

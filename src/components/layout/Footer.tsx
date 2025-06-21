@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { textColor } from "@/lib/theme";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface FooterProps {
   className?: string;
@@ -11,15 +13,55 @@ interface FooterProps {
 
 export function Footer({ className }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const [footerStickers, setFooterStickers] = useState<number[]>([]);
+
+  useEffect(() => {
+    // Randomly select 4 stickers for footer decoration
+    const stickers = Array.from({ length: 4 }, () => 
+      Math.floor(Math.random() * 46) + 1
+    );
+    setFooterStickers(stickers);
+  }, []);
 
   return (
     <motion.footer
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className={cn(`py-12 px-6 md:px-12 ${textColor.lightTaupe}`, className)}
+      className={cn(`relative py-12 px-6 md:px-12 ${textColor.lightTaupe}`, className)}
     >
-      <div className="container mx-auto">
+      {/* Decorative stickers */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
+        {footerStickers.map((stickerNum, index) => (
+          <motion.div
+            key={index}
+            className="absolute"
+            style={{
+              left: `${20 + index * 20}%`,
+              top: `${10 + (index % 2) * 60}%`,
+            }}
+            animate={{
+              rotate: [0, 5, -5, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 4 + index,
+              repeat: Infinity,
+              delay: index * 0.5,
+            }}
+          >
+            <Image
+              src={`/images/stickers/Subject ${stickerNum}.png`}
+              alt=""
+              width={60}
+              height={60}
+              className="w-12 h-12 md:w-16 md:h-16"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-4xl tracking-wider font-bold">Kim & Nicola</h3>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
 import { textColor } from "@/lib/theme";
+import Image from "next/image";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,7 +32,26 @@ export function HeroSection() {
   };
 
   return (
-    <section ref={sectionRef} className={`relative h-screen flex justify-center overflow-hidden`}>
+    <section 
+      ref={sectionRef} 
+      className={`relative h-screen flex justify-center overflow-hidden`}
+      data-hero-section
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/1.jpg"
+          alt="Kim and Nicola"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
+      </div>
+
+      {/* Floating Stickers */}
+      {/* <FloatingStickers count={8} className="z-5" /> */}
+
       {/* Text container that animates from center to top */}
       <motion.div
         className="absolute left-1/2 z-10"
