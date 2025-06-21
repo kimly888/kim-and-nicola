@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 interface TextMaskAnimationProps {
@@ -17,7 +17,7 @@ export function TextMaskAnimation({
   delayMultiplier = 0.075,
   duration = 0.75,
 }: TextMaskAnimationProps) {
-  const animation = {
+  const animation: Variants = {
     initial: { y: '100%' },
     enter: (i: number) => ({
       y: '0',

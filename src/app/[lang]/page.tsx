@@ -17,37 +17,35 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     ...dictionary.details,
     welcome: {
       ...dictionary.details.welcome,
-      icon: <span className="text-4xl">👋</span>,
+      icon: "👋",
     },
     venue: {
       ...dictionary.details.venue,
-      icon: <span className="text-4xl">🏰</span>,
+      icon: "🏰",
     },
     schedule: {
       ...dictionary.details.schedule,
-      icon: <span className="text-4xl">🗓️</span>,
+      icon: "🗓️",
     },
     attire: {
       ...dictionary.details.attire,
-      icon: <span className="text-4xl">👔</span>,
+      icon: "👔",
     },
     accommodation: {
       ...dictionary.details.accommodation,
-      icon: <span className="text-4xl">🏘️</span>,
+      icon: "🏘️",
     },
     travel: {
       ...dictionary.details.travel,
-      icon: <span className="text-4xl">🚗</span>,
+      icon: "🚗",
     },
-    travelSpots: dictionary.details.travelSpots
-      ? {
-          ...dictionary.details.travelSpots,
-          icon: <span className="text-4xl">🗺️</span>,
-        }
-      : undefined,
+    travelSpots: {
+      ...dictionary.details.travelSpots,
+      icon: "🗺️",
+    },
     gifts: {
       ...dictionary.details.gifts,
-      icon: <span className="text-4xl">🎁</span>,
+      icon: "🎁",
     },
   };
 

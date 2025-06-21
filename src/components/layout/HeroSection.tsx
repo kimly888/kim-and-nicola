@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
 import { textColor } from "@/lib/theme";
@@ -10,18 +10,18 @@ export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Animation variants for the container
-  const containerVariants = {
+  const containerVariants: Variants = {
     initial: {
       scale: 0.5,
       top: "50%",
-      translateY: "-50%",
-      translateX: "-50%",
+      y: "-50%",
+      x: "-50%",
     },
     animate: {
       scale: [0.5, 1, 1],
       top: ["50%", "50%", "5%"],
-      translateY: ["-50%", "-50%", "0%"],
-      translateX: "-50%",
+      y: ["-50%", "-50%", "0%"],
+      x: "-50%",
       transition: {
         duration: 2.5,
         times: [0, 0.4, 1],
