@@ -4,7 +4,7 @@
     "story": "私たちの物語",
     "details": "詳細",
     "gallery": "ギャラリー",
-    "rsvp": "出欠確認"
+    "rsvp": "出席確認"
   },
   "hero": {
     "headline": "これは愛の物語。はいと言うだけでいい。",
@@ -167,21 +167,62 @@
     }
   },
   "rsvp": {
-    "title": "出欠確認",
-    "subtitle": "あなたとのお祝いを楽しみにしています！",
-    "deadline": "2025年12月1日までにご返信ください",
+    "title": "出席確認",
+    "subtitle": "あなたと一緒にお祝いできることを楽しみにしています！",
+    "sectionDescription": "私たちの特別な日にご参加いただけることを光栄に思います。ご都合をお聞かせください。",
+    "deadline": "2025年12月1日までにご返答ください",
     "form": {
-      "name": "氏名",
-      "email": "メールアドレス",
-      "attending": "ご出席いただけますか？",
-      "yes": "はい、参加します",
-      "no": "申し訳ありませんが、参加できません",
-      "guests": "ゲスト人数",
-      "dietaryRestrictions": "食事制限",
-      "message": "カップルへのメッセージ",
-      "submit": "送信"
+      "title": "出席確認",
+      "description": "私たちの特別な日にお越しいただけるかお聞かせください。",
+      "fields": {
+        "name": {
+          "label": "お名前",
+          "placeholder": "フルネーム"
+        },
+        "email": {
+          "label": "メールアドレス",
+          "placeholder": "your.email@example.com"
+        },
+        "attending": {
+          "label": "出席いたします",
+          "description": "ご都合をお聞かせください"
+        },
+        "plusOnes": {
+          "label": "同伴者 (最大4名)",
+          "description": "招待状に同伴者が含まれている場合はラッキーです。そうでない場合は、あなた一人分の素晴らしい席をご用意しています。"
+        },
+        "plusOneNames": {
+          "label": "同伴者のお名前",
+          "placeholder": "同伴者のお名前",
+          "description": "同伴される方のお名前をご記入ください。"
+        },
+        "dietaryRestrictions": {
+          "label": "食事制限",
+          "placeholder": "食事制限がございましたらお聞かせください"
+        },
+        "notes": {
+          "label": "その他ご質問",
+          "placeholder": "その他ご質問がございましたらどうぞ"
+        }
+      },
+      "validation": {
+        "nameRequired": "お名前を入力してください",
+        "emailInvalid": "有効なメールアドレスを入力してください",
+        "nameMinLength": "名前を入力してください",
+        "plusOneNamesRequired": "すべての同伴者のお名前をご記入ください"
+      },
+      "submit": "席を確保する（シャンパンも一緒に）",
+      "submitting": "送信中..."
     },
-    "confirmation": "出欠確認をありがとうございます！あなたとお祝いできることを楽しみにしています。"
+    "success": {
+      "title": "{name}様、ありがとうございます！",
+      "message": "出席確認を正常に送信いたしました。あなたと一緒にお祝いできることを楽しみにしています！",
+      "emailConfirmation": "まもなく確認メールをお送りします。"
+    },
+    "toasts": {
+      "success": "出席確認をありがとうございます！",
+      "error": "出席確認の送信中にエラーが発生しました。もう一度お試しください。"
+    }
   },
   "footer": {
     "copyright": "© 2026 キム＆ニコラ",

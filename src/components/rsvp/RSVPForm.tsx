@@ -23,32 +23,39 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { fadeIn, slideUp } from "@/lib/animations";
 import { supabase } from "@/lib/supabase/client";
 import { bgColor, textColor } from "@/lib/theme";
+import { Dictionary } from "@/dictionaries";
 
-// Form schema
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Please enter your name" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  attending: z.boolean(),
-  plusOnes: z.number().min(0).max(5),
-  plusOneNames: z.array(z.string().min(1, { message: "Please enter a name" })).optional(),
-  dietaryRestrictions: z.string().optional(),
-  notes: z.string().optional(),
-}).refine((data) => {
-  // If attending and has plus ones, plus one names are required
-  if (data.attending && data.plusOnes > 0) {
-    return data.plusOneNames && data.plusOneNames.length === data.plusOnes;
-  }
-  return true;
-}, {
-  message: "Please provide names for all plus ones",
-  path: ["plusOneNames"],
-});
+interface RSVPFormProps {
+  dictionary: Dictionary;
+}
 
-type FormValues = z.infer<typeof formSchema>;
-
-export function RSVPForm() {
+export function RSVPForm({ dictionary }: RSVPFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false); 
+
+  const formTexts = dictionary.rsvp.form;
+
+  // Form schema with translated validation messages
+  const formSchema = z.object({
+    name: z.string().min(2, { message: formTexts.validation.nameRequired }),
+    email: z.string().email({ message: formTexts.validation.emailInvalid }),
+    attending: z.boolean(),
+    plusOnes: z.number().min(0).max(5),
+    plusOneNames: z.array(z.string().min(1, { message: formTexts.validation.nameMinLength })).optional(),
+    dietaryRestrictions: z.string().optional(),
+    notes: z.string().optional(),
+  }).refine((data) => {
+    // If attending and has plus ones, plus one names are required
+    if (data.attending && data.plusOnes > 0) {
+      return data.plusOneNames && data.plusOneNames.length === data.plusOnes;
+    }
+    return true;
+  }, {
+    message: formTexts.validation.plusOneNamesRequired,
+    path: ["plusOneNames"],
+  });
+
+  type FormValues = z.infer<typeof formSchema>;
 
   // Initialize form
   const form = useForm<FormValues>({
@@ -86,10 +93,10 @@ export function RSVPForm() {
 
       // Show success message
       setIsSuccess(true);
-      toast.success("Thank you for your RSVP!");
+      toast.success(dictionary.rsvp.toasts.success);
     } catch (error) {
       console.error("Error submitting RSVP:", error);
-      toast.error("There was an error submitting your RSVP. Please try again.");
+      toast.error(dictionary.rsvp.toasts.error);
     } finally {
       setIsSubmitting(false);
     }
@@ -103,13 +110,13 @@ export function RSVPForm() {
       className="w-full max-w-md mx-auto"
     >
       {isSuccess ? (
-        <SuccessMessage name={form.getValues("name")} />
+        <SuccessMessage name={form.getValues("name")} dictionary={dictionary} />
       ) : (
         <Card className={`border-none shadow-lg ${bgColor.lightTaupe} ${textColor.darkMaroon}`}>
           <CardHeader>
-            <CardTitle className="text-xl">RSVP</CardTitle>
+            <CardTitle className="text-xl">{formTexts.title}</CardTitle>
             <CardDescription>
-              Please let us know if you can make it to our special day.
+              {formTexts.description}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -120,9 +127,9 @@ export function RSVPForm() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>{formTexts.fields.name.label}</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your full name" {...field} />
+                        <Input placeholder={formTexts.fields.name.placeholder} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -134,9 +141,9 @@ export function RSVPForm() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{formTexts.fields.email.label}</FormLabel>
                       <FormControl>
-                        <Input placeholder="your.email@example.com" type="email" {...field} />
+                        <Input placeholder={formTexts.fields.email.placeholder} type="email" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -152,8 +159,8 @@ export function RSVPForm() {
                         <Checkbox checked={field.value} onCheckedChange={field.onChange} />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>I will be attending</FormLabel>
-                        <FormDescription>Let us know if you can make it</FormDescription>
+                        <FormLabel>{formTexts.fields.attending.label}</FormLabel>
+                        <FormDescription>{formTexts.fields.attending.description}</FormDescription>
                       </div>
                     </FormItem>
                   )}
@@ -166,7 +173,7 @@ export function RSVPForm() {
                       name="plusOnes"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Plus Ones (Max 4)</FormLabel>
+                          <FormLabel>{formTexts.fields.plusOnes.label}</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
@@ -177,7 +184,7 @@ export function RSVPForm() {
                             />
                           </FormControl>
                           <FormDescription>
-                          If your invite includes a plus one, lucky them. If not, we&apos;re saving a seat for one fabulous guest, you.
+                            {formTexts.fields.plusOnes.description}
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
@@ -190,12 +197,12 @@ export function RSVPForm() {
                         name="plusOneNames"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Plus One Names</FormLabel>
+                            <FormLabel>{formTexts.fields.plusOneNames.label}</FormLabel>
                             <div className="space-y-3">
                               {Array.from({ length: form.watch("plusOnes") }, (_, index) => (
                                 <FormControl key={index}>
                                   <Input
-                                    placeholder={`Name of plus one ${index + 1}`}
+                                    placeholder={`${formTexts.fields.plusOneNames.placeholder} ${index + 1}`}
                                     value={field.value?.[index] || ""}
                                     onChange={(e) => {
                                       const currentNames = field.value || [];
@@ -208,7 +215,7 @@ export function RSVPForm() {
                               ))}
                             </div>
                             <FormDescription>
-                              Enter the names of the plus ones you&apos;re bringing.
+                              {formTexts.fields.plusOneNames.description}
                             </FormDescription>
                             <FormMessage />
                           </FormItem>
@@ -221,10 +228,10 @@ export function RSVPForm() {
                       name="dietaryRestrictions"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Dietary Restrictions</FormLabel>
+                          <FormLabel>{formTexts.fields.dietaryRestrictions.label}</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Please let us know if you have any dietary restrictions"
+                              placeholder={formTexts.fields.dietaryRestrictions.placeholder}
                               {...field}
                             />
                           </FormControl>
@@ -240,10 +247,10 @@ export function RSVPForm() {
                   name="notes"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Additional Questions</FormLabel>
+                      <FormLabel>{formTexts.fields.notes.label}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Any additional information you'd like to know"
+                          placeholder={formTexts.fields.notes.placeholder}
                           {...field}
                         />
                       </FormControl>
@@ -253,7 +260,7 @@ export function RSVPForm() {
                 />
 
                 <Button type="submit" className={`w-full ${bgColor.sageGreen} font-bold`} disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Reserve Your Seat (and your champagne)"}
+                  {isSubmitting ? formTexts.submitting : formTexts.submit}
                 </Button>
               </form>
             </Form>
@@ -264,7 +271,9 @@ export function RSVPForm() {
   );
 }
 
-function SuccessMessage({ name }: { name: string }) {
+function SuccessMessage({ name, dictionary }: { name: string; dictionary: Dictionary }) {
+  const successTexts = dictionary.rsvp.success;
+  
   return (
     <motion.div
       variants={slideUp()}
@@ -287,12 +296,12 @@ function SuccessMessage({ name }: { name: string }) {
           <path d="M20 6 9 17l-5-5" />
         </svg>
       </div>
-      <h3 className="text-2xl">Thank You, {name}!</h3>
+      <h3 className="text-2xl">{successTexts.title.replace('{name}', name)}</h3>
       <p>
-        Your RSVP has been successfully submitted. We look forward to celebrating with you!
+        {successTexts.message}
       </p>
       <p>
-        You&apos;ll receive a confirmation email shortly.
+        {successTexts.emailConfirmation}
       </p>
     </motion.div>
   );

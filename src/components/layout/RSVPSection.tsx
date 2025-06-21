@@ -5,8 +5,13 @@ import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 import { RSVPForm } from "@/components/rsvp/RSVPForm";
 import { fadeIn } from "@/lib/animations";
 import { textColor } from "@/lib/theme";
+import { Dictionary } from "@/dictionaries";
 
-export function RSVPSection() {
+interface RSVPSectionProps {
+  dictionary: Dictionary;
+}
+
+export function RSVPSection({ dictionary }: RSVPSectionProps) {
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
     threshold: 0.1,
     triggerOnce: true,
@@ -22,10 +27,9 @@ export function RSVPSection() {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl mb-4 font-bold font-shrikhand">RSVP</h2>
+          <h2 className="text-5xl md:text-7xl mb-4 font-bold font-shrikhand">{dictionary.rsvp.title}</h2>
           <p className="max-w-2xl mx-auto">
-            We would be honored to have you join us on our special day. Please let us know if you
-            can make it.
+            {dictionary.rsvp.sectionDescription}
           </p>
         </motion.div>
 
@@ -34,7 +38,7 @@ export function RSVPSection() {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
-          <RSVPForm />
+          <RSVPForm dictionary={dictionary} />
         </motion.div>
       </div>
     </section>

@@ -168,20 +168,61 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Edrychwn ymlaen at ddathlu gyda chi!",
+    "subtitle": "Rydym yn edrych ymlaen at ddathlu gyda chi!",
+    "sectionDescription": "Byddai'n anrhydedd cael eich cwmni ar ein diwrnod arbennig. Rhowch wybod i ni os gallwch chi ddod.",
     "deadline": "Atebwch erbyn Rhagfyr 1, 2025 os gwelwch yn dda",
     "form": {
-      "name": "Enw Llawn",
-      "email": "Cyfeiriad E-bost",
-      "attending": "A fyddwch chi'n bresennol?",
-      "yes": "Byddaf, byddaf yno",
-      "no": "Mae'n ddrwg gennyf, ni allaf ddod",
-      "guests": "Nifer o Westeion",
-      "dietaryRestrictions": "Cyfyngiadau Deietegol",
-      "message": "Neges i'r Pâr",
-      "submit": "Cyflwyno RSVP"
+      "title": "RSVP",
+      "description": "Rhowch wybod i ni os gallwch chi ddod i'n diwrnod arbennig.",
+      "fields": {
+        "name": {
+          "label": "Enw",
+          "placeholder": "Eich enw llawn"
+        },
+        "email": {
+          "label": "E-bost",
+          "placeholder": "eich.ebost@enghraifft.com"
+        },
+        "attending": {
+          "label": "Byddaf yn bresennol",
+          "description": "Gadewch i ni wybod os gallwch chi ddod"
+        },
+        "plusOnes": {
+          "label": "Gwesteion Ychwanegol (Uchafswm 4)",
+          "description": "Os yw eich gwahoddiad yn cynnwys gwestai ychwanegol, lwcus iddynt. Os nad, rydym yn cadw sedd i un gwestai anhygoel, chi."
+        },
+        "plusOneNames": {
+          "label": "Enwau'r Gwesteion Ychwanegol",
+          "placeholder": "Enw'r gwestai ychwanegol",
+          "description": "Rhowch enwau'r gwesteion ychwanegol rydych chi'n eu dod."
+        },
+        "dietaryRestrictions": {
+          "label": "Cyfyngiadau Deietegol",
+          "placeholder": "Rhowch wybod i ni os oes gennych chi gyfyngiadau deietegol"
+        },
+        "notes": {
+          "label": "Cwestiynau Ychwanegol",
+          "placeholder": "Unrhyw wybodaeth ychwanegol yr hoffech chi ei wybod"
+        }
+      },
+      "validation": {
+        "nameRequired": "Rhowch eich enw os gwelwch yn dda",
+        "emailInvalid": "Rhowch gyfeiriad e-bost dilys os gwelwch yn dda",
+        "nameMinLength": "Rhowch enw os gwelwch yn dda",
+        "plusOneNamesRequired": "Rhowch enwau ar gyfer yr holl westeion ychwanegol"
+      },
+      "submit": "Cadw Eich Sedd (a'ch siampên)",
+      "submitting": "Yn cyflwyno..."
     },
-    "confirmation": "Diolch am eich RSVP! Ni allwn aros i ddathlu gyda chi."
+    "success": {
+      "title": "Diolch, {name}!",
+      "message": "Mae eich RSVP wedi'i gyflwyno'n llwyddiannus. Rydym yn edrych ymlaen at ddathlu gyda chi!",
+      "emailConfirmation": "Byddwch yn derbyn e-bost cadarnhau'n fuan."
+    },
+    "toasts": {
+      "success": "Diolch am eich RSVP!",
+      "error": "Roedd gwall wrth gyflwyno eich RSVP. Rhowch gynnig arall arni."
+    }
   },
   "footer": {
     "copyright": "© 2026 Kim & Nicola",

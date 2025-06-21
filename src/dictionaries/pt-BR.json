@@ -168,20 +168,61 @@
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Estamos ansiosos para celebrar com você!",
+    "subtitle": "Esperamos celebrar com você!",
+    "sectionDescription": "Seria uma honra ter você conosco em nosso dia especial. Por favor, nos informe se você pode comparecer.",
     "deadline": "Por favor, responda até 1º de dezembro de 2025",
     "form": {
-      "name": "Nome Completo",
-      "email": "Endereço de Email",
-      "attending": "Você irá participar?",
-      "yes": "Sim, estarei lá",
-      "no": "Desculpe, não poderei ir",
-      "guests": "Número de Convidados",
-      "dietaryRestrictions": "Restrições Alimentares",
-      "message": "Mensagem para o Casal",
-      "submit": "Enviar RSVP"
+      "title": "RSVP",
+      "description": "Por favor, nos informe se você pode vir ao nosso dia especial.",
+      "fields": {
+        "name": {
+          "label": "Nome",
+          "placeholder": "Seu nome completo"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "seu.email@exemplo.com"
+        },
+        "attending": {
+          "label": "Estarei presente",
+          "description": "Nos informe se você pode comparecer"
+        },
+        "plusOnes": {
+          "label": "Acompanhantes (Máx. 4)",
+          "description": "Se seu convite inclui um acompanhante, que sorte. Se não, estamos reservando um lugar para um convidado fabuloso: você."
+        },
+        "plusOneNames": {
+          "label": "Nomes dos Acompanhantes",
+          "placeholder": "Nome do acompanhante",
+          "description": "Digite os nomes dos acompanhantes que você trará."
+        },
+        "dietaryRestrictions": {
+          "label": "Restrições Alimentares",
+          "placeholder": "Por favor, nos informe se você tem restrições alimentares"
+        },
+        "notes": {
+          "label": "Perguntas Adicionais",
+          "placeholder": "Qualquer informação adicional que você gostaria de saber"
+        }
+      },
+      "validation": {
+        "nameRequired": "Por favor, digite seu nome",
+        "emailInvalid": "Por favor, digite um endereço de e-mail válido",
+        "nameMinLength": "Por favor, digite um nome",
+        "plusOneNamesRequired": "Por favor, forneça nomes para todos os acompanhantes"
+      },
+      "submit": "Reserve Seu Lugar (e seu champanhe)",
+      "submitting": "Enviando..."
     },
-    "confirmation": "Obrigado pelo seu RSVP! Estamos ansiosos para celebrar com você."
+    "success": {
+      "title": "Obrigado, {name}!",
+      "message": "Seu RSVP foi enviado com sucesso. Esperamos celebrar com você!",
+      "emailConfirmation": "Você receberá um e-mail de confirmação em breve."
+    },
+    "toasts": {
+      "success": "Obrigado pelo seu RSVP!",
+      "error": "Houve um erro ao enviar seu RSVP. Por favor, tente novamente."
+    }
   },
   "footer": {
     "copyright": "© 2026 Kim & Nicola",

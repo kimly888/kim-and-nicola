@@ -169,19 +169,60 @@
   "rsvp": {
     "title": "RSVP",
     "subtitle": "We look forward to celebrating with you!",
+    "sectionDescription": "We would be honored to have you join us on our special day. Please let us know if you can make it.",
     "deadline": "Please respond by December 1, 2025",
     "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "attending": "Will you be attending?",
-      "yes": "Yes, I'll be there",
-      "no": "Sorry, I can't make it",
-      "guests": "Number of Guests",
-      "dietaryRestrictions": "Dietary Restrictions",
-      "message": "Message for the Couple",
-      "submit": "Submit RSVP"
+      "title": "RSVP",
+      "description": "Please let us know if you can make it to our special day.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your.email@example.com"
+        },
+        "attending": {
+          "label": "I will be attending",
+          "description": "Let us know if you can make it"
+        },
+        "plusOnes": {
+          "label": "Plus Ones (Max 4)",
+          "description": "If your invite includes a plus one, lucky them. If not, we're saving a seat for one fabulous guest, you."
+        },
+        "plusOneNames": {
+          "label": "Plus One Names",
+          "placeholder": "Name of plus one",
+          "description": "Enter the names of the plus ones you're bringing."
+        },
+        "dietaryRestrictions": {
+          "label": "Dietary Restrictions",
+          "placeholder": "Please let us know if you have any dietary restrictions"
+        },
+        "notes": {
+          "label": "Additional Questions",
+          "placeholder": "Any additional information you'd like to know"
+        }
+      },
+      "validation": {
+        "nameRequired": "Please enter your name",
+        "emailInvalid": "Please enter a valid email address",
+        "nameMinLength": "Please enter a name",
+        "plusOneNamesRequired": "Please provide names for all plus ones"
+      },
+      "submit": "Reserve Your Seat (and your champagne)",
+      "submitting": "Submitting..."
     },
-    "confirmation": "Thank you for your RSVP! We can't wait to celebrate with you."
+    "success": {
+      "title": "Thank You, {name}!",
+      "message": "Your RSVP has been successfully submitted. We look forward to celebrating with you!",
+      "emailConfirmation": "You'll receive a confirmation email shortly."
+    },
+    "toasts": {
+      "success": "Thank you for your RSVP!",
+      "error": "There was an error submitting your RSVP. Please try again."
+    }
   },
   "footer": {
     "copyright": "© 2026 Kim & Nicola",
