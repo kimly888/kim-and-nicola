@@ -1,59 +1,81 @@
 /**
- * Dynamically generated Tailwind utility classes for custom colors
- * This file automatically generates classes based on the colors defined in colors.ts
+ * Tailwind utility classes for custom colors
+ * Directly mapped to ensure CSS variable names match globals.css
  */
 
-import { colors } from './colors';
-
-// Helper function to convert camelCase to kebab-case for CSS variables
-const toKebabCase = (str: string): string => {
-  return str.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
+// Direct mapping to ensure exact CSS variable names
+export const textColor = {
+  champagne: 'text-[var(--color-champagne)]',
+  darkMaroon: 'text-[var(--color-dark-maroon)]',
+  mediumBurgundy: 'text-[var(--color-medium-burgundy)]',
+  oliveBrown: 'text-[var(--color-olive-brown)]',
+  sageGreen: 'text-[var(--color-sage-green)]',
+  deepTeal: 'text-[var(--color-deep-teal)]',
+  slateBlue: 'text-[var(--color-slate-blue)]',
+  steelBlue: 'text-[var(--color-steel-blue)]',
+  lightTaupe: 'text-[var(--color-light-taupe)]',
+  mediumTaupe: 'text-[var(--color-medium-taupe)]',
+  darkTaupe: 'text-[var(--color-dark-taupe)]',
 };
 
-// Helper function to create CSS variable reference
-const createCssVar = (colorName: string): string => {
-  return `var(--color-${toKebabCase(colorName)})`;
+export const bgColor = {
+  champagne: 'bg-[var(--color-champagne)]',
+  darkMaroon: 'bg-[var(--color-dark-maroon)]',
+  mediumBurgundy: 'bg-[var(--color-medium-burgundy)]',
+  oliveBrown: 'bg-[var(--color-olive-brown)]',
+  sageGreen: 'bg-[var(--color-sage-green)]',
+  deepTeal: 'bg-[var(--color-deep-teal)]',
+  slateBlue: 'bg-[var(--color-slate-blue)]',
+  steelBlue: 'bg-[var(--color-steel-blue)]',
+  lightTaupe: 'bg-[var(--color-light-taupe)]',
+  mediumTaupe: 'bg-[var(--color-medium-taupe)]',
+  darkTaupe: 'bg-[var(--color-dark-taupe)]',
 };
 
-// Type for color keys
-type ColorKey = keyof typeof colors;
+export const borderColor = {
+  champagne: 'border-[var(--color-champagne)]',
+  darkMaroon: 'border-[var(--color-dark-maroon)]',
+  mediumBurgundy: 'border-[var(--color-medium-burgundy)]',
+  oliveBrown: 'border-[var(--color-olive-brown)]',
+  sageGreen: 'border-[var(--color-sage-green)]',
+  deepTeal: 'border-[var(--color-deep-teal)]',
+  slateBlue: 'border-[var(--color-slate-blue)]',
+  steelBlue: 'border-[var(--color-steel-blue)]',
+  lightTaupe: 'border-[var(--color-light-taupe)]',
+  mediumTaupe: 'border-[var(--color-medium-taupe)]',
+  darkTaupe: 'border-[var(--color-dark-taupe)]',
+};
 
-// Dynamically generate text color classes
-export const textColor: Record<ColorKey, string> = Object.keys(colors).reduce((acc, colorName) => {
-  const key = colorName as ColorKey;
-  acc[key] = `text-[${createCssVar(colorName)}]`;
-  return acc;
-}, {} as Record<ColorKey, string>);
+export const ringColor = {
+  champagne: 'ring-[var(--color-champagne)]',
+  darkMaroon: 'ring-[var(--color-dark-maroon)]',
+  mediumBurgundy: 'ring-[var(--color-medium-burgundy)]',
+  oliveBrown: 'ring-[var(--color-olive-brown)]',
+  sageGreen: 'ring-[var(--color-sage-green)]',
+  deepTeal: 'ring-[var(--color-deep-teal)]',
+  slateBlue: 'ring-[var(--color-slate-blue)]',
+  steelBlue: 'ring-[var(--color-steel-blue)]',
+  lightTaupe: 'ring-[var(--color-light-taupe)]',
+  mediumTaupe: 'ring-[var(--color-medium-taupe)]',
+  darkTaupe: 'ring-[var(--color-dark-taupe)]',
+};
 
-// Dynamically generate background color classes
-export const bgColor: Record<ColorKey, string> = Object.keys(colors).reduce((acc, colorName) => {
-  const key = colorName as ColorKey;
-  acc[key] = `bg-[${createCssVar(colorName)}]`;
-  return acc;
-}, {} as Record<ColorKey, string>);
-
-// Dynamically generate border color classes
-export const borderColor: Record<ColorKey, string> = Object.keys(colors).reduce((acc, colorName) => {
-  const key = colorName as ColorKey;
-  acc[key] = `border-[${createCssVar(colorName)}]`;
-  return acc;
-}, {} as Record<ColorKey, string>);
-
-// Additional utility classes
-export const ringColor: Record<ColorKey, string> = Object.keys(colors).reduce((acc, colorName) => {
-  const key = colorName as ColorKey;
-  acc[key] = `ring-[${createCssVar(colorName)}]`;
-  return acc;
-}, {} as Record<ColorKey, string>);
-
-export const shadowColor: Record<ColorKey, string> = Object.keys(colors).reduce((acc, colorName) => {
-  const key = colorName as ColorKey;
-  acc[key] = `shadow-[${createCssVar(colorName)}]`;
-  return acc;
-}, {} as Record<ColorKey, string>);
+export const shadowColor = {
+  champagne: 'shadow-[var(--color-champagne)]',
+  darkMaroon: 'shadow-[var(--color-dark-maroon)]',
+  mediumBurgundy: 'shadow-[var(--color-medium-burgundy)]',
+  oliveBrown: 'shadow-[var(--color-olive-brown)]',
+  sageGreen: 'shadow-[var(--color-sage-green)]',
+  deepTeal: 'shadow-[var(--color-deep-teal)]',
+  slateBlue: 'shadow-[var(--color-slate-blue)]',
+  steelBlue: 'shadow-[var(--color-steel-blue)]',
+  lightTaupe: 'shadow-[var(--color-light-taupe)]',
+  mediumTaupe: 'shadow-[var(--color-medium-taupe)]',
+  darkTaupe: 'shadow-[var(--color-dark-taupe)]',
+};
 
 // Utility to get all classes for a specific color
-export const getColorClasses = (colorName: ColorKey) => ({
+export const getColorClasses = (colorName: keyof typeof bgColor) => ({
   text: textColor[colorName],
   bg: bgColor[colorName],
   border: borderColor[colorName],

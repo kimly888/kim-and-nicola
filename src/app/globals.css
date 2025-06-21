@@ -82,13 +82,18 @@
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
   
-  /* Custom color palette */
-  --color-dark-maroon: #3C0086;
-  --color-slate-blue: #5B7C99;
-  --color-light-taupe: #C9A98F;
-  --color-champagne: #F7E6CA;
-  --color-off-white: #F2F0EF;
-  --color-sage-green: #7A8366;
+  /* Custom color palette - Wedding colors from image */
+  --color-champagne: #F2E6D3;
+  --color-dark-maroon: #562A29;
+  --color-medium-burgundy: #744648;
+  --color-olive-brown: #5F5B40;
+  --color-sage-green: #4A6350;
+  --color-deep-teal: #253C34;
+  --color-slate-blue: #6B8CAE;
+  --color-steel-blue: #4F6B85;
+  --color-light-taupe: #FCF8EF;
+  --color-medium-taupe: #D7C8B5;
+  --color-dark-taupe: #8C857B;
 }
 
 .dark {
@@ -124,13 +129,18 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
   
-  /* Custom color palette - maintained in dark mode */
-  --color-dark-maroon: #3C0086;
-  --color-slate-blue: #5B7C99;
-  --color-light-taupe: #C9A98F;
-  --color-champagne: #F7E6CA;
-  --color-off-white: #F2F0EF;
-  --color-sage-green: #7A8366;
+  /* Custom color palette - Wedding colors maintained in dark mode */
+  --color-champagne: #F2E6D3;
+  --color-dark-maroon: #562A29;
+  --color-medium-burgundy: #744648;
+  --color-olive-brown: #5F5B40;
+  --color-sage-green: #4A6350;
+  --color-deep-teal: #253C34;
+  --color-slate-blue: #6B8CAE;
+  --color-steel-blue: #4F6B85;
+  --color-light-taupe: #FCF8EF;
+  --color-medium-taupe: #D7C8B5;
+  --color-dark-taupe: #8C857B;
 }
 
 @layer base {
