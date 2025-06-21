@@ -12,27 +12,34 @@ interface InfoSectionProps {
   enableParallax?: boolean;
   id?: string;
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
-export function InfoSection({ 
-  info, 
+export function InfoSection({
+  info,
   backgroundImage,
   enableParallax = false,
   id,
   stackIndex = 0,
+  backgroundColor,
+  textColor,
 }: InfoSectionProps) {
   return (
     <SectionCard
       id={id}
+      sectionNumber={`${stackIndex}`}
       title={info.title}
       icon={info.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
       stackIndex={stackIndex}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
       <div className="space-y-4">
         <p className="text-[#653e00]/80 text-lg leading-relaxed">{info.description}</p>
       </div>
     </SectionCard>
   );
-} 
+}

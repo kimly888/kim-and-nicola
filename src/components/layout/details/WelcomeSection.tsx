@@ -12,16 +12,28 @@ interface WelcomeSectionProps {
     icon: React.ReactNode;
   };
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
-export function WelcomeSection({ welcome, stackIndex = 0 }: WelcomeSectionProps) {
+export function WelcomeSection({
+  welcome,
+  stackIndex = 0,
+  backgroundColor,
+  textColor,
+}: WelcomeSectionProps) {
   return (
     <SectionCard
       title={welcome.title}
       icon={welcome.icon}
       stackIndex={stackIndex}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
-      <p className="text-[#653e00] text-3xl lg:text-5xl font-semibold leading-tight mb-4">
+      <p
+        className="text-3xl lg:text-5xl font-semibold leading-tight mb-4"
+        style={{ color: textColor }}
+      >
         {welcome.sections.map((section) => section.text).join(" ")}
       </p>
     </SectionCard>

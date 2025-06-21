@@ -16,6 +16,8 @@ interface ScheduleSectionProps {
   enableParallax?: boolean;
   id?: string;
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 export function ScheduleSection({ 
@@ -24,25 +26,30 @@ export function ScheduleSection({
   enableParallax = false,
   id,
   stackIndex = 0,
+  backgroundColor,
+  textColor,
 }: ScheduleSectionProps) {
   return (
     <SectionCard
       id={id}
+      sectionNumber={`${stackIndex}`}
       title={schedule.title}
       icon={schedule.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
       stackIndex={stackIndex}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
       {schedule.disclaimer && (
-        <div className="mb-6 italic text-[#653e00]/80">{schedule.disclaimer}</div>
+        <div className="mb-6 italic" style={{ color: textColor, opacity: 0.8 }}>{schedule.disclaimer}</div>
       )}
       
       <div className="space-y-4">
         {schedule.items.map((item, index) => (
           <div key={index} className="flex gap-4">
-            <div className="font-medium min-w-[120px] text-[#653e00]">{item.time}</div>
-            <div className="text-[#653e00]/80">{item.event}</div>
+            <div className="font-medium min-w-[120px]" style={{ color: textColor }}>{item.time}</div>
+            <div style={{ color: textColor, opacity: 0.8 }}>{item.event}</div>
           </div>
         ))}
       </div>

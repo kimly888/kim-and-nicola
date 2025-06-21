@@ -21,6 +21,8 @@ interface AttireSectionProps {
   enableParallax?: boolean;
   id?: string;
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 export function AttireSection({
@@ -29,38 +31,42 @@ export function AttireSection({
   enableParallax = false,
   id,
   stackIndex = 0,
+  backgroundColor,
+  textColor,
 }: AttireSectionProps) {
   return (
     <SectionCard
       id={id}
+      sectionNumber={`${stackIndex}`}
       title={attire.title}
       icon={attire.icon}
-      
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
       stackIndex={stackIndex}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
       <div className="space-y-6">
         <div className="space-y-4">
-          <h3 className="text-xl font-serif text-[#653e00]">{attire.women.title}</h3>
-          <ul className="list-disc pl-6 space-y-2 text-[#653e00]/80">
+          <h3 className="text-xl font-serif" style={{ color: textColor }}>{attire.women.title}</h3>
+          <ul className="list-disc pl-6 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
             {attire.women.guidelines.map((guideline, index) => (
               <li key={index}>{guideline}</li>
             ))}
           </ul>
-          <p className="text-[#653e00]/80 italic">{attire.women.note}</p>
+          <p className="italic" style={{ color: textColor, opacity: 0.8 }}>{attire.women.note}</p>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xl font-serif text-[#653e00]">{attire.men.title}</h3>
-          <ul className="list-disc pl-6 space-y-2 text-[#653e00]/80">
+          <h3 className="text-xl font-serif" style={{ color: textColor }}>{attire.men.title}</h3>
+          <ul className="list-disc pl-6 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
             {attire.men.guidelines.map((guideline, index) => (
               <li key={index}>{guideline}</li>
             ))}
           </ul>
         </div>
 
-        <p className="text-[#653e00]/80 mt-4">{attire.note}</p>
+        <p className="mt-4" style={{ color: textColor, opacity: 0.8 }}>{attire.note}</p>
       </div>
     </SectionCard>
   );

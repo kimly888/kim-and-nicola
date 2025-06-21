@@ -8,6 +8,7 @@ import { EnhancedAccommodationSection } from "./details/EnhancedAccommodationSec
 import { EnhancedTravelSection } from "./details/EnhancedTravelSection";
 import { TravelSpotsSection } from "./details/TravelSpotsSection";
 import { InfoSection } from "./details/InfoSection";
+import { sectionColors } from "@/lib/theme/colors";
 
 interface WelcomeSection {
   id: string;
@@ -71,7 +72,7 @@ interface DetailsSectionProps {
       tip: string;
       icon: React.ReactNode;
     };
-    travelSpots?: {
+    travelSpots: {
       title: string;
       intro: string;
       spots: string[];
@@ -107,14 +108,21 @@ interface DetailsSectionProps {
 
 export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProps) {
   return (
-    <div id="details" className="relative bg-[var(--color-sage-green)] px-4">
-      <WelcomeSection welcome={details.welcome} stackIndex={0} />
+    <div id="details" className="relative px-4">
+      <WelcomeSection
+        welcome={details.welcome}
+        stackIndex={0}
+        backgroundColor={sectionColors.welcome.background}
+        textColor={sectionColors.welcome.text}
+      />
 
       <VenueSection
         venue={details.venue}
         backgroundImage={backgrounds.venue}
         id="venue"
         stackIndex={1}
+        backgroundColor={sectionColors.venue.background}
+        textColor={sectionColors.venue.text}
       />
 
       <ScheduleSection
@@ -122,6 +130,8 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         backgroundImage={backgrounds.schedule}
         id="schedule"
         stackIndex={2}
+        backgroundColor={sectionColors.schedule.background}
+        textColor={sectionColors.schedule.text}
       />
 
       <AttireSection
@@ -129,6 +139,8 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         backgroundImage={backgrounds.attire}
         id="attire"
         stackIndex={3}
+        backgroundColor={sectionColors.attire.background}
+        textColor={sectionColors.attire.text}
       />
 
       <EnhancedAccommodationSection
@@ -136,6 +148,8 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         backgroundImage={backgrounds.accommodation}
         id="accommodation"
         stackIndex={4}
+        backgroundColor={sectionColors.accommodation.background}
+        textColor={sectionColors.accommodation.text}
       />
 
       <EnhancedTravelSection
@@ -143,16 +157,18 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         backgroundImage={backgrounds.travel}
         id="travel"
         stackIndex={5}
+        backgroundColor={sectionColors.travel.background}
+        textColor={sectionColors.travel.text}
       />
 
-      {details.travelSpots && (
-        <TravelSpotsSection
-          travelSpots={details.travelSpots}
-          backgroundImage={backgrounds.travelSpots}
-          id="travelSpots"
-          stackIndex={6}
-        />
-      )}
+      <TravelSpotsSection
+        travelSpots={details.travelSpots}
+        backgroundImage={backgrounds.travelSpots}
+        id="travelSpots"
+        stackIndex={6}
+        backgroundColor={sectionColors.travelSpots.background}
+        textColor={sectionColors.travelSpots.text}
+      />
 
       {/* Gifts Section */}
       <InfoSection
@@ -160,6 +176,8 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         backgroundImage={backgrounds.gifts}
         id="gifts"
         stackIndex={7}
+        backgroundColor={sectionColors.gifts.background}
+        textColor={sectionColors.gifts.text}
       />
     </div>
   );

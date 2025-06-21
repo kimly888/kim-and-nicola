@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
-import { bgColor } from "@/lib/theme/tailwind-classes";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,10 +30,7 @@ export function HeroSection() {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      className={`relative h-screen flex justify-center overflow-hidden ${bgColor.sageGreen}`}
-    >
+    <section ref={sectionRef} className={`relative h-screen flex justify-center overflow-hidden`}>
       {/* Text container that animates from center to top */}
       <motion.div
         className="absolute left-1/2 z-10"

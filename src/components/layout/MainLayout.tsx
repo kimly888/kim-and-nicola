@@ -12,7 +12,7 @@ interface MainLayoutProps {
 
 export function MainLayout({ children, transparentHeader = false, dictionary }: MainLayoutProps) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={`flex flex-col min-h-screen bg-amber-900`}>
       <Header transparent={transparentHeader} dictionary={dictionary} />
       <main className="flex-1">{children}</main>
       <Footer />

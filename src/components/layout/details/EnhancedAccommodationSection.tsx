@@ -16,30 +16,39 @@ interface EnhancedAccommodationSectionProps {
   enableParallax?: boolean;
   id?: string;
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
-export function EnhancedAccommodationSection({ 
-  accommodation, 
+export function EnhancedAccommodationSection({
+  accommodation,
   backgroundImage,
   enableParallax = false,
   id,
   stackIndex = 0,
+  backgroundColor,
+  textColor,
 }: EnhancedAccommodationSectionProps) {
   return (
     <SectionCard
       id={id}
+      sectionNumber={`${stackIndex}`}
       title={accommodation.title}
       icon={accommodation.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
       stackIndex={stackIndex}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
       <div className="space-y-6">
-        <p className="text-[#653e00]/80">{accommodation.description}</p>
-        
+        <p style={{ color: textColor }}>{accommodation.description}</p>
+
         <div>
-          <h3 className="font-medium mb-3 text-[#653e00]">{accommodation.alternatives.title}</h3>
-          <ul className="list-disc pl-5 text-[#653e00]/80 space-y-2">
+          <h3 className="font-medium mb-3" style={{ color: textColor }}>
+            {accommodation.alternatives.title}
+          </h3>
+          <ul className="list-disc pl-5 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
             {accommodation.alternatives.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}
@@ -48,4 +57,4 @@ export function EnhancedAccommodationSection({
       </div>
     </SectionCard>
   );
-} 
+}

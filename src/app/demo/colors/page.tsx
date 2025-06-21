@@ -79,7 +79,7 @@ return (
             </p>
           </div>
           
-          <div className={`p-6 rounded-lg ${bgColor.offWhite} ${borderColor.sageGreen} border-2`}>
+          <div className={`p-6 rounded-lg ${bgColor.lightTaupe} ${borderColor.sageGreen} border-2`}>
             <h3 className={`text-xl font-medium mb-2 ${textColor.sageGreen}`}>
               Card with Borders
             </h3>

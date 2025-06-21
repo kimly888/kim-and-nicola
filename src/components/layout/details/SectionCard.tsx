@@ -3,7 +3,6 @@
 import { useRef, ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
-import { bgColor } from "@/lib/theme";
 
 interface SectionCardProps {
   id?: string;
@@ -17,6 +16,8 @@ interface SectionCardProps {
   icon?: ReactNode;
   className?: string;
   stackIndex?: number;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
 export function SectionCard({
@@ -28,6 +29,8 @@ export function SectionCard({
   icon,
   className = "",
   stackIndex = 0,
+  backgroundColor = "#F7E6CA", // Default champagne
+  textColor = "#653e00", // Default dark text
 }: SectionCardProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [ref] = useAnimationOnScroll<HTMLDivElement>({
@@ -68,29 +71,34 @@ export function SectionCard({
           scale, 
           y, 
           rotateZ, 
-          transformOrigin: "center center"
+          transformOrigin: "center center",
+          backgroundColor,
+          color: textColor
         }}
-        className={`relative container rounded-4xl min-h-[600px] flex flex-col space-y-6 p-12 lg:p-16 ${bgColor.champagne} mx-auto border-8 border-white ${className}`}
+        className={`relative container rounded-4xl min-h-[600px] flex flex-col space-y-6 p-12 lg:p-16 mx-auto border-8 border-white ${className}`}
       >
         {/* Header with title, icon, and number */}
         {(title || icon || sectionNumber) && (
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
               {icon && (
-                <div className="w-12 h-12 flex items-center justify-center text-[#653e00]">
+                <div className="w-12 h-12 flex items-center justify-center" style={{ color: textColor }}>
                   {icon}
                 </div>
               )}
               {title && (
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#653e00] tracking-tight">
+                <h2 className="text-4xl lg:text-5xl font-bold tracking-tight" style={{ color: textColor }}>
                   {title}
                 </h2>
               )}
             </div>
 
             {sectionNumber && (
-              <span className="text-2xl lg:text-3xl font-bold text-[#653e00] bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
-                {sectionNumber}
+              <span 
+                className="text-2xl lg:text-3xl font-bold bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm"
+                style={{ color: textColor }}
+              >
+                {`(${sectionNumber})`}
               </span>
             )}
           </div>
