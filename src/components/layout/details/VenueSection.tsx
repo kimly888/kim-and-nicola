@@ -12,6 +12,7 @@ interface VenueSectionProps {
   backgroundImage?: string;
   enableParallax?: boolean;
   id?: string;
+  stackIndex?: number;
 }
 
 export function VenueSection({
@@ -19,6 +20,7 @@ export function VenueSection({
   backgroundImage,
   enableParallax = false,
   id,
+  stackIndex = 0,
 }: VenueSectionProps) {
   const venueKeywords = ["Ceremony", "Reception", "Celebration", "Gathering", "Memories", "Love"];
 
@@ -31,6 +33,7 @@ export function VenueSection({
       tags={venueKeywords}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
+      stackIndex={stackIndex}
     >
       <div className="flex-1">
         <p className="text-[#653e00] text-lg lg:text-xl leading-relaxed max-w-lg font-medium">

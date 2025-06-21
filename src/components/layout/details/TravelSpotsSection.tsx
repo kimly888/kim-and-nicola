@@ -12,13 +12,15 @@ interface TravelSpotsSectionProps {
   backgroundImage?: string;
   enableParallax?: boolean;
   id?: string;
+  stackIndex?: number;
 }
 
 export function TravelSpotsSection({ 
   travelSpots, 
   backgroundImage,
   enableParallax = false,
-  id
+  id,
+  stackIndex = 0,
 }: TravelSpotsSectionProps) {
   return (
     <SectionCard
@@ -27,11 +29,12 @@ export function TravelSpotsSection({
       icon={travelSpots.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
+      stackIndex={stackIndex}
     >
       <div className="space-y-6">
-        <p className="text-muted-foreground">{travelSpots.intro}</p>
+        <p className="text-[#653e00]/80">{travelSpots.intro}</p>
         
-        <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+        <ul className="list-disc pl-5 text-[#653e00]/80 space-y-2">
           {travelSpots.spots.map((spot, index) => (
             <li key={index}>{spot}</li>
           ))}

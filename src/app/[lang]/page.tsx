@@ -18,12 +18,10 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
       ...dictionary.details.welcome,
       icon: <span className="text-4xl">👋</span>,
     },
-    venue: dictionary.details.venue
-      ? {
-          ...dictionary.details.venue,
-          icon: <span className="text-4xl">🏰</span>,
-        }
-      : undefined,
+    venue: {
+      ...dictionary.details.venue,
+      icon: <span className="text-4xl">🏰</span>,
+    },
     schedule: {
       ...dictionary.details.schedule,
       icon: <span className="text-4xl">🗓️</span>,

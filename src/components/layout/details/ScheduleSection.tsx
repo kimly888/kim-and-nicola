@@ -15,13 +15,15 @@ interface ScheduleSectionProps {
   backgroundImage?: string;
   enableParallax?: boolean;
   id?: string;
+  stackIndex?: number;
 }
 
 export function ScheduleSection({ 
   schedule, 
   backgroundImage,
   enableParallax = false,
-  id
+  id,
+  stackIndex = 0,
 }: ScheduleSectionProps) {
   return (
     <SectionCard
@@ -30,16 +32,17 @@ export function ScheduleSection({
       icon={schedule.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
+      stackIndex={stackIndex}
     >
       {schedule.disclaimer && (
-        <div className="mb-6 italic text-muted-foreground">{schedule.disclaimer}</div>
+        <div className="mb-6 italic text-[#653e00]/80">{schedule.disclaimer}</div>
       )}
       
       <div className="space-y-4">
         {schedule.items.map((item, index) => (
           <div key={index} className="flex gap-4">
-            <div className="font-medium min-w-[120px]">{item.time}</div>
-            <div className="text-muted-foreground">{item.event}</div>
+            <div className="font-medium min-w-[120px] text-[#653e00]">{item.time}</div>
+            <div className="text-[#653e00]/80">{item.event}</div>
           </div>
         ))}
       </div>

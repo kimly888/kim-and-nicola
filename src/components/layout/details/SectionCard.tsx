@@ -16,44 +16,61 @@ interface SectionCardProps {
   tags?: string[];
   icon?: ReactNode;
   className?: string;
+  stackIndex?: number;
 }
 
 export function SectionCard({
   id,
   backgroundImage,
-  enableParallax = false,
   sectionNumber,
   title,
   children,
   icon,
   className = "",
+  stackIndex = 0,
 }: SectionCardProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
+  const [ref] = useAnimationOnScroll<HTMLDivElement>({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  // Set up parallax effect if enabled
+  // Set up parallax effect with enhanced animations for stacking
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end start"],
+    offset: ["start center", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  // Enhanced transforms for stacking effect
+  const scale = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.85, 0.6]);
+  const y = useTransform(scrollYProgress, [0, 0.6, 1], [0, -50, -120]);
+  const rotateZ = useTransform(
+    scrollYProgress, 
+    [0, 0.5, 1], 
+    [0, stackIndex % 2 === 0 ? -2 : 2, stackIndex % 2 === 0 ? -5 : 5]
+  );
+
+  const zIndex = stackIndex;
 
   return (
     <section
       id={id}
       ref={sectionRef}
-      className="relative sticky top-10 flex items-center justify-center overflow-hidden py-20"
+      className="sticky top-0 flex items-center justify-center overflow-hidden"
+      style={{ 
+        zIndex: zIndex,
+        height: "100dvh" // Full viewport height for proper stacking
+      }}
     >
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
         ref={ref}
-        className={`relative container rounded-3xl min-h-[600px] flex flex-col space-y-6 p-12 lg:p-16 ${bgColor.champagne} shadow-2xl mx-auto ${className}`}
+        style={{ 
+          scale, 
+          y, 
+          rotateZ, 
+          transformOrigin: "center center"
+        }}
+        className={`relative container rounded-4xl min-h-[600px] flex flex-col space-y-6 p-12 lg:p-16 ${bgColor.champagne} mx-auto border-8 border-white ${className}`}
       >
         {/* Header with title, icon, and number */}
         {(title || icon || sectionNumber) && (
@@ -85,7 +102,9 @@ export function SectionCard({
         {/* Background Image for card variant */}
         <div className="relative lg:block">
           {backgroundImage ? (
-            <motion.div style={enableParallax ? { y } : {}} className="absolute inset-0">
+            <motion.div 
+              className="absolute inset-0"
+            >
               <div
                 className="w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${backgroundImage})` }}

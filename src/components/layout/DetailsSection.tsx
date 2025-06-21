@@ -61,7 +61,6 @@ interface DetailsSectionProps {
     };
     travel: {
       title: string;
-      description: string;
       intro: string;
       closestAirport: string;
       options: string[];
@@ -72,7 +71,7 @@ interface DetailsSectionProps {
       tip: string;
       icon: React.ReactNode;
     };
-    travelSpots: {
+    travelSpots?: {
       title: string;
       intro: string;
       spots: string[];
@@ -106,63 +105,61 @@ interface DetailsSectionProps {
   };
 }
 
-export function DetailsSection({
-  details,
-  backgrounds = {},
-  parallaxEnabled = {},
-}: DetailsSectionProps) {
+export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProps) {
   return (
     <div id="details" className="relative bg-[var(--color-sage-green)] px-4">
-      <WelcomeSection welcome={details.welcome} />
+      <WelcomeSection welcome={details.welcome} stackIndex={0} />
 
       <VenueSection
         venue={details.venue}
         backgroundImage={backgrounds.venue}
-        enableParallax={parallaxEnabled.venue}
         id="venue"
+        stackIndex={1}
       />
 
       <ScheduleSection
         schedule={details.schedule}
         backgroundImage={backgrounds.schedule}
-        enableParallax={parallaxEnabled.schedule}
         id="schedule"
+        stackIndex={2}
       />
 
       <AttireSection
         attire={details.attire}
         backgroundImage={backgrounds.attire}
-        enableParallax={parallaxEnabled.attire}
         id="attire"
+        stackIndex={3}
       />
 
       <EnhancedAccommodationSection
         accommodation={details.accommodation}
         backgroundImage={backgrounds.accommodation}
-        enableParallax={parallaxEnabled.accommodation}
         id="accommodation"
+        stackIndex={4}
       />
 
       <EnhancedTravelSection
         travel={details.travel}
         backgroundImage={backgrounds.travel}
-        enableParallax={parallaxEnabled.travel}
         id="travel"
+        stackIndex={5}
       />
 
-      <TravelSpotsSection
-        travelSpots={details.travelSpots}
-        backgroundImage={backgrounds.travelSpots}
-        enableParallax={parallaxEnabled.travelSpots}
-        id="travelSpots"
-      />
+      {details.travelSpots && (
+        <TravelSpotsSection
+          travelSpots={details.travelSpots}
+          backgroundImage={backgrounds.travelSpots}
+          id="travelSpots"
+          stackIndex={6}
+        />
+      )}
 
       {/* Gifts Section */}
       <InfoSection
         info={details.gifts}
         backgroundImage={backgrounds.gifts}
-        enableParallax={parallaxEnabled.gifts}
         id="gifts"
+        stackIndex={7}
       />
     </div>
   );

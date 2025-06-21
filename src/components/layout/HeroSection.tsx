@@ -45,7 +45,7 @@ export function HeroSection() {
       >
         <TextMaskAnimation
           phrases={["WELCOME"]}
-          className="text-5xl md:text-8xl tracking-wide font-bold text-white"
+          className="text-5xl md:text-8xl tracking-wide font-bold text-white "
           threshold={0.1}
           delayMultiplier={0.1}
         />

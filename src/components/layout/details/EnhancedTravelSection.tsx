@@ -18,13 +18,15 @@ interface EnhancedTravelSectionProps {
   backgroundImage?: string;
   enableParallax?: boolean;
   id?: string;
+  stackIndex?: number;
 }
 
 export function EnhancedTravelSection({ 
   travel, 
   backgroundImage,
   enableParallax = false,
-  id
+  id,
+  stackIndex = 0,
 }: EnhancedTravelSectionProps) {
   return (
     <SectionCard
@@ -33,13 +35,14 @@ export function EnhancedTravelSection({
       icon={travel.icon}
       backgroundImage={backgroundImage}
       enableParallax={enableParallax}
+      stackIndex={stackIndex}
     >
       <div className="space-y-6">
-        <p className="text-muted-foreground">{travel.intro}</p>
+        <p className="text-[#653e00]/80">{travel.intro}</p>
         
         <div>
-          <h3 className="font-medium mb-2">{travel.closestAirport}</h3>
-          <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+          <h3 className="font-medium mb-2 text-[#653e00]">{travel.closestAirport}</h3>
+          <ul className="list-disc pl-5 text-[#653e00]/80 space-y-1">
             {travel.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}
@@ -47,15 +50,15 @@ export function EnhancedTravelSection({
         </div>
         
         <div>
-          <h3 className="font-medium mb-2">{travel.alternatives.title}</h3>
-          <ul className="list-disc pl-5 text-muted-foreground space-y-1">
+          <h3 className="font-medium mb-2 text-[#653e00]">{travel.alternatives.title}</h3>
+          <ul className="list-disc pl-5 text-[#653e00]/80 space-y-1">
             {travel.alternatives.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}
           </ul>
         </div>
         
-        <p className="text-muted-foreground italic">{travel.tip}</p>
+        <p className="text-[#653e00]/80 italic">{travel.tip}</p>
       </div>
     </SectionCard>
   );
