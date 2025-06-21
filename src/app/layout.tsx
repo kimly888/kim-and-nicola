@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Shrikhand } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
-import { LenisProvider } from '@/components/layout/LenisProvider';
+import { LenisProvider } from "@/components/layout/LenisProvider";
 import { i18n } from "@/i18n-config";
 
 const playfair = Playfair_Display({
@@ -13,6 +13,12 @@ const playfair = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const shrikhand = Shrikhand({
+  subsets: ["latin"],
+  variable: "--font-shrikhand",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={i18n.defaultLocale}>
-      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
+      <body
+        className={`${playfair.variable} ${inter.variable}  ${shrikhand.variable} antialiased`}
+      >
         <LenisProvider>
           {children}
           <Toaster position="bottom-right" />
