@@ -44,7 +44,7 @@ export function GallerySection({
     return (
       <>
         {/* Parallax section */}
-        <section className={`bg-muted/5 ${textColor.champagne} `}>
+        <section className={`${textColor.lightTaupe} `}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export function GallerySection({
               ref={ref}
               className="text-center py-20"
             >
-              <h2 className={`text-3xl md:text-7xl mb-4 font-bold`}>{title}</h2>
+              <h2 className={`text-3xl md:text-7xl mb-4 font-bold font-shrikhand`}>{title}</h2>
               <p className="max-w-2xl mx-auto font-medium text-lg">{description}</p>
             </motion.div>
           </div>
@@ -67,7 +67,7 @@ export function GallerySection({
 
   // Original grid gallery
   return (
-    <section id="gallery" className="py-20 bg-muted/20">
+    <section id="gallery" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

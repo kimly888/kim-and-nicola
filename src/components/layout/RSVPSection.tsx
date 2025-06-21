@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 import { RSVPForm } from "@/components/rsvp/RSVPForm";
 import { fadeIn } from "@/lib/animations";
+import { textColor } from "@/lib/theme";
 
 export function RSVPSection() {
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
@@ -12,7 +13,7 @@ export function RSVPSection() {
   });
 
   return (
-    <section id="rsvp" className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section id="rsvp" className={`py-20 ${textColor.lightTaupe}`}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,8 +22,8 @@ export function RSVPSection() {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl mb-4">RSVP</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl mb-4 font-bold font-shrikhand">RSVP</h2>
+          <p className="max-w-2xl mx-auto">
             We would be honored to have you join us on our special day. Please let us know if you
             can make it.
           </p>

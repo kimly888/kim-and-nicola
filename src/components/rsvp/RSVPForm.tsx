@@ -22,6 +22,7 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fadeIn, slideUp } from "@/lib/animations";
 import { supabase } from "@/lib/supabase/client";
+import { bgColor, textColor } from "@/lib/theme";
 
 // Form schema
 const formSchema = z.object({
@@ -92,7 +93,7 @@ export function RSVPForm() {
       {isSuccess ? (
         <SuccessMessage name={form.getValues("name")} />
       ) : (
-        <Card className="border-none shadow-lg">
+        <Card className={`border-none shadow-lg ${bgColor.lightTaupe} ${textColor.darkMaroon}`}>
           <CardHeader>
             <CardTitle className="text-2xl">RSVP</CardTitle>
             <CardDescription>
@@ -207,7 +208,7 @@ export function RSVPForm() {
                   )}
                 />
 
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" className={`w-full ${bgColor.sageGreen} font-bold`} disabled={isSubmitting}>
                   {isSubmitting ? "Submitting..." : "Reserve Your Seat (and your champagne)"}
                 </Button>
               </form>
