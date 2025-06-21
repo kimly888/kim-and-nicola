@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Guest } from "@/lib/types";
 import { supabase } from "@/lib/supabase/client";
 import { fadeIn, staggerContainer } from "@/lib/animations";
+import { textColor } from "@/lib/theme";
 
 export function AdminDashboard() {
   const [guests, setGuests] = useState<Guest[]>([]);
@@ -56,7 +57,7 @@ export function AdminDashboard() {
       variants={staggerContainer(0.1)}
       initial="hidden"
       animate="visible"
-      className="space-y-8"
+      className={`space-y-8 ${textColor.lightTaupe}`}
     >
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -90,7 +91,7 @@ export function AdminDashboard() {
       <motion.div variants={fadeIn(0.3)} className="bg-card rounded-lg shadow-md overflow-hidden">
         <div className="p-6 border-b">
           <h2 className="text-2xl">Guest List</h2>
-          <p className="text-muted-foreground">All RSVP responses</p>
+          <p>All RSVP responses</p>
         </div>
 
         {isLoading ? (
@@ -103,25 +104,25 @@ export function AdminDashboard() {
             <table className="w-full">
               <thead className="bg-muted/50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Name
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Email
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Plus Ones
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Plus One Names
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Dietary Restrictions
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                     Date Submitted
                   </th>
                 </tr>
@@ -129,7 +130,7 @@ export function AdminDashboard() {
               <tbody className="divide-y divide-border">
                 {guests.length === 0 ? (
                   <tr>
-                    <td colSpan={7} className="px-6 py-4 text-center text-muted-foreground">
+                    <td colSpan={7} className="px-6 py-4 text-center">
                       No RSVPs yet.
                     </td>
                   </tr>
