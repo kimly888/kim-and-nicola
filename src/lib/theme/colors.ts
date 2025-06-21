@@ -13,21 +13,6 @@ export const colors = {
   darkTaupe: '#8C857B',      // Dark taupe from palette 4
 };
 
-// CSS Variable version for use in styles
-export const cssColors = {
-  champagne: 'var(--color-champagne)',
-  darkMaroon: 'var(--color-dark-maroon)',
-  mediumBurgundy: 'var(--color-medium-burgundy)',
-  oliveBrown: 'var(--color-olive-brown)',
-  sageGreen: 'var(--color-sage-green)',
-  deepTeal: 'var(--color-deep-teal)',
-  slateBlue: 'var(--color-slate-blue)',
-  steelBlue: 'var(--color-steel-blue)',
-  lightTaupe: 'var(--color-light-taupe)',
-  mediumTaupe: 'var(--color-medium-taupe)',
-  darkTaupe: 'var(--color-dark-taupe)',
-};
-
 // Color names with their descriptions
 export const colorNames = {
   champagne: 'Champagne',
