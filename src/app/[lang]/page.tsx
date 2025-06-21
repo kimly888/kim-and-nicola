@@ -54,7 +54,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
       <HeroSection />
       <DetailsSection details={detailsWithIcons} />
       <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
-      <StickerGallery />
+      <StickerGallery dictionary={dictionary} />
       <RSVPSection />
     </MainLayout>
   );

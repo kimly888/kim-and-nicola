@@ -153,7 +153,18 @@
     }
   },
   "gallery": {
-    "title": "Oriel Luniau"
+    "title": "Oriel Lluniau",
+    "stickerGallery": {
+      "title": "Atgofion Difyr",
+      "description": "Cliciwch ar unrhyw sticer i'w weld yn fanwl. Mae'r rhain yn cynrychioli ein holl eiliadau difyr gyda'n gilydd!",
+      "loadMore": "Llwytho Mwy o Sticeri",
+      "remaining": "ar ôl",
+      "modal": {
+        "title": "Sticer #",
+        "description": "Un o'n hoff atgofion wedi'i ddal ar ffurf sticer!",
+        "close": "Cau"
+      }
+    }
   },
   "rsvp": {
     "title": "RSVP",

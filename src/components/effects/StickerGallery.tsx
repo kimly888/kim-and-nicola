@@ -3,12 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { textColor } from "@/lib/theme";
+import { Dictionary } from "@/dictionaries";
 
 interface StickerGalleryProps {
   className?: string;
+  dictionary: Dictionary;
 }
 
-export function StickerGallery({ className = "" }: StickerGalleryProps) {
+export function StickerGallery({ className = "", dictionary }: StickerGalleryProps) {
   const [selectedSticker, setSelectedSticker] = useState<number | null>(null);
   const [visibleStickers, setVisibleStickers] = useState(12);
 
@@ -19,18 +22,20 @@ export function StickerGallery({ className = "" }: StickerGalleryProps) {
     setVisibleStickers(prev => Math.min(prev + 12, 46));
   };
 
+  const stickerTexts = dictionary.gallery.stickerGallery;
+
   return (
     <div className={`py-20 ${className}`}>
-      <div className="container mx-auto px-4">
+      <div className={`container mx-auto px-4 ${textColor.lightTaupe}`}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl mb-4 font-bold">Fun Memories</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Click on any sticker to see it in detail. These represent all our fun moments together!
+          <h2 className="text-5xl md:text-7xl mb-4 font-bold">{stickerTexts.title}</h2>
+          <p className="max-w-2xl mx-auto">
+            {stickerTexts.description}
           </p>
         </motion.div>
 
@@ -55,7 +60,7 @@ export function StickerGallery({ className = "" }: StickerGalleryProps) {
             >
               <Image
                 src={`/images/stickers/Subject ${stickerNum}.png`}
-                alt={`Sticker ${stickerNum}`}
+                alt={`${stickerTexts.modal.title}${stickerNum}`}
                 width={80}
                 height={80}
                 className="w-full h-full object-contain"
@@ -72,7 +77,7 @@ export function StickerGallery({ className = "" }: StickerGalleryProps) {
               onClick={loadMoreStickers}
               className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
             >
-              Load More Stickers ({46 - visibleStickers} remaining)
+              {stickerTexts.loadMore} ({46 - visibleStickers} {stickerTexts.remaining})
             </motion.button>
           </div>
         )}
@@ -98,20 +103,20 @@ export function StickerGallery({ className = "" }: StickerGalleryProps) {
               <div className="text-center">
                 <Image
                   src={`/images/stickers/Subject ${selectedSticker}.png`}
-                  alt={`Sticker ${selectedSticker}`}
+                  alt={`${stickerTexts.modal.title}${selectedSticker}`}
                   width={200}
                   height={200}
                   className="mx-auto mb-4"
                 />
-                <h3 className="text-xl font-bold mb-2">Sticker #{selectedSticker}</h3>
+                <h3 className="text-xl font-bold mb-2">{stickerTexts.modal.title}{selectedSticker}</h3>
                 <p className="text-muted-foreground mb-4">
-                  One of our favorite memories captured in sticker form!
+                  {stickerTexts.modal.description}
                 </p>
                 <button
                   onClick={() => setSelectedSticker(null)}
                   className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Close
+                  {stickerTexts.modal.close}
                 </button>
               </div>
             </motion.div>

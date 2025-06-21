@@ -153,7 +153,18 @@
     }
   },
   "gallery": {
-    "title": "Galería de Fotos"
+    "title": "Galería de Fotos",
+    "stickerGallery": {
+      "title": "Recuerdos Divertidos",
+      "description": "Haz clic en cualquier pegatina para verla en detalle. ¡Estas representan todos nuestros momentos divertidos juntos!",
+      "loadMore": "Cargar Más Pegatinas",
+      "remaining": "restantes",
+      "modal": {
+        "title": "Pegatina #",
+        "description": "¡Uno de nuestros recuerdos favoritos capturado en forma de pegatina!",
+        "close": "Cerrar"
+      }
+    }
   },
   "rsvp": {
     "title": "RSVP",

@@ -270,7 +270,7 @@ function SuccessMessage({ name }: { name: string }) {
       variants={slideUp()}
       initial="hidden"
       animate="visible"
-      className="text-center space-y-4 p-8"
+      className={`text-center space-y-4 p-8 ${textColor.lightTaupe}`}
     >
       <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
         <svg
@@ -288,10 +288,10 @@ function SuccessMessage({ name }: { name: string }) {
         </svg>
       </div>
       <h3 className="text-2xl">Thank You, {name}!</h3>
-      <p className="text-muted-foreground">
+      <p>
         Your RSVP has been successfully submitted. We look forward to celebrating with you!
       </p>
-      <p className="text-sm text-muted-foreground">
+      <p>
         You&apos;ll receive a confirmation email shortly.
       </p>
     </motion.div>

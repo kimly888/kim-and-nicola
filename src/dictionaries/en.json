@@ -153,7 +153,18 @@
     }
   },
   "gallery": {
-    "title": "Photo Gallery"
+    "title": "Photo Gallery",
+    "stickerGallery": {
+      "title": "Fun Memories",
+      "description": "Click on any sticker to see it in detail. These represent all our fun moments together!",
+      "loadMore": "Load More Stickers",
+      "remaining": "remaining",
+      "modal": {
+        "title": "Sticker #",
+        "description": "One of our favorite memories captured in sticker form!",
+        "close": "Close"
+      }
+    }
   },
   "rsvp": {
     "title": "RSVP",

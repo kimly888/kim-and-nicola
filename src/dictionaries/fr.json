@@ -153,7 +153,18 @@
     }
   },
   "gallery": {
-    "title": "Galerie Photos"
+    "title": "Galerie Photos",
+    "stickerGallery": {
+      "title": "Souvenirs Amusants",
+      "description": "Cliquez sur n'importe quel autocollant pour le voir en détail. Ils représentent tous nos moments amusants ensemble !",
+      "loadMore": "Charger Plus d'Autocollants",
+      "remaining": "restants",
+      "modal": {
+        "title": "Autocollant #",
+        "description": "L'un de nos souvenirs préférés capturé sous forme d'autocollant !",
+        "close": "Fermer"
+      }
+    }
   },
   "rsvp": {
     "title": "RSVP",

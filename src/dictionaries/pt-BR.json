@@ -153,7 +153,18 @@
     }
   },
   "gallery": {
-    "title": "Galeria de Fotos"
+    "title": "Galeria de Fotos",
+    "stickerGallery": {
+      "title": "Memórias Divertidas",
+      "description": "Clique em qualquer adesivo para vê-lo em detalhes. Estes representam todos os nossos momentos divertidos juntos!",
+      "loadMore": "Carregar Mais Adesivos",
+      "remaining": "restantes",
+      "modal": {
+        "title": "Adesivo #",
+        "description": "Uma das nossas memórias favoritas capturada em forma de adesivo!",
+        "close": "Fechar"
+      }
+    }
   },
   "rsvp": {
     "title": "RSVP",
