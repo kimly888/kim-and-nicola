@@ -30,10 +30,7 @@ export function WelcomeSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      <p
-        className="text-3xl lg:text-5xl font-semibold leading-tight mb-4"
-        style={{ color: textColor }}
-      >
+      <p className="text-3xl lg:text-5xl font-semibold leading-tight mb-4">
         {welcome.sections.map((section) => section.text).join(" ")}
       </p>
     </SectionCard>

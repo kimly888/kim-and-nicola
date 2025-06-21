@@ -39,9 +39,9 @@ export function TravelSpotsSection({
       textColor={textColor}
     >
       <div className="space-y-6">
-        <p className="text-[#653e00]/80">{travelSpots.intro}</p>
+        <p>{travelSpots.intro}</p>
         
-        <ul className="list-disc pl-5 text-[#653e00]/80 space-y-2">
+        <ul className="list-disc pl-5 space-y-2">
           {travelSpots.spots.map((spot, index) => (
             <li key={index}>{spot}</li>
           ))}

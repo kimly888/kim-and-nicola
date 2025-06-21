@@ -48,25 +48,25 @@ export function AttireSection({
     >
       <div className="space-y-6">
         <div className="space-y-4">
-          <h3 className="text-xl font-serif" style={{ color: textColor }}>{attire.women.title}</h3>
-          <ul className="list-disc pl-6 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
+          <h3 className="text-xl font-serif">{attire.women.title}</h3>
+          <ul className="list-disc pl-6 space-y-2">
             {attire.women.guidelines.map((guideline, index) => (
               <li key={index}>{guideline}</li>
             ))}
           </ul>
-          <p className="italic" style={{ color: textColor, opacity: 0.8 }}>{attire.women.note}</p>
+          <p className="italic">{attire.women.note}</p>
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xl font-serif" style={{ color: textColor }}>{attire.men.title}</h3>
-          <ul className="list-disc pl-6 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
+          <h3 className="text-xl font-serif">{attire.men.title}</h3>
+          <ul className="list-disc pl-6 space-y-2">
             {attire.men.guidelines.map((guideline, index) => (
               <li key={index}>{guideline}</li>
             ))}
           </ul>
         </div>
 
-        <p className="mt-4" style={{ color: textColor, opacity: 0.8 }}>{attire.note}</p>
+        <p className="mt-4">{attire.note}</p>
       </div>
     </SectionCard>
   );

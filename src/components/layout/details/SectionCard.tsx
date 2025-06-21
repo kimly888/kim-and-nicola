@@ -48,8 +48,8 @@ export function SectionCard({
   const scale = useTransform(scrollYProgress, [0, 0.6, 1], [1, 0.85, 0.6]);
   const y = useTransform(scrollYProgress, [0, 0.6, 1], [0, -50, -120]);
   const rotateZ = useTransform(
-    scrollYProgress, 
-    [0, 0.5, 1], 
+    scrollYProgress,
+    [0, 0.5, 1],
     [0, stackIndex % 2 === 0 ? -2 : 2, stackIndex % 2 === 0 ? -5 : 5]
   );
 
@@ -60,20 +60,20 @@ export function SectionCard({
       id={id}
       ref={sectionRef}
       className="sticky top-0 flex items-center justify-center overflow-hidden"
-      style={{ 
+      style={{
         zIndex: zIndex,
-        height: "100dvh" // Full viewport height for proper stacking
+        height: "100dvh", // Full viewport height for proper stacking
       }}
     >
       <motion.div
         ref={ref}
-        style={{ 
-          scale, 
-          y, 
-          rotateZ, 
+        style={{
+          scale,
+          y,
+          rotateZ,
           transformOrigin: "center center",
           backgroundColor,
-          color: textColor
+          color: textColor,
         }}
         className={`relative container rounded-4xl min-h-[600px] flex flex-col space-y-6 p-12 lg:p-16 mx-auto border-8 border-white ${className}`}
       >
@@ -82,22 +82,26 @@ export function SectionCard({
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
               {icon && (
-                <div className="w-12 h-12 flex items-center justify-center" style={{ color: textColor }}>
+                <div
+                  className="w-12 h-12 flex items-center justify-center"
+                  style={{ color: textColor }}
+                >
                   {icon}
                 </div>
               )}
+
               {title && (
-                <h2 className="text-4xl lg:text-5xl font-bold tracking-tight" style={{ color: textColor }}>
+                <h2
+                  className="text-4xl lg:text-5xl font-bold tracking-tight"
+                  style={{ color: textColor }}
+                >
                   {title}
                 </h2>
               )}
             </div>
 
             {sectionNumber && (
-              <span 
-                className="text-2xl lg:text-3xl font-bold bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm"
-                style={{ color: textColor }}
-              >
+              <span className="text-2xl lg:text-4xl font-bold  rounded-full backdrop-blur-sm">
                 {`(${sectionNumber})`}
               </span>
             )}
@@ -110,9 +114,7 @@ export function SectionCard({
         {/* Background Image for card variant */}
         <div className="relative lg:block">
           {backgroundImage ? (
-            <motion.div 
-              className="absolute inset-0"
-            >
+            <motion.div className="absolute inset-0">
               <div
                 className="w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${backgroundImage})` }}

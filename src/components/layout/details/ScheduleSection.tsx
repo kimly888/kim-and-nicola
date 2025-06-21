@@ -20,8 +20,8 @@ interface ScheduleSectionProps {
   textColor?: string;
 }
 
-export function ScheduleSection({ 
-  schedule, 
+export function ScheduleSection({
+  schedule,
   backgroundImage,
   enableParallax = false,
   id,
@@ -41,18 +41,18 @@ export function ScheduleSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      {schedule.disclaimer && (
-        <div className="mb-6 italic" style={{ color: textColor, opacity: 0.8 }}>{schedule.disclaimer}</div>
-      )}
-      
+      {schedule.disclaimer && <div className="mb-6 italic">{schedule.disclaimer}</div>}
+
       <div className="space-y-4">
         {schedule.items.map((item, index) => (
           <div key={index} className="flex gap-4">
-            <div className="font-medium min-w-[120px]" style={{ color: textColor }}>{item.time}</div>
-            <div style={{ color: textColor, opacity: 0.8 }}>{item.event}</div>
+            <div className="font-medium min-w-[120px]" style={{ color: textColor }}>
+              {item.time}
+            </div>
+            <div>{item.event}</div>
           </div>
         ))}
       </div>
     </SectionCard>
   );
-} 
+}

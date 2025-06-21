@@ -42,13 +42,11 @@ export function EnhancedAccommodationSection({
       textColor={textColor}
     >
       <div className="space-y-6">
-        <p style={{ color: textColor }}>{accommodation.description}</p>
+        <p>{accommodation.description}</p>
 
         <div>
-          <h3 className="font-medium mb-3" style={{ color: textColor }}>
-            {accommodation.alternatives.title}
-          </h3>
-          <ul className="list-disc pl-5 space-y-2" style={{ color: textColor, opacity: 0.8 }}>
+          <h3 className="font-medium mb-3">{accommodation.alternatives.title}</h3>
+          <ul className="list-disc pl-5 space-y-2">
             {accommodation.alternatives.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}

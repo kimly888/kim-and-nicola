@@ -44,7 +44,7 @@ export const sectionColors = {
   },
   attire: {
     background: colors.slateBlue,
-    text: '#2D4455', // Darker slate blue
+    text: '#E8F5E8', // Darker slate blue
   },
   accommodation: {
     background: colors.sageGreen,
@@ -52,7 +52,7 @@ export const sectionColors = {
   },
   travel: {
     background: colors.darkMaroon,
-    text: '#F2E6D3', // Light text for dark background
+    text: '#E8F5E8', // Light text for dark background
   },
   travelSpots: {
     background: colors.steelBlue,
@@ -60,6 +60,6 @@ export const sectionColors = {
   },
   gifts: {
     background: colors.darkTaupe,
-    text: '#F2E6D3', // Light text for dark background
+    text: '#E8F5E8', // Light text for dark background
   },
 }; 
