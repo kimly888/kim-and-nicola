@@ -196,10 +196,10 @@ export function RSVPForm() {
                   name="notes"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Additional Notes</FormLabel>
+                      <FormLabel>Additional Questions</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Any additional information you'd like to share"
+                          placeholder="Any additional information you'd like to know"
                           {...field}
                         />
                       </FormControl>
