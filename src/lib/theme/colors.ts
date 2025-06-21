@@ -1,29 +1,80 @@
 export const colors = {
-  // Core Colors
-  darkMaroon: '#3C0086',
-  slateBlue: '#5B7C99',
-  lightTaupe: '#C9A98F',
-  champagne: '#F7E6CA',
-  offWhite: '#F2F0EF',
-  sageGreen: '#7A8366',
+  // Colors extracted from Wedding Color Palette Image
+  champagne: '#F2E6D3',      // Cream/champagne base (consistent across all palettes)
+  darkMaroon: '#562A29',     // Deep burgundy from palette 1
+  mediumBurgundy: '#744648', // Medium burgundy from palette 1
+  oliveBrown: '#5F5B40',     // Olive brown from palette 1
+  sageGreen: '#4A6350',      // Forest green from palette 2
+  deepTeal: '#253C34',       // Deep teal from palette 2
+  slateBlue: '#6B8CAE',      // Slate blue from palette 3
+  steelBlue: '#4F6B85',      // Steel blue from palette 3
+  lightTaupe: '#FCF8EF',     // Light taupe from palette 4
+  mediumTaupe: '#D7C8B5',    // Medium taupe from palette 4
+  darkTaupe: '#8C857B',      // Dark taupe from palette 4
 };
 
 // CSS Variable version for use in styles
 export const cssColors = {
-  darkMaroon: 'var(--color-dark-maroon)',
-  slateBlue: 'var(--color-slate-blue)',
-  lightTaupe: 'var(--color-light-taupe)',
   champagne: 'var(--color-champagne)',
-  offWhite: 'var(--color-off-white)',
+  darkMaroon: 'var(--color-dark-maroon)',
+  mediumBurgundy: 'var(--color-medium-burgundy)',
+  oliveBrown: 'var(--color-olive-brown)',
   sageGreen: 'var(--color-sage-green)',
+  deepTeal: 'var(--color-deep-teal)',
+  slateBlue: 'var(--color-slate-blue)',
+  steelBlue: 'var(--color-steel-blue)',
+  lightTaupe: 'var(--color-light-taupe)',
+  mediumTaupe: 'var(--color-medium-taupe)',
+  darkTaupe: 'var(--color-dark-taupe)',
 };
 
 // Color names with their descriptions
 export const colorNames = {
-  darkMaroon: 'Dark Maroon',
-  slateBlue: 'Slate Blue',
-  lightTaupe: 'Light Taupe',
   champagne: 'Champagne',
-  offWhite: 'Off White',
+  darkMaroon: 'Dark Maroon',
+  mediumBurgundy: 'Medium Burgundy',
+  oliveBrown: 'Olive Brown',
   sageGreen: 'Sage Green',
+  deepTeal: 'Deep Teal',
+  slateBlue: 'Slate Blue',
+  steelBlue: 'Steel Blue',
+  lightTaupe: 'Light Taupe',
+  mediumTaupe: 'Medium Taupe',
+  darkTaupe: 'Dark Taupe',
+};
+
+// Section-specific color combinations - Updated with image colors only
+export const sectionColors = {
+  welcome: {
+    background: colors.champagne,
+    text: '#8B5A00', // Darker champagne
+  },
+  venue: {
+    background: colors.lightTaupe,
+    text: '#5A3F2A', // Darker taupe
+  },
+  schedule: {
+    background: colors.mediumTaupe,
+    text: '#3E2F23', // Dark brown text
+  },
+  attire: {
+    background: colors.slateBlue,
+    text: '#2D4455', // Darker slate blue
+  },
+  accommodation: {
+    background: colors.sageGreen,
+    text: '#E8F5E8', // Light text for dark background
+  },
+  travel: {
+    background: colors.darkMaroon,
+    text: '#F2E6D3', // Light text for dark background
+  },
+  travelSpots: {
+    background: colors.steelBlue,
+    text: '#E8F5E8', // Light text for dark background
+  },
+  gifts: {
+    background: colors.darkTaupe,
+    text: '#F2E6D3', // Light text for dark background
+  },
 }; 
