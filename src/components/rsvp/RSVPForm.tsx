@@ -107,7 +107,7 @@ export function RSVPForm() {
       ) : (
         <Card className={`border-none shadow-lg ${bgColor.lightTaupe} ${textColor.darkMaroon}`}>
           <CardHeader>
-            <CardTitle className="text-2xl">RSVP</CardTitle>
+            <CardTitle className="text-xl">RSVP</CardTitle>
             <CardDescription>
               Please let us know if you can make it to our special day.
             </CardDescription>

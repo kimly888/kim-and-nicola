@@ -22,7 +22,7 @@ export function RSVPSection() {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl mb-4 font-bold font-shrikhand">RSVP</h2>
+          <h2 className="text-5xl md:text-7xl mb-4 font-bold font-shrikhand">RSVP</h2>
           <p className="max-w-2xl mx-auto">
             We would be honored to have you join us on our special day. Please let us know if you
             can make it.
