@@ -94,7 +94,7 @@ export function RSVPForm() {
       ) : (
         <Card className="border-none shadow-lg">
           <CardHeader>
-            <CardTitle className="text-2xl font-serif">RSVP</CardTitle>
+            <CardTitle className="text-2xl">RSVP</CardTitle>
             <CardDescription>
               Please let us know if you can make it to our special day.
             </CardDescription>
@@ -242,7 +242,7 @@ function SuccessMessage({ name }: { name: string }) {
           <path d="M20 6 9 17l-5-5" />
         </svg>
       </div>
-      <h3 className="text-2xl font-serif">Thank You, {name}!</h3>
+      <h3 className="text-2xl">Thank You, {name}!</h3>
       <p className="text-muted-foreground">
         Your RSVP has been successfully submitted. We look forward to celebrating with you!
       </p>

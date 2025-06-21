@@ -44,12 +44,12 @@ export function EnhancedTravelSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      <div className="space-y-6">
-        <p>{travel.intro}</p>
+      <div className="space-y-4 md:space-y-6">
+        <p className="text-sm md:text-base lg:text-lg xl:text-xl leading-relaxed">{travel.intro}</p>
 
         <div>
-          <h3 className="font-medium mb-2">{travel.closestAirport}</h3>
-          <ul className="list-disc pl-5 space-y-1">
+          <h3 className="font-medium mb-2 text-base md:text-lg lg:text-xl xl:text-2xl">{travel.closestAirport}</h3>
+          <ul className="list-disc pl-4 md:pl-5 space-y-1 text-sm md:text-base lg:text-lg xl:text-xl">
             {travel.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}
@@ -57,15 +57,15 @@ export function EnhancedTravelSection({
         </div>
 
         <div>
-          <h3 className="font-medium mb-2">{travel.alternatives.title}</h3>
-          <ul className="list-disc pl-5 space-y-1">
+          <h3 className="font-medium mb-2 text-base md:text-lg lg:text-xl xl:text-2xl">{travel.alternatives.title}</h3>
+          <ul className="list-disc pl-4 md:pl-5 space-y-1 text-sm md:text-base lg:text-lg xl:text-xl">
             {travel.alternatives.options.map((option, index) => (
               <li key={index}>{option}</li>
             ))}
           </ul>
         </div>
 
-        <p className="italic">{travel.tip}</p>
+        <p className="italic text-sm md:text-base lg:text-lg xl:text-xl">{travel.tip}</p>
       </div>
     </SectionCard>
   );

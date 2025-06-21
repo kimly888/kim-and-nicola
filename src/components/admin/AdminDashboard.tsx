@@ -89,7 +89,7 @@ export function AdminDashboard() {
       {/* Guest List */}
       <motion.div variants={fadeIn(0.3)} className="bg-card rounded-lg shadow-md overflow-hidden">
         <div className="p-6 border-b">
-          <h2 className="text-2xl font-serif">Guest List</h2>
+          <h2 className="text-2xl">Guest List</h2>
           <p className="text-muted-foreground">All RSVP responses</p>
         </div>
 

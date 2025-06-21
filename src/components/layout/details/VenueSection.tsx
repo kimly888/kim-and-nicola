@@ -42,7 +42,7 @@ export function VenueSection({
       textColor={textColor}
     >
       <div className="flex-1">
-        <p className="text-lg lg:text-xl leading-relaxed max-w-lg font-medium">
+        <p className="text-md lg:text-xl leading-relaxed max-w-lg">
           {venue.description}
         </p>
 
@@ -53,7 +53,7 @@ export function VenueSection({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.1 * index }}
-              className="px-4 py-2 bg-white/50 backdrop-blur-sm font-medium rounded-full text-sm border border-white/30 hover:bg-white/30 transition-all duration-300"
+              className="px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full text-sm border border-white/30 hover:bg-white/30 transition-all duration-300"
             >
               {keyword}
             </motion.span>

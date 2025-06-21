@@ -86,7 +86,7 @@ export function Header({ transparent = false, dictionary }: HeaderProps) {
       <div className="container mx-auto flex items-center justify-between gap-4">
         <Link
           href="/"
-          className={`${transparent && atTop ? "text-white" : "text-black"} text-2xl font-serif tracking-wider transition-colors duration-300`}
+          className={`${transparent && atTop ? "text-white" : "text-black"} text-2xl tracking-wider transition-colors duration-300`}
         >
           {/* {dictionary?.hero.title || "Kim & Nicola"} */}
         </Link>

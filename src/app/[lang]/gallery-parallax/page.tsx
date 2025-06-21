@@ -13,7 +13,7 @@ export default function GalleryParallaxPage() {
     <main className="min-h-screen">
       <div className="h-screen flex items-center justify-center bg-muted/5">
         <div className="text-center">
-          <h1 className="text-5xl font-serif mb-6">Gallery Parallax Effect</h1>
+          <h1 className="text-5xl mb-6">Gallery Parallax Effect</h1>
           <p className="text-xl text-muted-foreground max-w-xl mx-auto">
             Scroll down to experience the zoom parallax effect with our gallery images.
           </p>
@@ -28,7 +28,7 @@ export default function GalleryParallaxPage() {
       
       <div className="h-screen flex items-center justify-center bg-muted/5">
         <div className="text-center">
-          <h2 className="text-3xl font-serif mb-4">Continue Exploring</h2>
+          <h2 className="text-3xl mb-4">Continue Exploring</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             The parallax effect adds depth and engagement to your photo gallery.
           </p>

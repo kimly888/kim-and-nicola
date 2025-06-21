@@ -19,7 +19,7 @@ export default function GalleryComparisonPage() {
     <main className="min-h-screen">
       <div className="h-[50vh] flex flex-col items-center justify-center bg-muted/5">
         <div className="text-center mb-8">
-          <h1 className="text-5xl font-serif mb-6">Gallery Comparison</h1>
+          <h1 className="text-5xl mb-6">Gallery Comparison</h1>
           <p className="text-xl text-muted-foreground max-w-xl mx-auto mb-8">
             Compare our traditional gallery grid with the new zoom parallax effect.
           </p>
@@ -46,7 +46,7 @@ export default function GalleryComparisonPage() {
       
       <div className="h-[30vh] flex items-center justify-center bg-muted/5">
         <div className="text-center">
-          <h2 className="text-3xl font-serif mb-4">Which Do You Prefer?</h2>
+          <h2 className="text-3xl mb-4">Which Do You Prefer?</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Both gallery styles offer unique ways to showcase your precious memories.
           </p>

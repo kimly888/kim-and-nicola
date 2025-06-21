@@ -21,7 +21,7 @@ export function Footer({ className }: FooterProps) {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-serif tracking-wider">Kim & Nicola</h3>
+            <h3 className="text-xl tracking-wider">Kim & Nicola</h3>
             <p className="text-muted-foreground">
               We can&apos;t wait to celebrate our special day with you.
             </p>

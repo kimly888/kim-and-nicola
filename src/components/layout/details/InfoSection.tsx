@@ -37,8 +37,8 @@ export function InfoSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      <div className="space-y-4">
-        <p className="text-lg leading-relaxed">{info.description}</p>
+      <div className="space-y-3 md:space-y-4">
+        <p className="text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">{info.description}</p>
       </div>
     </SectionCard>
   );

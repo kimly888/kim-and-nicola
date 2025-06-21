@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TextMaskAnimation } from "@/components/animation/TextMaskAnimation";
 import { useRef } from "react";
+import { textColor } from "@/lib/theme";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -41,7 +42,7 @@ export function HeroSection() {
       >
         <TextMaskAnimation
           phrases={["WELCOME"]}
-          className="text-5xl md:text-8xl tracking-wide font-bold text-white "
+          className={`text-5xl md:text-8xl tracking-wide font-shrikhand ${textColor.lightTaupe} `}
           threshold={0.1}
           delayMultiplier={0.1}
         />

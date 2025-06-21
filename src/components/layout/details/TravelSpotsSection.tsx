@@ -38,10 +38,10 @@ export function TravelSpotsSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      <div className="space-y-6">
-        <p>{travelSpots.intro}</p>
+      <div className="space-y-4 md:space-y-6">
+        <p className="text-base lg:text-lg xl:text-xl leading-relaxed">{travelSpots.intro}</p>
         
-        <ul className="list-disc pl-5 space-y-2">
+        <ul className="list-disc pl-4 md:pl-5 space-y-1 md:space-y-2 text-base lg:text-lg xl:text-xl">
           {travelSpots.spots.map((spot, index) => (
             <li key={index}>{spot}</li>
           ))}

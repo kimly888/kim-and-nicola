@@ -41,15 +41,19 @@ export function ScheduleSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      {schedule.disclaimer && <div className="mb-6 italic">{schedule.disclaimer}</div>}
+      {schedule.disclaimer && (
+        <div className="mb-4 md:mb-6 italic text-sm md:text-base lg:text-lg xl:text-xl font-bold">
+          {schedule.disclaimer}
+        </div>
+      )}
 
-      <div className="space-y-4">
+      <div className="space-y-3 md:space-y-4">
         {schedule.items.map((item, index) => (
-          <div key={index} className="flex gap-4">
-            <div className="font-medium min-w-[120px]" style={{ color: textColor }}>
+          <div key={index} className="flex flex-row gap-2 sm:gap-4">
+            <div className="font-bold text-sm md:text-base lg:text-lg xl:text-xl max-w-[55px] sm:min-w-[100px] md:min-w-[120px] lg:min-w-[140px]">
               {item.time}
             </div>
-            <div>{item.event}</div>
+            <div className="text-sm md:text-base lg:text-lg xl:text-xl">{item.event}</div>
           </div>
         ))}
       </div>

@@ -30,7 +30,7 @@ export function StorySection({ stories }: StorySectionProps) {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">Our Story</h2>
+          <h2 className="text-3xl md:text-4xl mb-4">Our Story</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             The journey that brought us together and led us to this special day.
           </p>
@@ -94,7 +94,7 @@ function StoryItem({ story, isEven, index }: StoryItemProps) {
           <div className="h-[1px] flex-1 bg-primary/30 ml-4" />
         </div>
 
-        <h3 className="text-2xl font-serif">{story.title}</h3>
+        <h3 className="text-2xl">{story.title}</h3>
         <p className="text-sm text-muted-foreground">{story.date}</p>
         <p className="text-muted-foreground leading-relaxed">{story.description}</p>
       </motion.div>

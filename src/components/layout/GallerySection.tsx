@@ -7,6 +7,7 @@ import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 import ZoomParallax from "@/components/effects/ZoomParallax";
+import { textColor } from "@/lib/theme";
 
 interface GallerySectionProps {
   images: {
@@ -43,7 +44,7 @@ export function GallerySection({
     return (
       <>
         {/* Parallax section */}
-        <section className="bg-muted/5">
+        <section className={`bg-muted/5 ${textColor.champagne} `}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -52,8 +53,8 @@ export function GallerySection({
               ref={ref}
               className="text-center py-20"
             >
-              <h2 className="text-3xl md:text-4xl font-serif mb-4">{title}</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
+              <h2 className={`text-3xl md:text-7xl mb-4 font-bold`}>{title}</h2>
+              <p className="max-w-2xl mx-auto font-medium text-lg">{description}</p>
             </motion.div>
           </div>
 
@@ -75,7 +76,7 @@ export function GallerySection({
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-serif mb-4">{title}</h2>
+          <h2 className="text-3xl md:text-4xl mb-4">{title}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </motion.div>
 
