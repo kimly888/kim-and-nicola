@@ -159,13 +159,13 @@ export function RSVPForm() {
                             <Input
                               type="number"
                               min={0}
-                              max={5}
+                              max={1}
                               {...field}
                               onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                             />
                           </FormControl>
                           <FormDescription>
-                            How many guests will be joining you? (Max: 5)
+                            Are you bringing a plus one?
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
