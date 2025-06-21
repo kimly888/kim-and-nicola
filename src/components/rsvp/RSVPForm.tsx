@@ -30,8 +30,18 @@ const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
   attending: z.boolean(),
   plusOnes: z.number().min(0).max(5),
+  plusOneNames: z.array(z.string().min(1, { message: "Please enter a name" })).optional(),
   dietaryRestrictions: z.string().optional(),
   notes: z.string().optional(),
+}).refine((data) => {
+  // If attending and has plus ones, plus one names are required
+  if (data.attending && data.plusOnes > 0) {
+    return data.plusOneNames && data.plusOneNames.length === data.plusOnes;
+  }
+  return true;
+}, {
+  message: "Please provide names for all plus ones",
+  path: ["plusOneNames"],
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -48,6 +58,7 @@ export function RSVPForm() {
       email: "",
       attending: true,
       plusOnes: 0,
+      plusOneNames: [],
       dietaryRestrictions: "",
       notes: "",
     },
@@ -65,6 +76,7 @@ export function RSVPForm() {
           email: data.email,
           attending: data.attending,
           plus_ones: data.plusOnes,
+          plus_one_names: data.plusOneNames,
           dietary_restrictions: data.dietaryRestrictions,
           notes: data.notes,
         },
@@ -171,6 +183,38 @@ export function RSVPForm() {
                         </FormItem>
                       )}
                     />
+
+                    {form.watch("plusOnes") > 0 && (
+                      <FormField
+                        control={form.control}
+                        name="plusOneNames"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Plus One Names</FormLabel>
+                            <div className="space-y-3">
+                              {Array.from({ length: form.watch("plusOnes") }, (_, index) => (
+                                <FormControl key={index}>
+                                  <Input
+                                    placeholder={`Name of plus one ${index + 1}`}
+                                    value={field.value?.[index] || ""}
+                                    onChange={(e) => {
+                                      const currentNames = field.value || [];
+                                      const newNames = [...currentNames];
+                                      newNames[index] = e.target.value;
+                                      field.onChange(newNames);
+                                    }}
+                                  />
+                                </FormControl>
+                              ))}
+                            </div>
+                            <FormDescription>
+                              Enter the names of the plus ones you&apos;re bringing.
+                            </FormDescription>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    )}
 
                     <FormField
                       control={form.control}

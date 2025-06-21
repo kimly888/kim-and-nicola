@@ -4,6 +4,7 @@ export type Guest = {
   email: string;
   attending: boolean;
   plus_ones: number;
+  plus_one_names?: string[];
   dietary_restrictions?: string;
   notes?: string;
   created_at: string;

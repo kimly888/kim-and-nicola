@@ -6,11 +6,28 @@ export async function POST(request: Request) {
     const supabase = createServerSupabaseClient();
     const body = await request.json();
 
-    const { name, email, attending, plusOnes, dietaryRestrictions, notes } = body;
+    const { name, email, attending, plusOnes, plusOneNames, dietaryRestrictions, notes } = body;
 
     // Validate required fields
     if (!name || !email) {
       return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
+    }
+
+    // Validate plus one names if plusOnes > 0
+    if (plusOnes > 0 && attending) {
+      if (!plusOneNames || !Array.isArray(plusOneNames) || plusOneNames.length !== plusOnes) {
+        return NextResponse.json({ 
+          error: "Plus one names are required and must match the number of plus ones" 
+        }, { status: 400 });
+      }
+
+      // Validate that all plus one names are provided and not empty
+      const invalidNames = plusOneNames.some(name => !name || name.trim().length === 0);
+      if (invalidNames) {
+        return NextResponse.json({ 
+          error: "All plus one names must be provided" 
+        }, { status: 400 });
+      }
     }
 
     // Insert into Supabase
@@ -22,6 +39,7 @@ export async function POST(request: Request) {
           email,
           attending,
           plus_ones: plusOnes,
+          plus_one_names: plusOnes > 0 && attending ? plusOneNames : null,
           dietary_restrictions: dietaryRestrictions,
           notes,
         },

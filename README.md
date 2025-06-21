@@ -6,8 +6,9 @@ A stunning, responsive wedding RSVP website built with Next.js, TailwindCSS, and
 
 - **Responsive Design**: Looks great on all devices from mobile to desktop
 - **Animated UI**: Smooth animations and transitions using Framer Motion
-- **RSVP Form**: Interactive form with real-time validation
-- **Admin Dashboard**: Secure admin area to view and manage RSVPs
+- **RSVP Form**: Interactive form with real-time validation and dynamic plus one name fields
+- **Plus One Management**: Conditional text fields for collecting individual plus one names
+- **Admin Dashboard**: Secure admin area to view and manage RSVPs with detailed guest information
 - **Supabase Integration**: Real-time database for storing and retrieving guest information
 - **Modern UI Components**: Built with shadcn/ui for a consistent and beautiful design
 
@@ -58,12 +59,19 @@ A stunning, responsive wedding RSVP website built with Next.js, TailwindCSS, and
        email text not null,
        attending boolean default true,
        plus_ones integer default 0,
+       plus_one_names text[],
        dietary_restrictions text,
        notes text,
        created_at timestamp with time zone default now(),
        updated_at timestamp with time zone default now()
      );
      ```
+
+   **Migration for Existing Users:**
+   If you already have a `guests` table, add the new column with:
+   ```sql
+   alter table guests add column plus_one_names text[];
+   ```
 
 5. Run the development server:
    ```bash

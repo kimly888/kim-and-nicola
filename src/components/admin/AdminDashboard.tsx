@@ -116,6 +116,9 @@ export function AdminDashboard() {
                     Plus Ones
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                    Plus One Names
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                     Dietary Restrictions
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
@@ -126,7 +129,7 @@ export function AdminDashboard() {
               <tbody className="divide-y divide-border">
                 {guests.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="px-6 py-4 text-center text-muted-foreground">
+                    <td colSpan={7} className="px-6 py-4 text-center text-muted-foreground">
                       No RSVPs yet.
                     </td>
                   </tr>
@@ -147,6 +150,11 @@ export function AdminDashboard() {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">{guest.plus_ones || 0}</td>
+                      <td className="px-6 py-4">
+                        {guest.plus_one_names && guest.plus_one_names.length > 0 
+                          ? guest.plus_one_names.join(", ") 
+                          : "None"}
+                      </td>
                       <td className="px-6 py-4">{guest.dietary_restrictions || "None"}</td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         {new Date(guest.created_at).toLocaleDateString()}
