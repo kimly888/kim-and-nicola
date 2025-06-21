@@ -154,18 +154,18 @@ export function RSVPForm() {
                       name="plusOnes"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Plus Ones</FormLabel>
+                          <FormLabel>Plus Ones (Max 4)</FormLabel>
                           <FormControl>
                             <Input
                               type="number"
                               min={0}
-                              max={1}
+                              max={4}
                               {...field}
                               onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                             />
                           </FormControl>
                           <FormDescription>
-                            Are you bringing a plus one?
+                          If your invite includes a plus one, lucky them. If not, we&apos;re saving a seat for one fabulous guest, you.
                           </FormDescription>
                           <FormMessage />
                         </FormItem>
