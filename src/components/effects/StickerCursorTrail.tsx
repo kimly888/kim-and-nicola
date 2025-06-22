@@ -66,7 +66,7 @@ class StickerCursorTrailLogic {
     this.zIndexVal = 1;
     this.activeStickersCount = 0;
     this.isIdle = true;
-    this.threshold = 80;
+    this.threshold = 120;
     this.mousePos = { x: 0, y: 0 };
     this.lastMousePos = { x: 0, y: 0 };
     this.cacheMousePos = { x: 0, y: 0 };
