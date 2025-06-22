@@ -158,3 +158,22 @@
 .text-white {
   color: #FAFAFA !important;
 }
+
+/* Marquee animation for FlowingMenu */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 8s linear infinite;
+}
+
+/* Hover effect for menu items */
+.group:hover .animate-marquee {
+  animation-play-state: running;
+}
