@@ -49,10 +49,23 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     },
   };
 
+  const backgrounds = {
+    welcome:
+      "",
+    venue:
+      "",
+    schedule:
+      "",
+    attire:
+      "",
+    accommodation:
+      "",
+  };
+
   return (
     <MainLayout transparentHeader={true} dictionary={dictionary}>
       <HeroSection />
-      <DetailsSection details={detailsWithIcons} />
+      <DetailsSection details={detailsWithIcons} backgrounds={backgrounds} />
       <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
       <StickerGallery dictionary={dictionary} />
       <RSVPSection dictionary={dictionary} />

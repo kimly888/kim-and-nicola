@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { SectionCard } from "./SectionCard";
 
 interface VenueSectionProps {
@@ -41,24 +40,20 @@ export function VenueSection({
       backgroundColor={backgroundColor}
       textColor={textColor}
     >
-      <div className="flex-1">
-        <p className="text-md lg:text-xl leading-relaxed max-w-lg">
+      <div className="flex flex-col md:flex-row flex-1 gap-8">
+        <p className="text-md lg:text-xl leading-relaxed max-w-lg mb-4">
           {venue.description}
         </p>
 
-        <div className="flex flex-wrap gap-3 pt-6 max-w-sm">
-          {venueKeywords?.map((keyword, index) => (
-            <motion.span
-              key={keyword}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 * index }}
-              className="px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full text-sm border border-white/30 hover:bg-white/30 transition-all duration-300"
-            >
-              {keyword}
-            </motion.span>
-          ))}
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.737803607142!2d-2.3648775000000004!3d52.556267500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870870c81731745%3A0xb7fa4eadb3f3997c!2sDavenport%20House!5e0!3m2!1sen!2sjp!4v1750551594885!5m2!1sen!2sjp"
+          width="100%"
+          height="200px"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </SectionCard>
   );

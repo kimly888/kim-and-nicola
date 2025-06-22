@@ -3,6 +3,7 @@
 import { useRef, ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useAnimationOnScroll } from "@/hooks/useAnimationOnScroll";
+import Image from "next/image";
 
 interface SectionCardProps {
   id?: string;
@@ -86,7 +87,7 @@ export function SectionCard({
                   {icon}
                 </div>
               )}
-  
+
               {title && (
                 <h2 className="text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight">
                   {title}
@@ -106,19 +107,17 @@ export function SectionCard({
         <div className="flex-1 overflow-y-auto font-medium">{children}</div>
 
         {/* Background Image for card variant */}
-        <div className="relative lg:block">
-          {backgroundImage ? (
-            <motion.div className="absolute inset-0">
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${backgroundImage})` }}
-              />
-              <div className="absolute inset-0" />
-            </motion.div>
-          ) : (
-            <div className="absolute inset-0 opacity-30" />
-          )}
-        </div>
+        {backgroundImage && (
+          <motion.div className="w-full h-full">
+            <Image
+              src={backgroundImage}
+              alt="background"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        )}
       </motion.div>
     </section>
   );

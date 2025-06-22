@@ -9,6 +9,7 @@ import { EnhancedTravelSection } from "./details/EnhancedTravelSection";
 import { TravelSpotsSection } from "./details/TravelSpotsSection";
 import { InfoSection } from "./details/InfoSection";
 import { sectionColors } from "@/lib/theme/colors";
+import VenueImageSection from "./details/VenueImageSection";
 
 interface WelcomeSection {
   id: string;
@@ -123,6 +124,12 @@ export function DetailsSection({ details, backgrounds = {} }: DetailsSectionProp
         stackIndex={1}
         backgroundColor={sectionColors.venue.background}
         textColor={sectionColors.venue.text}
+      />
+
+      <VenueImageSection
+        backgroundImage={'https://cdn.prod.website-files.com/634e5ccdbca7e77e1d981e22/63dce7a0242fd1370f177479_DLP-MEGAN%2BOLIVER-CURATEDMIX(002of922).png'}
+        id="venue-image"
+        stackIndex={1}
       />
 
       <ScheduleSection
