@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Guest } from "@/lib/types";
 import { supabase } from "@/lib/supabase/client";
+import { useAuth } from "@/components/auth/AuthProvider";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 import { textColor } from "@/lib/theme";
 
@@ -17,6 +19,7 @@ export function AdminDashboard() {
     notAttending: 0,
     totalPlusOnes: 0,
   });
+  const { user, signOut } = useAuth();
 
   useEffect(() => {
     async function fetchGuests() {
@@ -57,8 +60,25 @@ export function AdminDashboard() {
       variants={staggerContainer(0.1)}
       initial="hidden"
       animate="visible"
-      className={`space-y-8 ${textColor.lightTaupe}`}
+      className={`space-y-8`}
     >
+      {/* Admin Header */}
+      <div className={`flex justify-between items-center`}>
+        <div>
+          <p className={`text-sm ${textColor.lightTaupe}`}>
+            Logged in as: {user?.email}
+          </p>
+        </div>
+        <Button
+          onClick={signOut}
+          variant="outline"
+          className="cursor-pointer"
+          size="sm"
+        >
+          Sign Out
+        </Button>
+      </div>
+
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
+import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { i18n } from './src/i18n-config';
 
 // Use the locales from i18n-config
@@ -24,7 +25,7 @@ function getLocale(request: NextRequest): string {
   return matchLocale(languages, locales, defaultLocale);
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
   // Skip for static files and API routes
@@ -35,6 +36,18 @@ export function middleware(request: NextRequest) {
     pathname.includes('.') // Skip files with extensions
   ) {
     return;
+  }
+
+  // Handle admin route protection
+  if (pathname.startsWith('/admin') && !pathname.startsWith('/admin/login')) {
+    const res = NextResponse.next();
+    const supabase = createMiddlewareClient({ req: request, res });
+    
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (!session) {
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
   }
   
   // Check if the pathname is missing a locale
