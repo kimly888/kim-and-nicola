@@ -66,7 +66,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     <MainLayout transparentHeader={true} dictionary={dictionary}>
       <HeroSection dictionary={dictionary} />
       <DetailsSection details={detailsWithIcons} backgrounds={backgrounds} />
-      <GallerySection images={GALLERY_IMAGES} useParallaxEffect />
+      <GallerySection images={GALLERY_IMAGES} dictionary={dictionary} useParallaxEffect />
       <StickerGallery dictionary={dictionary} />
       <RSVPSection dictionary={dictionary} />
     </MainLayout>

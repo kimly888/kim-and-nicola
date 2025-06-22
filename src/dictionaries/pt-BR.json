@@ -163,7 +163,8 @@
     }
   },
   "gallery": {
-    "title": "Galeria de Fotos",
+    "title": "Nossa Galeria",
+    "description": "Uma coleção dos nossos momentos favoritos juntos.",
     "stickerGallery": {
       "title": "Memórias Divertidas",
       "description": "Clique em qualquer adesivo para vê-lo em detalhes. Estes representam todos os nossos momentos divertidos juntos!",

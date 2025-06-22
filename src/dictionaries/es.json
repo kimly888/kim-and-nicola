@@ -163,7 +163,8 @@
     }
   },
   "gallery": {
-    "title": "Galería de Fotos",
+    "title": "Nuestra Galería",
+    "description": "Una colección de nuestros momentos favoritos juntos.",
     "stickerGallery": {
       "title": "Recuerdos Divertidos",
       "description": "Haz clic en cualquier pegatina para verla en detalle. ¡Estas representan todos nuestros momentos divertidos juntos!",

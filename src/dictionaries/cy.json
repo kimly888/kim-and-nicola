@@ -163,7 +163,8 @@
     }
   },
   "gallery": {
-    "title": "Oriel Lluniau",
+    "title": "Ein Oriel",
+    "description": "Casgliad o'n hoff eiliadau gyda'n gilydd.",
     "stickerGallery": {
       "title": "Atgofion Difyr",
       "description": "Cliciwch ar unrhyw sticer i'w weld yn fanwl. Mae'r rhain yn cynrychioli ein holl eiliadau difyr gyda'n gilydd!",

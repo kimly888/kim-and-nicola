@@ -163,7 +163,8 @@
     }
   },
   "gallery": {
-    "title": "Photo Gallery",
+    "title": "Our Gallery",
+    "description": "A collection of our favorite moments together.",
     "stickerGallery": {
       "title": "Fun Memories",
       "description": "Click on any sticker to see it in detail. These represent all our fun moments together!",

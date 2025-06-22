@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 import ZoomParallax from "@/components/effects/ZoomParallax";
 import { textColor } from "@/lib/theme";
+import { Dictionary } from "@/dictionaries";
 
 interface GallerySectionProps {
   images: {
@@ -16,15 +17,13 @@ interface GallerySectionProps {
     width: number;
     height: number;
   }[];
-  title?: string;
-  description?: string;
+  dictionary: Dictionary;
   useParallaxEffect?: boolean;
 }
 
 export function GallerySection({
   images,
-  title = "Our Gallery",
-  description = "A collection of our favorite moments together.",
+  dictionary,
   useParallaxEffect = false,
 }: GallerySectionProps) {
   const [ref, isVisible] = useAnimationOnScroll<HTMLDivElement>({
@@ -53,8 +52,8 @@ export function GallerySection({
               ref={ref}
               className="text-center py-20"
             >
-              <h2 className={`text-3xl md:text-7xl mb-4 font-bold font-shrikhand`}>{title}</h2>
-              <p className="max-w-2xl mx-auto font-medium text-lg">{description}</p>
+              <h2 className={`text-3xl md:text-7xl mb-4 font-bold font-shrikhand`}>{dictionary.gallery.title}</h2>
+              <p className="max-w-2xl mx-auto font-medium text-lg">{dictionary.gallery.description}</p>
             </motion.div>
           </div>
 
@@ -76,8 +75,8 @@ export function GallerySection({
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl mb-4">{title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
+          <h2 className="text-3xl md:text-4xl mb-4">{dictionary.gallery.title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">{dictionary.gallery.description}</p>
         </motion.div>
 
         <motion.div

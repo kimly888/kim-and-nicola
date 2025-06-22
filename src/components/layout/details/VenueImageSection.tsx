@@ -17,7 +17,7 @@ export function VenueImageSection({
       backgroundImage={backgroundImage}
       stackIndex={stackIndex}
     >
-      <h2 className="text-4xl md:text-7xl font-bold overflow-hidden">Davenport House</h2>
+      <h2 className="text-4xl md:text-7xl font-bold overflow-hidden">✨Davenport House</h2>
     </SectionCard>
   );
 }

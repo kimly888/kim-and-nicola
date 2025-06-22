@@ -163,7 +163,8 @@
     }
   },
   "gallery": {
-    "title": "Galerie Photos",
+    "title": "Notre Galerie",
+    "description": "Une collection de nos moments préférés ensemble.",
     "stickerGallery": {
       "title": "Souvenirs Amusants",
       "description": "Cliquez sur n'importe quel autocollant pour le voir en détail. Ils représentent tous nos moments amusants ensemble !",
