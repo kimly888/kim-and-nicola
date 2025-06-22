@@ -66,7 +66,7 @@ export function HeroSection({ dictionary }: HeroSectionProps) {
     },
     animate: {
       scale: [0.5, 1, 1],
-      top: ["50%", "50%", "10%"],
+      top: ["50%", "50%", "5%"],
       y: ["-50%", "-50%", "0%"],
       x: "-50%",
       transition: {
@@ -109,7 +109,7 @@ export function HeroSection({ dictionary }: HeroSectionProps) {
       >
         <TextMaskAnimation
           phrases={[dictionary.hero.invitation]}
-          className={`text-6xl md:text-7xl tracking-wide font-shrikhand ${textColor.lightTaupe} whitespace-nowrap`}
+          className={`text-5xl md:text-7xl tracking-wide font-shrikhand ${textColor.lightTaupe} lg:whitespace-nowrap`}
           threshold={0.1}
           delayMultiplier={0.1}
         />
