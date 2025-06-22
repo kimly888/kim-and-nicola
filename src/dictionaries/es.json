@@ -212,8 +212,8 @@
           "placeholder": "Por favor, haznos saber si tienes restricciones alimentarias"
         },
         "notes": {
-          "label": "Preguntas Adicionales",
-          "placeholder": "Cualquier información adicional que te gustaría saber"
+          "label": "Preguntas o Solicitudes Adicionales",
+          "placeholder": "Solicitud de canción o cualquier información adicional que te gustaría saber"
         }
       },
       "validation": {

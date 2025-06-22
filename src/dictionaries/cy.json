@@ -212,8 +212,8 @@
           "placeholder": "Rhowch wybod i ni os oes gennych chi gyfyngiadau deietegol"
         },
         "notes": {
-          "label": "Cwestiynau Ychwanegol",
-          "placeholder": "Unrhyw wybodaeth ychwanegol yr hoffech chi ei wybod"
+          "label": "Cwestiynau neu Geisiadau Ychwanegol",
+          "placeholder": "Cais cân neu unrhyw wybodaeth ychwanegol yr hoffech chi ei wybod"
         }
       },
       "validation": {

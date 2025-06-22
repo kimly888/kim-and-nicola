@@ -19,7 +19,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { fadeIn, slideUp } from "@/lib/animations";
 import { supabase } from "@/lib/supabase/client";
 import { bgColor, textColor } from "@/lib/theme";
@@ -31,29 +31,36 @@ interface RSVPFormProps {
 
 export function RSVPForm({ dictionary }: RSVPFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false); 
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const formTexts = dictionary.rsvp.form;
 
   // Form schema with translated validation messages
-  const formSchema = z.object({
-    name: z.string().min(2, { message: formTexts.validation.nameRequired }),
-    email: z.string().email({ message: formTexts.validation.emailInvalid }),
-    attending: z.boolean(),
-    plusOnes: z.number().min(0).max(5),
-    plusOneNames: z.array(z.string().min(1, { message: formTexts.validation.nameMinLength })).optional(),
-    dietaryRestrictions: z.string().optional(),
-    notes: z.string().optional(),
-  }).refine((data) => {
-    // If attending and has plus ones, plus one names are required
-    if (data.attending && data.plusOnes > 0) {
-      return data.plusOneNames && data.plusOneNames.length === data.plusOnes;
-    }
-    return true;
-  }, {
-    message: formTexts.validation.plusOneNamesRequired,
-    path: ["plusOneNames"],
-  });
+  const formSchema = z
+    .object({
+      name: z.string().min(2, { message: formTexts.validation.nameRequired }),
+      email: z.string().email({ message: formTexts.validation.emailInvalid }),
+      attending: z.boolean(),
+      plusOnes: z.number().min(0).max(5),
+      plusOneNames: z
+        .array(z.string().min(1, { message: formTexts.validation.nameMinLength }))
+        .optional(),
+      dietaryRestrictions: z.string().optional(),
+      notes: z.string().optional(),
+    })
+    .refine(
+      (data) => {
+        // If attending and has plus ones, plus one names are required
+        if (data.attending && data.plusOnes > 0) {
+          return data.plusOneNames && data.plusOneNames.length === data.plusOnes;
+        }
+        return true;
+      },
+      {
+        message: formTexts.validation.plusOneNamesRequired,
+        path: ["plusOneNames"],
+      }
+    );
 
   type FormValues = z.infer<typeof formSchema>;
 
@@ -113,12 +120,10 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
         <SuccessMessage name={form.getValues("name")} dictionary={dictionary} />
       ) : (
         <Card className={`border-none shadow-lg ${bgColor.lightTaupe} ${textColor.darkMaroon}`}>
-          <CardHeader>
+          {/* <CardHeader>
             <CardTitle className="text-xl">{formTexts.title}</CardTitle>
-            <CardDescription>
-              {formTexts.description}
-            </CardDescription>
-          </CardHeader>
+            <CardDescription>{formTexts.description}</CardDescription>
+          </CardHeader> */}
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -129,7 +134,11 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                     <FormItem>
                       <FormLabel>{formTexts.fields.name.label}</FormLabel>
                       <FormControl>
-                        <Input placeholder={formTexts.fields.name.placeholder} {...field} />
+                        <Input
+                          placeholder={formTexts.fields.name.placeholder}
+                          className="text-sm"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -143,7 +152,12 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                     <FormItem>
                       <FormLabel>{formTexts.fields.email.label}</FormLabel>
                       <FormControl>
-                        <Input placeholder={formTexts.fields.email.placeholder} type="email" {...field} />
+                        <Input
+                          placeholder={formTexts.fields.email.placeholder}
+                          type="email"
+                          className="text-sm"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -180,12 +194,11 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                               min={0}
                               max={4}
                               {...field}
+                              className="text-sm"
                               onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                             />
                           </FormControl>
-                          <FormDescription>
-                            {formTexts.fields.plusOnes.description}
-                          </FormDescription>
+                          <FormDescription>{formTexts.fields.plusOnes.description}</FormDescription>
                           <FormMessage />
                         </FormItem>
                       )}
@@ -232,6 +245,7 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                           <FormControl>
                             <Textarea
                               placeholder={formTexts.fields.dietaryRestrictions.placeholder}
+                              className="text-sm"
                               {...field}
                             />
                           </FormControl>
@@ -251,6 +265,7 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                       <FormControl>
                         <Textarea
                           placeholder={formTexts.fields.notes.placeholder}
+                          className="text-sm"
                           {...field}
                         />
                       </FormControl>
@@ -259,7 +274,11 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
                   )}
                 />
 
-                <Button type="submit" className={`w-full ${bgColor.sageGreen} font-bold`} disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  className={`w-full ${bgColor.sageGreen} font-bold`}
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? formTexts.submitting : formTexts.submit}
                 </Button>
               </form>
@@ -273,7 +292,7 @@ export function RSVPForm({ dictionary }: RSVPFormProps) {
 
 function SuccessMessage({ name, dictionary }: { name: string; dictionary: Dictionary }) {
   const successTexts = dictionary.rsvp.success;
-  
+
   return (
     <motion.div
       variants={slideUp()}
@@ -296,13 +315,9 @@ function SuccessMessage({ name, dictionary }: { name: string; dictionary: Dictio
           <path d="M20 6 9 17l-5-5" />
         </svg>
       </div>
-      <h3 className="text-2xl">{successTexts.title.replace('{name}', name)}</h3>
-      <p>
-        {successTexts.message}
-      </p>
-      <p>
-        {successTexts.emailConfirmation}
-      </p>
+      <h3 className="text-2xl">{successTexts.title.replace("{name}", name)}</h3>
+      <p>{successTexts.message}</p>
+      <p>{successTexts.emailConfirmation}</p>
     </motion.div>
   );
 }

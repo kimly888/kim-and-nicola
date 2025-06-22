@@ -212,8 +212,8 @@
           "placeholder": "Please let us know if you have any dietary restrictions"
         },
         "notes": {
-          "label": "Additional Questions",
-          "placeholder": "Any additional information you'd like to know"
+          "label": "Additional Questions or Requests",
+          "placeholder": "Song request or any additional information you'd like to know"
         }
       },
       "validation": {
