@@ -6,6 +6,7 @@ import { useRef, useState, useEffect, useMemo } from "react";
 import { textColor } from "@/lib/theme";
 import Image from "next/image";
 import Counter from "@/blocks/Components/Counter/Counter";
+import { Dictionary } from "@/dictionaries";
 
 interface CountdownTime {
   days: number;
@@ -14,7 +15,11 @@ interface CountdownTime {
   seconds: number;
 }
 
-export function HeroSection() {
+interface HeroSectionProps {
+  dictionary: Dictionary;
+}
+
+export function HeroSection({ dictionary }: HeroSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [countdown, setCountdown] = useState<CountdownTime>({
     days: 0,
@@ -61,7 +66,7 @@ export function HeroSection() {
     },
     animate: {
       scale: [0.5, 1, 1],
-      top: ["50%", "50%", "5%"],
+      top: ["50%", "50%", "10%"],
       y: ["-50%", "-50%", "0%"],
       x: "-50%",
       transition: {
@@ -103,8 +108,8 @@ export function HeroSection() {
         style={{ position: "absolute" }}
       >
         <TextMaskAnimation
-          phrases={["You're Invited"]}
-          className={`text-6xl md:text-7xl tracking-wide font-shrikhand ${textColor.lightTaupe} `}
+          phrases={[dictionary.hero.invitation]}
+          className={`text-6xl md:text-7xl tracking-wide font-shrikhand ${textColor.lightTaupe} whitespace-nowrap`}
           threshold={0.1}
           delayMultiplier={0.1}
         />
@@ -118,7 +123,7 @@ export function HeroSection() {
         className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center space-y-6"
       >
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center text-white">
-          To Our Big Day
+          {dictionary.hero.countdownTitle}
         </h3>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
@@ -138,7 +143,7 @@ export function HeroSection() {
               gradientFrom="transparent"
               gradientTo="transparent"
             />
-            <span className="text-sm md:text-base font-semibold text-white">Days</span>
+            <span className="text-sm md:text-base font-semibold text-white">{dictionary.hero.countdown.days}</span>
           </div>
 
           {/* Hours */}
@@ -157,7 +162,7 @@ export function HeroSection() {
               gradientFrom="transparent"
               gradientTo="transparent"
             />
-            <span className="text-sm md:text-base font-semibold text-white">Hours</span>
+            <span className="text-sm md:text-base font-semibold text-white">{dictionary.hero.countdown.hours}</span>
           </div>
 
           {/* Minutes */}
@@ -176,7 +181,7 @@ export function HeroSection() {
               gradientFrom="transparent"
               gradientTo="transparent"
             />
-            <span className="text-sm md:text-base font-semibold text-white">Minutes</span>
+            <span className="text-sm md:text-base font-semibold text-white">{dictionary.hero.countdown.minutes}</span>
           </div>
 
           {/* Seconds */}
@@ -195,12 +200,12 @@ export function HeroSection() {
               gradientFrom="transparent"
               gradientTo="transparent"
             />
-            <span className="text-sm md:text-base font-semibold text-white">Seconds</span>
+            <span className="text-sm md:text-base font-semibold text-white">{dictionary.hero.countdown.seconds}</span>
           </div>
         </div>
 
         <p className="text-sm md:text-base text-center font-medium text-white mt-2">
-          January 5th, 2026
+          {dictionary.hero.weddingDate}
         </p>
       </motion.div>
 
@@ -211,7 +216,7 @@ export function HeroSection() {
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10"
       >
-        <p className="text-white text-lg sm:text-2xl mb-2">Scroll Down</p>
+        <p className="text-white text-lg sm:text-2xl mb-2">{dictionary.hero.scrollDown}</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

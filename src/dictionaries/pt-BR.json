@@ -9,7 +9,17 @@
   "hero": {
     "headline": "É uma história de amor. Apenas diga sim.",
     "subheadline": "Porque o amor é paciente, o amor é bondoso e, além disso... já pagamos o depósito. Então, por favor, confirme sua presença o mais rápido possível antes que fujamos de puro estresse.",
-    "rsvpButton": "Reserve seu lugar (e seu champanhe)"
+    "rsvpButton": "Reserve seu lugar (e seu champanhe)",
+    "invitation": "Você Está Convidado",
+    "countdownTitle": "Para Nosso Grande Dia",
+    "weddingDate": "5 de Janeiro de 2026",
+    "scrollDown": "Role Para Baixo",
+    "countdown": {
+      "days": "Dias",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "seconds": "Segundos"
+    }
   },
   "story": {
     "title": "Nossa História",

@@ -9,7 +9,17 @@
   "hero": {
     "headline": "これは愛の物語。はいと言うだけでいい。",
     "subheadline": "愛は忍耐強く、愛は優しい、そして...すでに頭金を払いました。ストレスで駆け落ちする前に、できるだけ早くご出席を確認してください。",
-    "rsvpButton": "あなたの席（とシャンパン）を予約する"
+    "rsvpButton": "あなたの席（とシャンパン）を予約する",
+    "invitation": "ご招待",
+    "countdownTitle": "私たちの特別な日まで",
+    "weddingDate": "2026年1月5日",
+    "scrollDown": "下にスクロール",
+    "countdown": {
+      "days": "日",
+      "hours": "時間",
+      "minutes": "分",
+      "seconds": "秒"
+    }
   },
   "story": {
     "title": "私たちの物語",

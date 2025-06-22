@@ -9,7 +9,17 @@
   "hero": {
     "headline": "Mae'n stori cariad. Dywedwch ie yn unig.",
     "subheadline": "Oherwydd mae cariad yn amyneddgar, mae cariad yn garedig, a hefyd... rydym eisoes wedi talu'r blaendal. Felly, rhowch wybod i ni cyn gynted â phosibl cyn i ni ddianc oherwydd straen llwyr.",
-    "rsvpButton": "Cadwch eich sedd (a'ch siampên)"
+    "rsvpButton": "Cadwch eich sedd (a'ch siampên)",
+    "invitation": "Rydych Chi'n Wahoddedig",
+    "countdownTitle": "I'n Diwrnod Mawr",
+    "weddingDate": "Ionawr 5ed, 2026",
+    "scrollDown": "Sgroliwch i Lawr",
+    "countdown": {
+      "days": "Dyddiau",
+      "hours": "Oriau",
+      "minutes": "Munudau",
+      "seconds": "Eiliadau"
+    }
   },
   "story": {
     "title": "Ein Stori",
