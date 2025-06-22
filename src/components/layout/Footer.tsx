@@ -26,7 +26,7 @@ export function Footer({ className }: FooterProps) {
   // Creative flowing menu items with wedding sticker themes
   const flowingMenuItems = [
     {
-      link: "/#story",
+      link: "/",
       text: "Home",
       image: "/images/stickers/Subject 14.png" // Heart-themed sticker
     },

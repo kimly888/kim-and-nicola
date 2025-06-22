@@ -43,7 +43,7 @@ export function GallerySection({
     return (
       <>
         {/* Parallax section */}
-        <section className={`${textColor.lightTaupe} `}>
+        <section id="gallery" className={`${textColor.lightTaupe} `}>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
