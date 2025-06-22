@@ -86,7 +86,7 @@ export function Footer({ className }: FooterProps) {
                 href="mailto:hello@kimandnicola.com"
                 className="underline hover:text-foreground transition-colors"
               >
-                hello@kimandnicola.com
+                kimly.jet@gmail.com
               </a>
             </p>
           </div>
