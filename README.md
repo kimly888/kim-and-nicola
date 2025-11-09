@@ -2,6 +2,12 @@
 
 A stunning, responsive wedding RSVP website built with Next.js, TailwindCSS, and Supabase. This site features beautiful animations, micro-interactions, and an immersive user experience.
 
+## 📚 Documentation
+
+- **[Complete Documentation](./DOCUMENTATION.md)** - Comprehensive guide covering all aspects of the application
+- **[Quick Start Guide](./QUICK_START.md)** - Get up and running in 5 minutes
+- **[Admin Setup Guide](./ADMIN_AUTH_SETUP.md)** - Setting up admin authentication
+
 ## Features
 
 - **Responsive Design**: Looks great on all devices from mobile to desktop
